@@ -1,0 +1,139 @@
+.menu {
+    display: none;
+    margin: 20px;
+    position:fixed;
+    top:10%;
+    left:85%;
+    transform:translate(-50%,-50%);
+    flex-direction: column;
+    border-radius: 10px;
+  
+}
+  
+.boombox {
+    display: none;
+    margin: 20px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    flex-direction: column;
+  
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9.481vw;
+  height: 2vw;
+  border: 0.152vw solid var(--border-color);
+  background: var(--background-color);
+  margin-top: 0.625vw;
+  transition: all 0.15s ease;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px 2px #0051ff; */
+}
+
+button:last-child {
+  margin-bottom: 0;
+}
+
+button:hover {
+  background: rgb(84, 129, 255)
+}
+button:active {
+  opacity: 1;
+}
+
+
+/* TWO */
+
+
+#keyboard-input{
+    position:fixed;
+	/* background: rgba(0, 0, 0, 0.45); */
+    padding:1rem;
+    top:10%;
+    left:85%;
+    transform:translate(-50%,-50%);
+    font-family:var(--font-family); 
+    display:none;
+    border-radius: 10px;
+}
+
+textarea{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    text-align: center;
+    top: 0%;
+    width: 9.281vw;
+    height: 1.5vw;
+    outline: none;
+    border-radius: 10px;
+    border: 0.10vw solid rgba(241, 237, 239, 0.45);
+	background: rgba(0, 0, 0, 0.55);
+    color:white;
+    resize:none;
+}
+
+
+.title{
+    text-align: center;
+    color:white;
+    font-size:0.8rem;
+    margin-bottom:1rem;
+}
+
+.btn-amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9.481vw;
+    height: 2vw;
+    border-radius: 2px;
+    border: 0vw solid rgba(241, 235, 238, 0.95);
+	background: rgba(0, 0, 0, 0.55);
+    margin-top: 0.625vw;
+    transition: all 0.15s ease;
+    border-radius: 10px;
+}
+.btn-amount:hover {
+	background: rgba(223, 214, 218, 0.25);
+}
+.btn-amount:active {
+    opacity: 1;
+}
+
+/* three */
+
+
+.quantite {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 12.281vw;
+    height: 7.5vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+}
+.quantite span:nth-child(1) {
+    font-size: 0.833vw;
+}
+.quantite input:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 13.281vw;
+    height: 2vw;
+    border: none;
+    background: none;
+    outline: none;
+    border: 0.052vw solid rgba(255, 0, 107, 0.35);
+	background-color: var(--background-color);
+    margin-top: 0.2vw;
+}

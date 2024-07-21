@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/fontawesome.css" />
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <img id="backgroundWallpaper" src="img/djpult.png" alt="Check img-folder!">
+        
+        <div id="console">
+            <p id="currentPlaying">joue :</p>
+            <div id="screen">
+                <p id="currentSong"></p>
+            </div>
+            <div id="timeLineOutside">
+                <div id="timeLineInside"></div>
+            </div>
+            <p id="timestamp"><span id="currentTime">--:--</span><span id="slash"> / </span><span id="maxTime">--:--</span></p>
+            <textarea id="linkInput" name="LOLOL" rows="4" cols="50" placeholder="Insérer le lien youtube ici..."></textarea>
+        </div>
+        
+        <button id="addToPlaylist">Ajouter à la playlist</button>
+        <button id="directPlay">Jouer</button>
+        <div id="addPlaylist"></div>
+        <div id="buttons">
+            <div id="buttonOne" class="button" ><button class="PlayButton"></button></div>
+            <div id="buttonTwo" class="button"><i class="fas fa-undo-alt"></i></div>
+            <div id="buttonThree" class="button"><i class="fas fa-redo-alt"></i></div>
+            <div id="buttonFour" class="button"><i class="fas fa-volume-down"></i></div>
+            <div id="buttonFive" class="button"><i class="fas fa-volume-up"></i></div>
+            <div id="buttonSix" class="button"></div>
+            <div id="buttonSeven" class="button"></div>
+        </div>
+
+        <div id="playlistsSpace">
+            <textarea id="CreatePlaylistName" name="LOLOL" rows="1" cols="50" placeholder="Nom de la Playlist"></textarea>
+            <i id="PlayListAddButton" class="fas fa-plus"></i>
+            <div class="playlist" id="songhistorySpace" data-id="1">
+                <button id="playlistsonghistory" class="playlistButton">historique des sons</button>
+                <div id="songSpacesonghistory" class="songs" data-id="songhistory" data-displayed="0">
+                </div>
+            </div>
+            <div id="playlists"></div>
+        </div>
+    </body>
+</html>

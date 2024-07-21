@@ -1,0 +1,106 @@
+
+
+body {
+    user-select: none;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; 
+    position: fixed;
+    /* background-color: black; */
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    /* font-family:var(--font-family);                                */
+}
+
+.form-inv {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity:1;
+    display: none;
+    font-family:var(--font-family); 
+    z-index: 0;
+    background: var(--inventory-color)
+    /* background-color: rgba(44, 44, 44, 0.486) */
+}
+
+
+
+.inventory {
+    position: absolute;
+    left: 50.5%;
+    top: 44%;
+    transform: translate(-50%, -50%);
+    width: 90.75vw;
+    height: 33.854vw;
+    color: rgba(255, 255, 255, 0.158);
+    font-family:var(--font-family);   
+    border-radius: 20.042vw
+    
+}
+
+#left-inventory {
+    width: 30.25vw;
+    height: 36.00vw;
+    float: left;
+    overflow-y: auto
+}
+
+
+#right-inventory {
+    width: 30.25vw;
+    height: 36.00vw;
+    float: right;
+    overflow-y: auto
+
+}
+
+
+#right-inventory::-webkit-scrollbar-track,
+#left-inventory::-webkit-scrollbar-track {
+    background-color: none;
+    border: none
+}
+#right-inventory::-webkit-scrollbar-track,
+#left-inventory::-webkit-scrollbar-track {
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+#right-inventory::-webkit-scrollbar-thumb,
+#left-inventory::-webkit-scrollbar-thumb {
+	background: var(--border-color);
+    border-radius: 10px;
+}
+#right-inventory::-webkit-scrollbar,
+#left-inventory::-webkit-scrollbar {
+    width: 4px;
+}
+
+
+
+@media (max-width: 78.125vw) {
+    .inventory {
+        width: 72.917vw;
+    }
+    #left-inventory {
+        width: 31.25vw;
+        height: 26.042vw;
+        bottom: 5.469vw;
+    }
+    #right-inventory {
+        width: 31.25vw;
+        height: 26.042vw;
+        bottom: 5.469vw;
+    }
+}
+
+
+

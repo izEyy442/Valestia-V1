@@ -1,0 +1,36 @@
+
+.info_ui {
+    position: absolute;
+    left: 3%;
+    bottom: 5.53%;
+    font-size: 2.15vw;
+    color: rgb(228, 221, 221);
+    text-shadow: 0.05vw 0.05vw 0.025vw black;
+    -webkit-transition: ease();
+    transition: ease();
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    padding: 0.25vw 0.65vw;
+    border-radius: 0.25vw;
+    z-index: 99999;
+}
+
+/* .settingsopener:hover {
+  background: rgba(20, 20, 20, 0.35);
+  -webkit-animation: pulse 2s ease infinite;
+          animation: pulse 2s ease infinite;
+} */
+  
+.info_ui i {
+  margin-right: 0.5vw;
+}
+  
+
+.ui-tooltip.custom-tooltip {
+    background-color: rgba(59, 59, 59, 0.774);
+    color: #ffffff; /* Couleur du texte */
+    font-size: 14px; /* Taille de police */
+    padding: 10px; /* Espacement interne */
+    max-width: 500px; /* Largeur maximale de l'info-bulle */
+    border-radius: 5px; /* Rayon de la bordure pour créer des coins arrondis */
+}

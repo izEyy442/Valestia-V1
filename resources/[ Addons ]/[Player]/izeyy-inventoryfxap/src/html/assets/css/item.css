@@ -1,0 +1,88 @@
+.item, 
+.item-other {
+    width: 4.531vw;
+    height: 3.125vw;
+    margin-top: 0.925vw;
+    margin-left: 0.465vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center
+}
+
+.item-info {
+    display: flex;
+    float: left;
+    width: 5.4vw;
+    height: 5.4vw;
+    bottom: -5%;
+    color: #fff;
+    border: 0.052vw solid var(--light-border-color);
+    background-color: var(--background-color);
+    margin: 0.15vw;
+    left: 0px;
+    border-radius: 10px;
+    /* border-radius: 3%; */
+    position: relative;
+}
+
+.item-info:hover {
+	/* border: 0.052vw solid rgba(255, 0, 107, 0.35); */
+	background: var(--hover-color); 
+}
+.item-info:active {
+	/* border: 0.052vw solid rgba(255, 0, 107, 0.2); */
+	background: var(--active-color);
+}
+
+
+.item-name {
+    position: absolute;
+    bottom: 0;
+    /* background-color: rgba(33, 37, 35, 0.515); */
+    border-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.55vw;
+    /* font-weight: bold; */
+    text-align: center;
+    padding-top: 0.0vw;
+    padding-bottom: 0.417vw;
+    margin-left: -0.38vw;
+    width: 5.4vw;
+    min-height: 0.15vw;
+    z-index: 500
+}
+
+.item-name-bg {
+    width: 100%;
+    width: 6.094vw;
+    height: 1.042vw;
+    position: absolute;
+    bottom: 0
+}
+
+.item-count {
+    position: absolute;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    width: 2.042vw;
+    margin-top: -0.521vw;
+    margin-left: 0vw;
+    height: 1.042vw;
+    color: rgb(255, 255, 255);
+    z-index: 500;
+    font-size: 0.55vw;
+}
+
+.ui-draggable-dragging .item-count,
+.ui-draggable-dragging .item-name  {
+    display: none
+}
+
+.hoverControl {
+    /* background-color: rgba(36, 36, 36, 0.479); */
+}
+
+.ammoIcon {
+    width: 0.517vw;
+    height: 0.517vw
+}

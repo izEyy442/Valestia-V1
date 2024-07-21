@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory by iZeyy</title>
+    <script src="../../config/config.js"></script>
+    <script src="../../locales/locales.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/ui.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/right.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/left.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/button.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/category.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slot.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/item.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/middle.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/card.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/info.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/hud.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/notif.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../config/config.css">
+
+
+</head>
+
+<body>
+
+
+    <!-- ProgressBar --> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/0.6.1/progressbar.min.js" integrity="sha512-7IoDEsIJGxz/gNyJY/0LRtS45wDSvPFXGPuC7Fo4YueWMNOmWKMAllEqo2Im3pgOjeEwsOoieyliRgdkZnY0ow==" crossorigin="anonymous"></script>
+ 
+    <!-- jQuery UI --> 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display?styles=98770" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+
+    <script src="assets/js/inventory.js"></script>
+
+    <script>
+        $(function() {
+            $("#dialog").dialog({
+                autoOpen: false,
+                clickOutside: true
+            });
+        });
+    </script>
+
+    <div class="form-inv">
+        <div class="inventory">
+
+            <div class="categorys">
+                <div class="first-category-all" id="button.raccourci-1">
+                    <img src="assets/images/FIRST-CATEGORY-ICON.png" alt="">
+                </div>
+                <div class="sec-category-food" id="button.raccourci-2">
+                    <img src="assets/images/SEC-CATEGORY-ICON.png" alt="">
+                </div>
+                <div class="three-category-weapon" id="button.raccourci-3">
+                    <img src="assets/images/THREE-CATEGORY-ICON.png" alt="">
+                </div>
+                <div class="four-category-clothes" id="button.raccourci-4">
+                    <img src="assets/images/FOUR-CATEGORY-ICON.png" alt="">
+                </div>
+                
+            </div>
+            <div class="loading-bar-kg-left-part">
+                <div class="text-loading-bar-left-part">
+                    <span id="translateInventory">Sac a Dos : </span> 
+                    <span id="weight"></span> 
+                </div>
+                <!-- <div class="novalue-left-part">
+                    <div class="value-left-part" id="weightBar"></div>
+                </div> -->
+            </div>
+            
+            <div id="left-inventory">
+            </div>
+
+
+            <div id="right-part">
+                <div class="loading-bar-kg-right-part">
+                    <div class="text-loading-bar-right-part">
+                        <span id="plate"></span>
+                        <span id="weightCoffre">UI By iZeyy</span>
+                    </div>
+                    <!-- <div class="novalue-right-part">
+                        <div class="value-right-part" id="weightBarCoffre"></div>
+                    </div> -->
+                </div>
+            </div>
+
+            <div id="right-inventory">
+            </div>
+
+        </div>
+
+
+        <div class="center-part">
+            <div class="top-buttons-center-part">
+                <div class="top-button-utilize" id="useItem">
+                    <span id="translateUse"> </span>
+                    <div class="raccours1">
+                        <img src="assets/images/TOP-BUTTONS-1-ICON.png" alt="">
+                    </div>
+                </div>
+                <div class="top-button-give" id="giveItem">
+                    <span id="translateGive"> </span>
+                    <div class="raccours4">
+                        <img src="assets/images/TOP-BUTTONS-2-ICON.png" alt="">
+                    </div>
+                </div>
+                <!-- <div class="top-button-rename" id="renameItem">
+                    <span id="translateRename">RENAME</span>
+                    <div class="raccours3">
+                        <img src="assets/images/TOP-BUTTONS-3-ICON.png" alt="">
+                    </div>
+                </div> -->
+                <div class="top-button-delete" id="deleteItem">
+                    <span id="translateDelete"> </span>
+                    <div class="raccours2">
+                        <img src="assets/images/TOP-BUTTONS-4-ICON.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="middle-clothes-part">
+                <div class="middle-clothes-part-left">
+                    <div id="helmet" class="item-box">
+                        <img src="assets/images/CLOTH-1-ICON.png" alt="">
+                    </div>
+                    <div id="chain" class="item-box">
+                        <img src="assets/images/CLOTH-2-ICON.png" alt="">
+                    </div>
+                    <div id="torso" class="item-box">
+                        <img src="assets/images/CLOTH-3-ICON.png" alt="">
+                    </div>
+                    <div id="pants" class="item-box">
+                        <img src="assets/images/CLOTH-4-ICON.png" alt="">
+                    </div>
+                    <div id="shoes" class="item-box">
+                        <img src="assets/images/CLOTH-5-ICON.png" alt="">
+                    </div>
+                    <div id="bags" class="item-box">
+                        <img src="assets/images/CLOTH-6-ICON.png" alt="">
+                    </div>
+                </div>
+                <div class="middle-logo">
+                    <img src="assets/images/LOGO.png" alt="">
+                    <span>DISCORD.GG/VALESTIARP</span> 
+                </div>
+                <div class="middle-clothes-part-right">
+                    <div id="mask" class="item-box2">
+                    <img src="assets/images/CLOTH-7-ICON.png" alt="">
+                    </div>
+                    <div id="glasses" class="item-box2">
+                    <img src="assets/images/CLOTH-8-ICON.png" alt="">
+                    </div>
+                    <div id="ears" class="item-box2">
+                    <img src="assets/images/CLOTH-9-ICON.png" alt="">
+                    </div>
+                    <div id="bracelets" class="item-box2">
+                    <img src="assets/images/CLOTH-10-ICON.png" alt="">
+                    </div>
+                    <div id="watches" class="item-box2">
+                    <img src="assets/images/CLOTH-11-ICON.png" alt="">
+                    </div>
+                    <div id="bproof" class="item-box2">
+                    <img src="assets/images/CLOTH-12-ICON.png" alt="">
+                    </div>
+            </div>
+            </div>
+            <div class="middle-bottom-slots">
+                <div class="middle-slot-box">
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container" id="hudSetting">
+            <div class="IconContainer">
+                <div id="HealthIndicator" class="BaseCircle">
+                <i id="hp-icon" class="fas fa-heart"></i>
+                </div>
+    
+                <div id="ArmorIndicator" class="BaseCircle">
+                <i class="fas fa-shield-alt"></i>
+                </div>
+    
+                <div id="HungerIndicator" class="BaseCircle">
+                <i id="HungerIcon" class="fas fa-hamburger"></i>
+                </div>
+    
+                <div id="ThirstIndicator" class="BaseCircle">
+                <i id="ThirstIcon" class="fas fa-tint"></i>
+                </div>
+    
+            </div>  
+        </div>  
+        <div class="info_ui"><i
+            style="color: var(--border-color);" class="far fa-question-circle question"></i>
+        </div> -->
+    </div>
+    <div class="notification"></div>
+    <div class="iconNotif"></div>
+
+    <div id="keyboard-input">
+        <div class="title"></div>
+        <textarea name="text" id="textArea" cols="60" rows="10"></textarea>
+        <div class="btn-amount"id="button.valider">
+            <span id="translateAccept">Accepter</span>
+        </div>
+    </div>
+    <div class="menu">
+        <button id="button.chooseButton">
+            <span id="translateWatch">Regarder</span>
+        </button>
+        <button id="button.showButton">
+            <span id="translateShow">Donner</span>
+        </button>
+    </div>
+
+    <div id="id-card" class="idcard-form">
+        <span id="button.closeIdCard" class="close-button">×</span>
+
+        <div id="id-card-setting" class="idcard-container">
+            <img class="icon-bg" id="icon" alt="">
+            <div class="idcard-header">
+                <span id="type">Carte d'identité</span>
+            </div>
+            <div class="idcard-content">
+                <div class="idcard-left-part">
+                    <div id= "picture-box-setting" class="picture-box">
+                        <img id="picture" alt="">
+                    </div>
+                    <span id="translateSignature">SIGNATURE</span>
+                </div>
+                <div class="main-content-container">
+                    <div class="idcard-info">
+                        <div class="idcard-info-left-part">
+                            <div class="name">
+                                <span id="translateName">Nom</span>
+                                <span id="name" style="font-family: regular; font-size: 0.455vw;">IZEYY</span>
+                            </div>
+                            <div class="dob">
+                                <span id="translateDob">Date de Naissance</span>
+                                <span id="dob" style="font-family: regular; font-size: 0.455vw;">IZEYY</span>
+                            </div>
+                            
+                        </div>
+                        <div class="idcard-info-right-part">
+                            <div class="sex">
+                                <span id="translateSex">Genre</span>
+                                <span id="sex" style="font-family: regular; font-size: 0.455vw;">M</span>
+                            </div>
+                            <div class="nationality">
+                                <span id="translateHeight">Taille</span>
+                                <span id="height" style="font-family: regular; font-size: 0.455vw;">190 cm</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="signature">
+                        <span id="signature">IZEYY</span>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("#translateInventory").html(_U('inventory'));
+
+        $("#translateUse").html(_U('use'));
+        $("#translateGive").html(_U('give'));
+        $("#translateRename").html(_U('rename'));
+        $("#translateDelete").html(_U('delete'));
+
+        $("#translateAccept").html(_U('accept'));
+
+        $("#translateWatch").html(_U('watch'));
+        $("#translateShow").html(_U('show'));
+
+        $("#translateName").html(_U('idcard_name'));
+        $("#translateDob").html(_U('idcard_dob'));
+        $("#translateSex").html(_U('idcard_sex'));
+        $("#translateHeight").html(_U('idcard_height'));
+        $("#translateSignature").html(_U('idcard_signature'));
+        
+    });
+</script>
+
+</html>

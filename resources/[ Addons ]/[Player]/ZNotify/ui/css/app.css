@@ -1,0 +1,252 @@
+/*
+Bulletin
+Copyright (c) 2021 Karl Saunders (Mobius1)
+Licensed under GPLv3
+
+Version: 1.1.9
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,500&display=swap');
+
+/* @font-face {
+    font-family: "ChaletComprime";
+    src: url("../fonts/ChaletComprimeCologneSixty.ttf");
+} */
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bulletin_container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bulletin-notification-container {
+    position: absolute;
+    width: 13.5vw;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+    z-index: 10000;
+}
+
+.bulletin-notification-container.notification-container-bottom {
+    bottom: 20px;
+    left: calc((100vw - 13.5vw) / 2);
+}
+
+.bulletin-notification-container.notification-container-bottomleft {
+    left: 20px;
+    bottom: 25vh;
+}
+
+.bulletin-notification-container.notification-container-bottomright {
+    right: 20px;
+    bottom: 20px;
+}
+
+.bulletin-notification-container.notification-container-bottomright .bulletin-notification {
+    right: 0;
+}
+
+.bulletin-notification-container.notification-container-top {
+    top: 20px;
+    left: calc((100vw - 13.5vw) / 2);
+}
+
+.bulletin-notification-container.notification-container-topleft {
+    left: 20px;
+    top: 20px;
+}
+
+.bulletin-notification-container.notification-container-topright {
+    right: 20px;
+    top: 20px;
+}
+
+.bulletin-notification-container.notification-container-topright .bulletin-notification {
+    right: 0;
+}
+
+.bulletin-notification {
+    position: absolute;
+    width: 13.5vw;
+    padding: 10px;
+    opacity: 0;
+    font-size: 13px;
+    border-radius: 5px;
+    color: #fff;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.12) 100%);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.bulletin-notification.stacked::after {
+    position: absolute;
+    content: attr(data-count);
+    right: 0px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    background-color: #a17f7f00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #ffffffad;
+}
+
+.bulletin-notification.pinned::after {
+    position: absolute;
+    content: "";
+    right: 4px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    font-size: 16px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.bulletin-notification.success {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.753);
+}
+
+.bulletin-notification.success .notification-title {
+    color: #fff;
+}
+
+.bulletin-notification.info {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.bulletin-notification.info .notification-title {
+    color: #fff
+}
+
+.bulletin-notification.warning {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.bulletin-notification.warning .notification-title {
+    color: #fff
+}
+
+.bulletin-notification.error {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.bulletin-notification.error .notification-title {
+    color: #fff
+}
+
+.bulletin-notification.default .notification-title {
+    color: #fff
+}
+
+.bulletin-notification.with-progress {
+    padding-bottom: 12px;
+}
+
+.bulletin-notification .notification-header {
+    height: 72px;
+}
+
+.bulletin-notification .notification-icon {
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.bulletin-notification .notification-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+
+.bulletin-notification .notification-progress .notification-bar {
+    height: 2px;
+    background-color: #1863efdc;
+    width: 100%;
+    transform: scale(0, 1);
+    transform-origin: 0 0 0;
+}
+
+.bulletin-notification .w,
+.bulletin-notification .s {
+    color: #fff;
+}
+
+.bulletin-notification .u {
+    color: #ffffff;
+}
+
+.bulletin-notification .r {
+    color: #ffffff;
+}
+
+.bulletin-notification .g {
+    color: #ffffff;
+}
+
+.bulletin-notification .b {
+    color: #ffffff;
+}
+
+.bulletin-notification .y {
+    color: #ffffff
+}
+
+.bulletin-notification .o {
+    color: #ffffff;
+}
+
+.bulletin-notification .p {
+    color: #ffffff;
+}
+
+.bulletin-notification .h {
+    font-weight: bold;
+}
+
+.bulletin-notification.active.progress .notification-bar {
+    animation-name: progress;
+    animation-timing-function: linear;
+}
+
+.bulletin-notification.hiding .notification-bar {
+    width: 0%;
+}
+
+@keyframes progress {
+    from {
+        transform: scale(0, 1);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fuksus Loading</title>
+    <link rel="stylesheet" href="style/main.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="script/main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body x-data="Main()" x-init="listen">
+
+    <!-- Background video Start-->
+    <div id="video-container">
+        <iframe src="https://www.youtube.com/embed/MsDD0x0RMhI?vq=hd1080&autoplay=1&loop=1&mute=1&modestbranding=1&rel=0&iv_load_policy=3&color=white&controls=0&disablekb=1&playlist=MsDD0x0RMhI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <img id="cursor" class="w-[28px] absolute z-[1000] pointer-events-none scale-110" src="./img/cursor.png">
+
+    <!-- Background video End -->
+    <div class="container">
+        <!-- Navigation Start -->
+        <nav class="flex items-center mb-20">
+            <img src="img/logo.png" alt="" class="mr-10">
+            <template x-for="button in buttons">
+                <div class="button px-5 py-2 rounded-md ml-3 font-medium text-sm" :class="button.selected ? 'selected':''"
+                    x-text="button.label" @click="button.selected = selectBtn(button.selected)">Home</div>
+            </template>
+        </nav>
+        <!-- Navigation End -->
+
+        <!-- Home Start -->
+        <div class="home relative" x-show="buttons[0].selected" x-transition:enter.duration.1000ms>
+            <div class=" text-[#0073f3] text-4xl max-w-3xl font-semibold mb-5 min-[1024px]:w-[700px] min-[2550px]:w-fit leading-normal">
+                Bienvenue sur ValestiaRP 💙
+            </div>
+            <div class="text-white/60 max-w-4xl text-2xl font-medium min-[1024px]:w-[600px] min-[2550px]:w-fit mb-6">
+                Valestia ne vous apportera que de bonnes émotions</div>
+            <div
+                class="text-[#ffffff] max-w-4xl text-lxl font-normal min-[1024px]:w-[600px] min-[2550px]:w-fit sub-text">
+                Nous sommes ravis de vous accueillir sur Valestia RP, le serveur à ouvert ses portes le 13 Avril 2024 et nous vous souhaitons la bienvenue. Le serveur dispose d'une équipe d'assistance compétente et dynamique pour répondre à vos besoins sur discord et sur le serveur.
+                Bon jeu à vous ! 💫</div>
+
+            <!-- Discord Widget Start -->
+            <div class="dcdiv w-fit p-5 rounded-xl mt-20 flex gap-5 items-center ">
+                <div class="w-[80px] h-[80px] rounded-xl flex justify-center">
+                    <img class="" src="img/logoserver.png" alt="Discord Logo">
+                </div>
+                <div>
+                    <div class="text-xl text-white font-medium">ValestiaRP | FiveM</div>
+                    <div class="text-[#0073f3] sub-text" x-text="memberCount + ' online members'"></div>
+                </div>
+                <a class="cursor-none sub-text bg-[#0073f3] hover:bg-[#0073f3] text-sm font-medium inline-flex gap-2 px-4 py-2 rounded-md text-white uppercase ml-10 transition duration-300 ease-in-out"
+                    :href="https://discord.gg/valestiarp" target="_blank"
+                    @click="window.invokeNative('openUrl', DiscordInviteLink);">Rejoindre <img src="img/arrow.svg" alt=""
+                        x-transition></a>
+            </div>
+            <div class="flex flex-row gap-2 absolute min-[1024px]:-bottom-72 min-[2550px]:-bottom-[620px]">            
+        </a>
+
+        </div>
+        <!-- Social Media End -->
+
+        </div>
+        <!-- Home End -->
+
+        <!-- News Start -->
+        <div x-show="buttons[1].selected" x-transition:enter.duration.1000ms>
+            <!-- <div class="text-white text-4xl font-medium mb-5 ">Informations</div>
+            <div class="sub-text text-white/60 max-w-4xl text-lg  font-normal mb-8 min-[1024px]:w-[700px] min-[2550px]:w-fit">
+                Vous trouverez ici les dernières mises à jour sur le projet et bien plus encore. Restez à l'écoute des dernières nouvelles et mises à jour.</div>
+
+            <div class="w-fit h-[600px] overflow-y-auto rounded-xl flex flex-col gap-5 sub-text">
+                <template x-for="news in feed">
+                    <div class="dcdiv p-5 w-fit h-fit rounded-xl hover:bg-black/30 transition duration-300 ease-in-out">
+                        <span class="text-white font-medium text-xl" x-text="news.label"></span>
+                        <div class="text-[#0073f3] w-[600px] mb-3 mt-2" x-text="news.desc"></div>
+                        <img class="w-full rounded-xl" :src="news.img" alt="">
+                        <div class="inline-flex gap-3">
+                            <div class="text-sm text-white bg-black/30 rounded-md mt-4 w-fit px-3 py-1.5"
+                                x-text="news.date"></div>
+                            <div class="text-sm text-white bg-[#0073f3] rounded-md mt-4 w-fit px-3 py-1.5"
+                                x-text="news.author"></div>
+                        </div>
+                    </div>
+                </template>
+            </div> -->
+            <div class="text-white text-4xl font-medium mb-5">Créateur Valestia RP</div>
+            <div
+                class="sub-text text-white/60 max-w-4xl text-lg  font-normal mb-8 min-[1024px]:w-[700px] min-[2550px]:w-fit">
+                Voici l'équipe unique des Créateur de ValestiaRP</div>
+            <div class="inline-flex flex-wrap w-[600px] gap-3 overflow-y-auto h-[630px]">
+                <template x-for="member in team">
+                    <div class="dcdiv member h-fit w-fit px-8 py-5 rounded-xl hover:bg-[#0073f3] transition duration-300 ease-in-out"
+                        @click="copyToClipboard(member.discord)">
+                        <img draggable="false" class="w-48 mb-5" :src="member.img" alt="">
+                        <div class="discord text-xl text-white pl-16" x-text="member.discord"></div>
+                        <div class="role text-md sub-text text-white/60 pl-14" x-text="member.role"></div>
+                    </div>
+                </template>
+            </div>
+        </div>
+        <!-- News End -->
+
+        <!-- Team Start -->
+        <!-- <div class="team" x-show="buttons[2].selected" x-transition:enter.duration.1000ms>
+            <div class="text-white text-4xl font-medium mb-5">Équipe Valestia RP</div>
+            <div
+                class="sub-text text-white/60 max-w-4xl text-lg  font-normal mb-8 min-[1024px]:w-[700px] min-[2550px]:w-fit">
+                Voici l'équipe de fondateur de ValestiaRP.</div>
+            <div class="inline-flex flex-wrap w-[600px] gap-3 overflow-y-auto h-[630px]">
+                <template x-for="member in team">
+                    <div class="dcdiv member h-fit w-fit px-8 py-5 rounded-xl hover:bg-[#0073f3] transition duration-300 ease-in-out"
+                        @click="copyToClipboard(member.discord)">
+                        <img draggable="false" class="w-48 mb-5" :src="member.img" alt="">
+                        <div class="discord text-xl text-white" x-text="member.discord"></div>
+                        <div class="role text-md sub-text text-white/60" x-text="member.role"></div>
+                    </div>
+                </template>
+            </div>
+        </div> -->
+        <!-- Team End -->
+
+        <!-- News Start -->
+        <div x-show="buttons[3].selected" x-transition:enter.duration.1000ms>
+            <div class="text-white text-4xl font-medium mb-5 ">Reglements</div>
+            <div
+                class="sub-text text-white/60 max-w-4xl text-lg  font-normal mb-8 min-[1024px]:w-[700px] min-[2550px]:w-fit">
+                Veuillez noter que le respect de règles et directives spécifiques est obligatoire lors de votre pressence sur le serveur. La méconnaissance de ces règles ne vous exonèrera pas de votre responsabilité.
+            </div>
+
+            <div class="w-fit h-[600px] overflow-y-auto rounded-xl flex flex-col gap-2 sub-text">
+                <template x-for="rules in list">
+                    <div class="dcdiv p-5 w-fit h-fit flex flex-row gap-2 rounded-xl hover:bg-black/30 transition duration-300 ease-in-out">
+                        <span class="text-white" x-text="rules.number"></span>
+                        <div class="text-[#0073f3] w-[600px]" x-text="rules.desc"></div>
+                    </div>
+                </template>
+            </div>
+        </div>
+        <!-- News End -->
+    </div>
+    </div>
+    <div class="bg1" style="background-image: url(img/rules-img.png)" x-show="buttons[0].selected"
+        x-transition:enter.duration.800ms x-transition:leave.duration.300ms></div>
+    <div class="bg1" style="background-image: url(img/news-img.png)" x-show="buttons[1].selected"
+        x-transition:enter.duration.800ms x-transition:leave.duration.300ms></div>
+    <div class="bg1" style="background-image: url(img/team-img.png)" x-show="buttons[2].selected"
+        x-transition:enter.duration.800ms x-transition:leave.duration.300ms></div>
+    <div class="bg1" style="background-image: url(img/rules-img.png)" x-show="buttons[3].selected"
+        x-transition:enter.duration.800ms x-transition:leave.duration.300ms></div>
+
+    <div class="dcdiv music-container" :class="musicOpen = !musicOpen ? 'active':''">
+        <img draggable="false" src="img/music.png" alt="">
+        <div class="" @click="musicOpen = !musicOpen">
+            <div class="bar1"></div>
+            <div class="bar2" :class="musicOpen ? 'active':''"></div>
+        </div>
+        <div class="visualizer">
+            <div class="bar" :class="isMusicPlaying ? 'active':''"></div>
+            <div class="bar" :class="isMusicPlaying ? 'active2':''"></div>
+            <div class="bar" :class="isMusicPlaying ? 'active3':''"></div>
+        </div>
+        <div class="info" x-show="musicOpen" x-transition:enter.duration.1600ms x-transition:leave.duration.50ms>
+            <div>
+                <div class="label font-normal text-xl" x-text="musicList[currentSong].label"></div>
+                <div class="sub-text author truncate w-44" x-text="musicList[currentSong].author"></div>
+                <img draggable="false" src="img/back.svg" alt="" class="back" @click="prev()">
+                <img draggable="false" src="img/pause.svg" alt="" class="pause" x-show="isMusicPlaying"
+                    @click="pause()">
+                <img draggable="false" src="img/play.svg" alt="" class="play" x-show="!isMusicPlaying" @click="play()">
+                <img draggable="false" src="img/forward.svg" alt="" class="forward" @click="next()">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

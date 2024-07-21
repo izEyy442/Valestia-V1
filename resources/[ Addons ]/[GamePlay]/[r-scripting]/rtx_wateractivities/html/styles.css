@@ -1,0 +1,497 @@
+:root {
+  --color: #ff66ff;
+}
+
+@import url('https://kit-pro.fontawesome.com/releases/v5.14.0/css/pro.min.css');
+
+@font-face {
+  font-family: BebasNeueBold;
+  src: url(BebasNeueBold.ttf);
+}
+
+@font-face {
+  font-family: Nakara;
+  src: url(NakaraRegular.ttf);
+}
+
+*{
+	user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+html {
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	display: none;
+	color: #a8a8aa;
+}
+
+.infonotify-container {
+	width: 17%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);	
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	border-radius: 10px;
+	display: none;
+}
+
+.infonotifytext {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 2px;
+	padding-right: 2px;	
+	vertical-align: middle;
+	text-align: center;
+	font-size: 25px;
+	font-family: BebasNeueBold;
+	color: #ffffff;
+}
+
+#infobindcolor {
+	color: var(--color);
+}
+
+.attraction-container {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.0);
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	display: none;
+}
+
+.attractionleavetext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 98%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 22px;
+	color: #ffffff;
+	text-align:center;
+	font-family: BebasNeueBold;
+}
+
+#attractionleavetextkey {
+	font-size: 22px;
+	color: var(--color);
+	text-align:center;
+	font-family: BebasNeueBold;
+}
+
+.scooterbuy-container {
+	width: 30%;
+	height: 50%;
+	background-color: rgba(1, 159, 232, 1.0);
+	border-bottom: 5px solid #fecd11;
+	border-radius: 10px;	
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	display: none;
+}
+
+.closescooterbuy {
+	position: absolute;
+	margin: 0;
+	top: 5%;
+	left: 95%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.logoscooter img {
+	position: absolute;
+	max-width:100%;
+	max-height:100%;
+	top: 20%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.scootertimelengthtextmain {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 45%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 22px;
+	color: #fecd11;
+	text-align:center;
+	font-family: Nakara;
+}
+
+.scootertimelengthtext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 60%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 22px;
+	color: #fecd11;
+	text-align:center;
+	font-family: Nakara;
+}
+
+#scootertimeminutedata {
+	font-size: 22px;
+	color: #ffffff;
+	text-align:center;
+	font-family: Nakara;
+}
+
+.scooterpricetext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 75%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 22px;
+	color: #fecd11;
+	text-align:center;
+	font-family: Nakara;
+}
+
+#scooterpricedata {
+	font-size: 22px;
+	color: #ffffff;
+	text-align:center;
+	font-family: Nakara;
+}
+
+
+.scootertimeslider {
+	-webkit-appearance: none;
+	appearance: none;	
+	position: absolute;
+	margin: 0;
+	background-color: rgba(255, 255, 255, 0.0);
+	color: #ffffff;
+	font-size: 35px;
+	text-decoration: none;
+	text-align: center;
+	top: 52%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 70%;
+	height: 40%;
+	border-radius: 5px;
+	font-family: Nakara;
+	outline: none;
+}
+
+.scootertimesliderline {
+	-webkit-appearance: none;
+	appearance: none;	
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 1.0);
+	color: #ffffff;
+	font-size: 35px;
+	text-decoration: none;
+	text-align: center;
+	top: 52%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 70%;
+	height: 1%;
+	border-radius: 5px;
+	font-family: Nakara;
+	outline: none;
+}
+
+.scootertimeslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.scootertimeslider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+.scooterbuybutton {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 1);
+	border-bottom: 5px solid #fecd11;
+	color: #ffffff;
+	font-size: 25px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-decoration: none;
+	text-align: center;
+	top: 90%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 99999999;
+	width: 60%;
+	border-radius: 10px;
+	font-family: Nakara;
+}
+
+.scooterbuybutton:hover {
+	background: #fecd11;
+	text-decoration: none;	
+}
+
+.scootercarmain-container {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.0);
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	display: none;
+}
+
+.scootercartimetext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 95%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 22px;
+	color: #ffffff;
+	text-align:center;
+	font-family: BebasNeueBold;
+}
+
+#scootercartimetextdata {
+	font-size: 22px;
+	color: var(--color);
+	text-align:center;
+	font-family: BebasNeueBold;
+}
+
+.scootercarleavetext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 98%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 22px;
+	color: #ffffff;
+	text-align:center;
+	font-family: BebasNeueBold;
+}
+
+#scootercarleavetextkey {
+	font-size: 22px;
+	color: var(--color);
+	text-align:center;
+	font-family: BebasNeueBold;
+}
+
+.sandprogressbar-container {
+	width: 40%;
+	height: 15%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);	
+	margin: 0;
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	border-radius: 10px;
+	display: none;
+}
+
+.sandprogressbartext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 30%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.sandprogressbarmaincontainer {
+	width: 90%;
+	height: 25%;
+	background-color: rgba(255, 255, 255, 0.70);
+	margin: 0;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	border-radius: 5px;
+}
+
+.sandprogressbarmaincontainerdata {
+	width: 0%;
+	height: 100%;
+	background-color: var(--color);
+	z-index: 9999999;
+}
+
+.attractionend-container {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.0);
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	display: none;
+}
+
+.attractionendtext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 98%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 22px;
+	color: #ffffff;
+	text-align:center;
+	font-family: BebasNeueBold;
+}
+
+#attractionendtextkey {
+	font-size: 22px;
+	color: var(--color);
+	text-align:center;
+	font-family: BebasNeueBold;
+}
+
+.attractionreact-container {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.0);
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	display: none;
+}
+
+.attractionreacttext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 80%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+	font-family: BebasNeueBold;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-left: 3px solid var(--color);		
+	border-right: 3px solid var(--color);	
+	border-radius: 10px;
+}
+
+#attractionreacttextkey {
+	font-size: 40px;
+	color: var(--color);
+	text-align:center;
+	font-family: BebasNeueBold;
+}
+
+*{
+	font-family: BebasNeueBold;
+}

@@ -1,0 +1,527 @@
+
+
+
+-- local weapons = {
+-- 	[`WEAPON_UNARMED`] = {parameters = {anim = false, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+
+-- 	[`WEAPON_KNIFE`] = {parameters = {anim = true, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_NIGHTSTICK`] = {parameters = {anim = false, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_HAMMER`] = {parameters = {anim = true, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_BAT`] = {parameters = {anim = true, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_CROWBAR`] = {parameters = {anim = true, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_GOLFCLUB`] = {parameters = {anim = true, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_BOTTLE`] = {parameters = {anim = true, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_DAGGER`] = {parameters = {anim = true, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_HATCHET`] = {parameters = {anim = true, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_KNUCKLE`] = {parameters = {anim = false, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_MACHETE`] = {parameters = {anim = true, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_FLASHLIGHT`] = {parameters = {anim = false, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_SWITCHBLADE`] = {parameters = {anim = false, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_BATTLEAXE`] = {parameters = {anim = true, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_POOLCUE`] = {parameters = {anim = true, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_WRENCH`] = {parameters = {anim = true, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+
+-- 	[`WEAPON_PISTOL`] = {parameters = {anim = true, scoped = false, shakeCam = 0.025, infiniteAmmo = false}},
+-- 	[`WEAPON_PISTOL_MK2`] = {parameters = {anim = true, scoped = false, shakeCam = 0.03, infiniteAmmo = false}},
+-- 	[`WEAPON_COMBATPISTOL`] = {parameters = {anim = false, scoped = false, shakeCam = 0.03, infiniteAmmo = false}},
+-- 	[`WEAPON_PISTOL50`] = {parameters = {anim = true, scoped = false, shakeCam = 0.05, infiniteAmmo = false}},
+-- 	[`WEAPON_SNSPISTOL`] = {parameters = {anim = true, scoped = false, shakeCam = 0.02, infiniteAmmo = false}},
+-- 	[`WEAPON_SNSPISTOL_MK2`] = {parameters = {anim = true, scoped = false, shakeCam = 0.025, infiniteAmmo = false}},
+-- 	[`WEAPON_HEAVYPISTOL`] = {parameters = {anim = true, scoped = false, shakeCam = 0.03, infiniteAmmo = false}},
+-- 	[`WEAPON_VINTAGEPISTOL`] = {parameters = {anim = true, scoped = false, shakeCam = 0.025, infiniteAmmo = false}},
+-- 	[`WEAPON_MARKSMANPISTOL`] = {parameters = {anim = true, scoped = false, shakeCam = 0.03, infiniteAmmo = false}},
+-- 	[`WEAPON_REVOLVER`] = {parameters = {anim = true, scoped = false, shakeCam = 0.045, infiniteAmmo = false}},
+-- 	[`WEAPON_NAVYREVOLVER`] = {parameters = {anim = true, scoped = false, shakeCam = 0.045, infiniteAmmo = false}},
+-- 	[`WEAPON_REVOLVER_MK2`] = {parameters = {anim = true, scoped = false, shakeCam = 0.055, infiniteAmmo = false}},
+-- 	[`WEAPON_DOUBLEACTION`] = {parameters = {anim = true, scoped = false, shakeCam = 0.025, infiniteAmmo = false}},
+-- 	[`WEAPON_APPISTOL`] = {parameters = {anim = true, scoped = false, shakeCam = 0.05, infiniteAmmo = false}},
+-- 	[`WEAPON_STUNGUN`] = {parameters = {anim = false, scoped = false, shakeCam = 0.01, infiniteAmmo = false}},
+-- 	[`WEAPON_FLAREGUN`] = {parameters = {anim = true, scoped = false, shakeCam = 0.01, infiniteAmmo = false}},
+-- 	[`WEAPON_GLOCK17`] = {parameters = {anim = true, scoped = false, shakeCam = 0.01, infiniteAmmo = false}},
+-- 	[`WEAPON_SPECIALHAMMER`] = {parameters = {anim = true, scoped = false, shakeCam = 0.01, infiniteAmmo = false}},
+-- 	[`WEAPON_PENIS`] = {parameters = {anim = true, scoped = false, shakeCam = 0.01, infiniteAmmo = false}},
+-- 	[`WEAPON_TEC9MF`] = {parameters = {anim = true, scoped = false, shakeCam = 0.01, infiniteAmmo = false}},
+-- 	[`WEAPON_UZILS`] = {parameters = {anim = true, scoped = false, shakeCam = 0.01, infiniteAmmo = false}},
+-- 	[`WEAPON_SIG550`] = {parameters = {anim = true, scoped = false, shakeCam = 0.01, infiniteAmmo = false}},
+-- 	[`WEAPON_SCARSC`] = {parameters = {anim = true, scoped = false, shakeCam = 0.01, infiniteAmmo = false}},
+-- 	[`WEAPON_357`] = {parameters = {anim = true, scoped = false, shakeCam = 0.01, infiniteAmmo = false}},
+-- 	[`WEAPON_VSCO`] = {parameters = {anim = true, scoped = false, shakeCam = 0.01, infiniteAmmo = false}},
+
+
+-- 	[`WEAPON_MICROSMG`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.035, infiniteAmmo = false}},
+-- 	[`WEAPON_MACHINEPISTOL`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.035, infiniteAmmo = false}},
+-- 	[`WEAPON_MINISMG`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.035, infiniteAmmo = false}},
+-- 	[`WEAPON_SMG`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.045, infiniteAmmo = false}},
+-- 	[`WEAPON_SMG_MK2`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.055, infiniteAmmo = false}},
+-- 	[`WEAPON_ASSAULTSMG`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.05, infiniteAmmo = false}},
+-- 	[`WEAPON_COMBATPDW`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.045, infiniteAmmo = false}},
+-- 	[`WEAPON_MG`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_COMBATMG`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.08, infiniteAmmo = false}},
+-- 	[`WEAPON_COMBATMG_MK2`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.085, infiniteAmmo = false}},
+-- 	[`WEAPON_GUSENBERG`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.05, infiniteAmmo = false}},
+
+-- 	[`WEAPON_SFAK`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_FAMASU1`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_HFSMG`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_SAFAK`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_M133`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_JRBAK`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_NEVA`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_GALILAR`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_DRH`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_ARS`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_FN42`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_SR47`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_SLR15`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_SB4S`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_SAR`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_AK4K`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_AK47S`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_AKMKH`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_ARC15`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_BULLDOG`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_FMR`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_FN502`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_GRAU`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_H2SMG`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_HOWA_2`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_IAR`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_M16A3`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_MZA`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+
+
+
+-- 	[`WEAPON_ASSAULTRIFLE`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_ASSAULTRIFLE_MK2`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.075, infiniteAmmo = false}},
+-- 	[`WEAPON_CARBINERIFLE`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.06, infiniteAmmo = false}},
+-- 	[`WEAPON_CARBINERIFLE_MK2`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.065, infiniteAmmo = false}},
+-- 	[`WEAPON_ADVANCEDRIFLE`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.06, infiniteAmmo = false}},
+-- 	[`WEAPON_SPECIALCARBINE`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.06, infiniteAmmo = false}},
+-- 	[`WEAPON_SPECIALCARBINE_MK2`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.075, infiniteAmmo = false}},
+-- 	[`WEAPON_TACTICALRIFLE`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.075, infiniteAmmo = false}},
+-- 	[`WEAPON_BULLPUPRIFLE`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.05, infiniteAmmo = false}},
+-- 	[`WEAPON_BULLPUPRIFLE_MK2`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.065, infiniteAmmo = false}},
+-- 	[`WEAPON_COMPACTRIFLE`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.05, infiniteAmmo = false}},
+-- 	[`WEAPON_SCAR17FM`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.05, infiniteAmmo = false}},
+-- 	[`WEAPON_PREDATOR`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.05, infiniteAmmo = false}},
+-- 	[`WEAPON_HKUMP`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.05, infiniteAmmo = false}},
+-- 	[`WEAPON_BLASTAK`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.05, infiniteAmmo = false}},
+-- 	[`WEAPON_AKS74U`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.05, infiniteAmmo = false}},
+-- 	[`WEAPON_M4A1FM`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.05, infiniteAmmo = false}},
+-- 	[`WEAPON_REDL`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.05, infiniteAmmo = false}},
+-- 	[`WEAPON_BLACKSNIPER`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.05, infiniteAmmo = false}},
+
+-- 	[`WEAPON_PUMPSHOTGUN`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.07, infiniteAmmo = false}},
+-- 	[`WEAPON_PUMPSHOTGUN_MK2`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.085, infiniteAmmo = false}},
+-- 	[`WEAPON_SAWNOFFSHOTGUN`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.06, infiniteAmmo = false}},
+-- 	[`WEAPON_BULLPUPSHOTGUN`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.08, infiniteAmmo = false}},
+-- 	[`WEAPON_ASSAULTSHOTGUN`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.12, infiniteAmmo = false}},
+-- 	[`WEAPON_MUSKET`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.04, infiniteAmmo = false}},
+-- 	[`WEAPON_HEAVYSHOTGUN`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.13, infiniteAmmo = false}},
+-- 	[`WEAPON_DBSHOTGUN`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.05, infiniteAmmo = false}},
+-- 	[`WEAPON_AUTOSHOTGUN`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.08, infiniteAmmo = false}},
+
+-- 	[`WEAPON_SNIPERRIFLE`] = {parameters = {anim = true, onlyBag = true, scoped = true, shakeCam = 0.2, infiniteAmmo = false}},
+-- 	[`WEAPON_HEAVYSNIPER`] = {parameters = {anim = true, onlyBag = true, scoped = true, shakeCam = 0.3, infiniteAmmo = false}},
+-- 	[`WEAPON_HEAVYSNIPER_MK2`] = {parameters = {anim = true, onlyBag = true, scoped = true, shakeCam = 0.35, infiniteAmmo = false}},
+-- 	[`WEAPON_MARKSMANRIFLE`] = {parameters = {anim = true, onlyBag = true, scoped = true, shakeCam = 0.1, infiniteAmmo = false}},
+-- 	[`WEAPON_BLUERIOT`] = {parameters = {anim = true, onlyBag = true, scoped = true, shakeCam = 0.1, infiniteAmmo = false}},
+-- 	[`WEAPON_MARKSMANRIFLE_MK2`] = {parameters = {anim = true, onlyBag = true, scoped = true, shakeCam = 0.1, infiniteAmmo = false}},
+
+-- 	[`WEAPON_GRENADELAUNCHER`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.08, infiniteAmmo = false}},
+-- 	[`WEAPON_RPG`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.9, infiniteAmmo = false}},
+-- 	[`WEAPON_STINGER`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_MINIGUN`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.2, infiniteAmmo = false}},
+-- 	[`WEAPON_FIREWORK`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.5, infiniteAmmo = false}},
+-- 	[`WEAPON_RAILGUN`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 1.0, infiniteAmmo = false}},
+-- 	[`WEAPON_HOMINGLAUNCHER`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.9, infiniteAmmo = false}},
+-- 	[`WEAPON_COMPACTLAUNCHER`] = {parameters = {anim = true, onlyBag = true, scoped = false, shakeCam = 0.08, infiniteAmmo = false}},
+
+-- 	[`WEAPON_GRENADE`] = {parameters = {anim = false, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_STICKYBOMB`] = {parameters = {anim = false, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_PROXMINE`] = {parameters = {anim = false, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_SMOKEGRENADE`] = {parameters = {anim = false, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_BZGAS`] = {parameters = {anim = false, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_MOLOTOV`] = {parameters = {anim = false, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_FIREEXTINGUISHER`] = {parameters = {anim = true, scoped = false, shakeCam = 0, infiniteAmmo = true}},
+-- 	[`WEAPON_PETROLCAN`] = {parameters = {anim = true, scoped = false, shakeCam = 0, infiniteAmmo = true}},
+-- 	[`WEAPON_BALL`] = {parameters = {anim = false, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_SNOWBALL`] = {parameters = {anim = false, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_FLARE`] = {parameters = {anim = false, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_PIPEBOMB`] = {parameters = {anim = false, scoped = false, shakeCam = 0, infiniteAmmo = false}},
+
+
+-- 	--
+-- 	[`WEAPON_KATANA`] = {parameters = {anim = true, scoped = false, onlyBag = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_GADGETPISTOL`] = {parameters = {anim = true, scoped = false, onlyBag = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_CASABLANCA`] = {parameters = {anim = true, scoped = false, onlyBag = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_STONE_HATCHET`] = {parameters = {anim = true, scoped = false, onlyBag = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_GLOCK`] = {parameters = {anim = true, scoped = false, onlyBag = false, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_MILITARM4`] = {parameters = {anim = true, scoped = false, onlyBag = true, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_MILITARYRIFLE`] = {parameters = {anim = true, scoped = false, onlyBag = true, shakeCam = 0, infiniteAmmo = false}},
+-- 	[`WEAPON_DOUBLEBARRELFM`] = {parameters = {anim = true, scoped = false, onlyBag = true, shakeCam = 0, infiniteAmmo = false}},
+-- }
+
+-- local unarmedHash = `WEAPON_UNARMED`
+-- local currWeapon = unarmedHash
+-- local holstered = true
+-- local canFire = true
+
+-- local ListBags = {
+-- 	[1] = true,
+-- 	[2] = true,
+-- 	[3] = true,
+-- 	[4] = true,
+-- 	[5] = true,
+-- 	[6] = true,
+-- 	[7] = true,
+-- 	[8] = true,
+-- 	[9] = true,
+-- 	[10] = true,
+-- 	[11] = true,
+-- 	[12] = true,
+-- 	[13] = true,
+-- 	[14] = true,
+-- 	[15] = true,
+-- 	[16] = true,
+-- 	[17] = true,
+-- 	[18] = true,
+-- 	[19] = true,
+-- 	[20] = true,
+-- 	[21] = true,
+-- 	[22] = true,
+-- 	[23] = true,
+-- 	[24] = true,
+-- 	[25] = true,
+-- 	[26] = true,
+-- 	[27] = true,
+-- 	[28] = true,
+-- 	[29] = true,
+-- 	[30] = true,
+-- 	[31] = true,
+-- 	[32] = true,
+-- 	[33] = true,
+-- 	[34] = true,
+-- 	[35] = true,
+-- 	[36] = true,
+-- 	[37] = true,
+-- 	[38] = true,
+-- 	[39] = true,
+-- 	[40] = true,
+-- 	[41] = true,
+-- 	[42] = true,
+-- 	[43] = true,
+-- 	[44] = true,
+-- 	[45] = true,
+-- 	[46] = true,
+-- 	[47] = true,
+-- 	[48] = true,
+-- 	[49] = true,
+-- 	[50] = true,
+-- 	[51] = true,
+-- 	[52] = true,
+-- 	[53] = true,
+-- 	[54] = true,
+-- 	[55] = true,
+-- 	[56] = true,
+-- 	[57] = true,
+-- 	[58] = true,
+-- 	[59] = true,
+-- 	[60] = true,
+-- 	[61] = true,
+-- 	[62] = true,
+-- 	[63] = true,
+-- 	[64] = true,
+-- 	[65] = true,
+-- 	[66] = true,
+-- 	[67] = true,
+-- 	[68] = true,
+-- 	[69] = true,
+-- 	[70] = true,
+-- 	[71] = true,
+-- 	[72] = true,
+-- 	[73] = true,
+-- 	[74] = true,
+-- 	[75] = true,
+-- 	[76] = true,
+-- 	[77] = true,
+-- 	[78] = true,
+-- 	[79] = true,
+-- 	[80] = true,
+-- 	[81] = true,
+-- 	[82] = true,
+-- 	[83] = true,
+-- 	[84] = true,
+-- 	[85] = true,
+-- 	[86] = true,
+-- 	[87] = true,
+-- 	[88] = true,
+-- 	[89] = true,
+-- 	[90] = true,
+-- 	[91] = true,
+-- 	[92] = true,
+-- 	[93] = true,
+-- 	[94] = true,
+-- 	[95] = true,
+-- 	[96] = true,
+-- 	[116] = true,
+-- 	[162] = true,
+-- 	[158] = true,
+-- 	[156] = true,
+-- }
+
+
+-- Holster_Whitelist = {
+-- 	['WEAPON_UNARMED'] = true,
+-- 	[`WEAPON_PISTOL`] = true,
+-- 	[`WEAPON_PISTOL_MK2`] = true,
+-- 	[`WEAPON_PISTOL50`] = true,
+-- 	[`WEAPON_SNSPISTOL`] = true,
+-- 	[`WEAPON_SNSPISTOL_MK2`] = true,
+-- 	[`WEAPON_HEAVYPISTOL`] = true,
+-- 	[`WEAPON_VINTAGEPISTOL`] = true,
+-- 	[`WEAPON_MARKSMANPISTOL`] = true,
+-- 	[`WEAPON_REVOLVER`] = true,
+-- 	[`WEAPON_NAVYREVOLVER`] = true,
+-- 	[`WEAPON_REVOLVER_MK2`] = true,
+-- 	[`WEAPON_DOUBLEACTION`] = true,
+-- 	[`WEAPON_APPISTOL`] = true,
+-- 	[`WEAPON_STUNGUN`] = true,
+-- 	[`WEAPON_FLAREGUN`] = true,
+-- 	['WEAPON_COMBATPISTOL'] = true,
+
+-- }
+
+-- Holster_WhitelistJob = {
+-- 	['police'] = true,
+-- 	['sheriff'] = true,
+-- }
+
+-- function GetFrontVehicle(ped)
+-- 	local entCoords = GetEntityCoords(ped, false)
+-- 	local offset = GetOffsetFromEntityInWorldCoords(ped, 0.0, 4.0, 0.0)
+-- 	local ray = StartShapeTestRay(entCoords, offset, 2, ped, 0)
+-- 	local _, _, _, _, result = GetShapeTestResult(ray)
+
+-- 	return result
+-- end
+
+-- local active = false
+
+-- Citizen.CreateThread(function()
+-- 	while not ESX.PlayerLoaded do Wait(1) end
+-- 	while true do
+-- 		if active then
+-- 			Wait(0)
+-- 		else
+-- 			Wait(500)
+-- 		end
+-- 		active = false
+-- 		if not IsEntityDead(PlayerPedId()) and IsPedOnFoot(PlayerPedId()) then
+-- 			local newWeap = GetSelectedPedWeapon(PlayerPedId())
+
+-- 			if newWeap ~= currWeapon then
+-- 				active = true
+-- 				SetCurrentPedWeapon(PlayerPedId(), currWeapon, true)
+-- 				local continue = true
+
+-- 				if (weapons[newWeap] ~= nil) and (weapons[newWeap].parameters.onlyBag) then
+-- 					local bagIndex = GetPedDrawableVariation(PlayerPedId(), 5)
+
+-- 					if not ListBags[bagIndex] then
+-- 						local vehicle = GetFrontVehicle(PlayerPedId())
+
+-- 						if DoesEntityExist(vehicle) then
+-- 							SetVehicleDoorOpen(vehicle, 5, false, false)
+-- 							Citizen.Wait(2000)
+-- 							SetVehicleDoorShut(vehicle, 5, false)
+-- 						else
+-- 							ESX.ShowNotification("~r~Action Impossible~s~ : Vous devez disposer d'un sac ou être proche d'une voiture.")
+-- 							continue = false
+-- 						end
+-- 					end
+-- 				end
+
+-- 				if continue then
+-- 					ESX.Streaming.RequestAnimDict('reaction@intimidation@1h')
+-- 					local PlayerPed = PlayerPedId()
+-- 					if (weapons[newWeap] ~= nil) and (weapons[newWeap].parameters.anim) then
+-- 						if Holster_Whitelist[newWeap] then 
+
+-- 							if Holster_WhitelistJob[ESX.PlayerData.job.name] then
+-- 								canFire = false 
+-- 								ESX.Streaming.RequestAnimDict('rcmjosh4')
+-- 								TaskPlayAnim(PlayerPed, 'rcmjosh4', 'josh_leadout_cop2', 8.0, 2.0, -1, 48, 10, 0, 0, 0 )
+-- 								RemoveAnimDict('rcmjosh4')
+-- 								Citizen.Wait(500)
+-- 								ESX.Streaming.RequestAnimDict('reaction@intimidation@cop@unarmed')
+-- 								TaskPlayAnim(PlayerPed, 'reaction@intimidation@cop@unarmed', 'outro', 8.0, 2.0, -1, 50, 2.0, 0, 0, 0 ) -- Change 50 to 30 if you want to stand still when holstering weapon
+-- 								RemoveAnimDict('reaction@intimidation@cop@unarmed')
+-- 								Citizen.Wait(60)
+								
+-- 								SetCurrentPedWeapon(PlayerPed, newWeap, true)
+-- 								ClearPedTasks(PlayerPed)
+-- 								currWeapon = newWeap
+-- 								holstered = false
+-- 								canFire = true
+-- 							else
+-- 								if holstered then
+-- 									canFire = false
+-- 									TaskPlayAnimAdvanced(PlayerPed, 'reaction@intimidation@1h', 'intro', GetEntityCoords(PlayerPed), 0, 0, GetEntityPhysicsHeading(PlayerPed), 8.0, 3.0, -1, 50, 0, 0, 0)
+-- 									Citizen.Wait(1000)
+-- 									SetCurrentPedWeapon(PlayerPed, newWeap, true)
+-- 									currWeapon = newWeap
+-- 									Citizen.Wait(2000)
+-- 									ClearPedTasks(PlayerPed)
+-- 									holstered = false
+-- 									canFire = true
+-- 								elseif newWeap ~= currWeapon then
+-- 									canFire = false
+-- 									TaskPlayAnimAdvanced(PlayerPed, 'reaction@intimidation@1h', 'outro', GetEntityCoords(PlayerPed), 0, 0, GetEntityPhysicsHeading(PlayerPed), 8.0, 3.0, -1, 50, 0, 0, 0)
+-- 									Citizen.Wait(1600)
+-- 									SetCurrentPedWeapon(PlayerPed, unarmedHash, true)
+-- 									TaskPlayAnimAdvanced(PlayerPed, 'reaction@intimidation@1h', 'intro', GetEntityCoords(PlayerPed), 0, 0, GetEntityPhysicsHeading(PlayerPed), 8.0, 3.0, -1, 50, 0, 0, 0)
+-- 									Citizen.Wait(1000)
+-- 									SetCurrentPedWeapon(PlayerPed, newWeap, true)
+-- 									currWeapon = newWeap
+-- 									Citizen.Wait(2000)
+-- 									ClearPedTasks(PlayerPed)
+-- 									holstered = false
+-- 									canFire = true
+-- 								end
+-- 							end
+-- 						else
+-- 							if Holster_Whitelist[newWeap] then 
+-- 								if Holster_WhitelistJob[ESX.PlayerData.job.name] then
+-- 									canFire = false 
+-- 									ESX.Streaming.RequestAnimDict('rcmjosh4')
+-- 									TaskPlayAnim(playerPed, 'rcmjosh4', 'josh_leadout_cop2', 8.0, 2.0, -1, 48, 10, 0, 0, 0 )
+-- 									RemoveAnimDict('rcmjosh4')
+-- 									Citizen.Wait(500)
+-- 									ESX.Streaming.RequestAnimDict('reaction@intimidation@cop@unarmed')
+-- 									TaskPlayAnim(playerPed, 'reaction@intimidation@cop@unarmed', 'outro', 8.0, 2.0, -1, 50, 2.0, 0, 0, 0 ) -- Change 50 to 30 if you want to stand still when holstering weapon
+-- 									RemoveAnimDict('reaction@intimidation@cop@unarmed')
+-- 									Citizen.Wait(60)
+									
+-- 									SetCurrentPedWeapon(PlayerPed, newWeap, true)
+-- 									ClearPedTasks(PlayerPed)
+-- 									currWeapon = newWeap
+-- 									holstered = false
+-- 									canFire = true
+-- 								else
+-- 									if holstered then
+-- 										canFire = false
+-- 										TaskPlayAnimAdvanced(PlayerPed, 'reaction@intimidation@1h', 'intro', GetEntityCoords(PlayerPed), 0, 0, GetEntityPhysicsHeading(PlayerPed), 8.0, 3.0, -1, 50, 0, 0, 0)
+-- 										Citizen.Wait(1000)
+										
+-- 										SetCurrentPedWeapon(PlayerPed, newWeap, true)
+-- 										currWeapon = newWeap
+-- 										Citizen.Wait(2000)
+-- 										ClearPedTasks(PlayerPed)
+-- 										holstered = false
+-- 										canFire = true
+-- 									elseif newWeap ~= currWeapon then
+-- 										canFire = false
+-- 										TaskPlayAnimAdvanced(PlayerPed, 'reaction@intimidation@1h', 'outro', GetEntityCoords(PlayerPed), 0, 0, GetEntityPhysicsHeading(PlayerPed), 8.0, 3.0, -1, 50, 0, 0, 0)
+-- 										Citizen.Wait(1600)
+-- 										SetCurrentPedWeapon(PlayerPed, unarmedHash, true)
+-- 										TaskPlayAnimAdvanced(PlayerPed, 'reaction@intimidation@1h', 'intro', GetEntityCoords(PlayerPed), 0, 0, GetEntityPhysicsHeading(PlayerPed), 8.0, 3.0, -1, 50, 0, 0, 0)
+-- 										Citizen.Wait(1000)
+-- 										SetCurrentPedWeapon(PlayerPed, newWeap, true)
+-- 										currWeapon = newWeap
+-- 										Citizen.Wait(2000)
+-- 										ClearPedTasks(PlayerPed)
+-- 										holstered = false
+-- 										canFire = true
+-- 									end
+-- 								end
+-- 							else
+-- 								if holstered then
+-- 									canFire = false
+-- 									TaskPlayAnimAdvanced(PlayerPed, 'reaction@intimidation@1h', 'intro', GetEntityCoords(PlayerPed), 0, 0, GetEntityPhysicsHeading(PlayerPed), 8.0, 3.0, -1, 50, 0, 0, 0)
+-- 									Citizen.Wait(1000)
+-- 									SetCurrentPedWeapon(PlayerPed, newWeap, true)
+-- 									currWeapon = newWeap
+-- 									Citizen.Wait(2000)
+-- 									ClearPedTasks(PlayerPed)
+-- 									holstered = false
+-- 									canFire = true
+-- 								elseif newWeap ~= currWeapon then
+-- 									canFire = false
+-- 									TaskPlayAnimAdvanced(PlayerPed, 'reaction@intimidation@1h', 'outro', GetEntityCoords(PlayerPed), 0, 0, GetEntityPhysicsHeading(PlayerPed), 8.0, 3.0, -1, 50, 0, 0, 0)
+-- 									Citizen.Wait(1600)
+-- 									SetCurrentPedWeapon(PlayerPed, unarmedHash, true)
+-- 									TaskPlayAnimAdvanced(PlayerPed, 'reaction@intimidation@1h', 'intro', GetEntityCoords(PlayerPed), 0, 0, GetEntityPhysicsHeading(PlayerPed), 8.0, 3.0, -1, 50, 0, 0, 0)
+-- 									Citizen.Wait(1000)
+-- 									SetCurrentPedWeapon(PlayerPed, newWeap, true)
+-- 									currWeapon = newWeap
+-- 									Citizen.Wait(2000)
+-- 									ClearPedTasks(PlayerPed)
+-- 									holstered = false
+-- 									canFire = true
+-- 								end
+-- 							end
+-- 						end
+-- 					else
+-- 						if not holstered and (weapons[currWeapon] ~= nil) and (weapons[currWeapon].parameters.anim) then
+-- 							if Holster_Whitelist[currWeapon] then 
+-- 								if Holster_WhitelistJob[ESX.PlayerData.job.name] then
+-- 									canFire = false
+-- 									SetPedCurrentWeaponVisible(playerPed, 0, 1, 1, 1)
+-- 									ESX.Streaming.RequestAnimDict('reaction@intimidation@cop@unarmed')
+-- 									TaskPlayAnim(playerPed, 'reaction@intimidation@cop@unarmed', 'intro', 8.0, 2.0, -1, 50, 2.0, 0, 0, 0 ) -- Change 50 to 30 if you want to stand still when removing weapon
+-- 									RemoveAnimDict('reaction@intimidation@cop@unarmed')
+-- 									Citizen.Wait(700)
+-- 									SetPedCurrentWeaponVisible(playerPed, 1, 1, 1, 1)
+-- 									ESX.Streaming.RequestAnimDict('rcmjosh4')
+-- 									TaskPlayAnim(playerPed, 'rcmjosh4', 'josh_leadout_cop2', 8.0, 2.0, -1, 48, 10, 0, 0, 0 )
+-- 									RemoveAnimDict('rcmjosh4')
+-- 									Citizen.Wait(400)
+-- 									SetCurrentPedWeapon(PlayerPed, unarmedHash, true)
+-- 									ClearPedTasks(PlayerPed)
+-- 									SetCurrentPedWeapon(PlayerPed, newWeap, true)
+-- 									holstered = true
+-- 									canFire = true
+-- 									currWeapon = newWeap
+-- 								else
+-- 									canFire = false
+-- 									TaskPlayAnimAdvanced(PlayerPed, 'reaction@intimidation@1h', 'outro', GetEntityCoords(PlayerPed), 0, 0, GetEntityPhysicsHeading(PlayerPed), 8.0, 3.0, -1, 50, 0, 0, 0)
+-- 									Citizen.Wait(1600)
+-- 									SetCurrentPedWeapon(PlayerPed, unarmedHash, true)
+-- 									ClearPedTasks(PlayerPed)
+-- 									SetCurrentPedWeapon(PlayerPed, newWeap, true)
+-- 									holstered = true
+-- 									canFire = true
+-- 									currWeapon = newWeap
+-- 								end
+-- 							else
+-- 								canFire = false
+-- 								TaskPlayAnimAdvanced(PlayerPed, 'reaction@intimidation@1h', 'outro', GetEntityCoords(PlayerPed), 0, 0, GetEntityPhysicsHeading(PlayerPed), 8.0, 3.0, -1, 50, 0, 0, 0)
+-- 								Citizen.Wait(1600)
+-- 								SetCurrentPedWeapon(PlayerPed, unarmedHash, true)
+-- 								ClearPedTasks(PlayerPed)
+-- 								SetCurrentPedWeapon(PlayerPed, newWeap, true)
+-- 								holstered = true
+-- 								canFire = true
+-- 								currWeapon = newWeap
+-- 							end
+-- 						else
+-- 							SetCurrentPedWeapon(PlayerPed, newWeap, true)
+-- 							holstered = false
+-- 							canFire = true
+-- 							currWeapon = newWeap
+-- 						end
+-- 					end
+
+-- 					RemoveAnimDict('reaction@intimidation@1h')
+-- 				end
+-- 			end
+-- 		end
+
+-- 		if not canFire then
+-- 			DisableControlAction(0, 25, true)
+-- 			DisablePlayerFiring(PlayerPed, true)
+-- 		end
+-- 	end
+-- end)
+

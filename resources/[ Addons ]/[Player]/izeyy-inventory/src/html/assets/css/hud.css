@@ -1,0 +1,76 @@
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.IconContainer {
+  position: absolute;
+  bottom: 5.8%;
+  left: 6.5%;
+}
+
+.BaseCircle {
+  position: relative;
+  width: 4vh !important;
+  height: 4vh !important;
+  float: left;
+  margin: 0.5vh;
+  border-radius: 50%;
+  background: var(--background-color);
+  color:var(--border-color);
+}
+
+.fa-heart,
+.fa-shield-alt,
+.fa-hamburger,
+.fa-wine-bottle,
+.fa-skull {
+  color: white;
+  position: absolute;
+  font-size: 1.6vh;
+  left: 1.2vh;
+  bottom: 1.2vh;
+}
+
+.fa-brain {
+  color: white;
+  position: absolute;
+  font-size: 1.6vh;
+  left: 1.1vh;
+  bottom: 1.2vh;
+}
+
+.fa-lungs {
+  color: white;
+  position: absolute;
+  font-size: 1.6vh;
+  left: 1vh;
+  bottom: 1.3vh;
+}
+
+.fa-tint {
+  color: white;
+  position: absolute;
+  font-size: 1.6vh;
+  left: 1.5vh;
+  bottom: 1.2vh;
+}
+
+
+
+.flash {
+  -webkit-animation: flash 1s;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap');
+
+#container_safez {
+    width: 20vw;
+	height: 16vh; 
+    position: relative;
+    bottom: -55em;
+    margin: 0 auto;
+    user-select: none;
+}
+
+#shield-container-safez {
+    width: 3.4vw;
+	height: 3vh; 
+    position: relative;
+    bottom: -3.5em;
+    margin: 0 auto;
+}
+
+.shieldr-size-safez {
+    filter: drop-shadow(0 0 0.75rem rgba(255, 0, 0, 0.322));
+    max-width: 200%;
+    max-height: 200%;
+}
+
+.shieldg-size-safez {
+    filter: drop-shadow(0 0 0.75rem rgba(0, 255, 64, 0.555));
+    max-width: 200%;
+    max-height: 200%;
+}
+
+#text-safez {
+    position: absolute;
+    width: 20vw;
+	height: 1vh; 
+    bottom: 1em; 
+	font-size: 1.6em;
+	text-align: center;
+	color: rgb(255, 255, 255);
+    font-family: 'Jost', sans-serif;	
+    text-shadow: 0.09em 0.09em 0.09em rgba(0, 0, 0, 0.501);
+}

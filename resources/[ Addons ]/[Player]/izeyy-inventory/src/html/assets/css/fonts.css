@@ -1,0 +1,23 @@
+@font-face { 
+    font-family: 'Black';
+    src: url('../fonts/Roboto-BoldItalic.ttf'); 
+}
+@font-face { 
+  font-family: regular;
+  src: url('../fonts/Roboto-BoldItalic.ttf'); 
+}
+@font-face {
+	font-family: 'Signature';
+	src: url('../fonts/signature.ttf');
+}
+
+@font-face {
+  font-family: justsignature;
+  src: url('../fonts/justsignature/JustSignature.woff');
+}
+
+@font-face { 
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-BoldItalic.ttf'); 
+}
+

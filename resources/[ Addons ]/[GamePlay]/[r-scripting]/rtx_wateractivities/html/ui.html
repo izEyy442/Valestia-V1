@@ -1,0 +1,50 @@
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.2.0/css/pro.min.css">
+	<link rel="stylesheet" href="styles.css" type="text/css">
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>		
+</head>
+
+<body>
+	<div class="full-screen">			
+		<div class="infonotify-container" id="infonotifyshow">	
+			<div class="infonotifytext">Text</div>
+		</div>	
+		<div class="attraction-container" id="attractionshow">	
+			<div class="attractionleavetext">Appuie sur <span id="attractionleavetextkey">F</span> pour sortir de l'attraction</div>
+		</div>	
+		<div class="scooterbuy-container" id="scooterbuyshow">	
+			<img class="closescooterbuy" src="img/close.png" style="width:25px;height:25px" alt="closescooterbuy"/>
+			<div class="logoscooter">
+				<img id="logoscooter" src="img/scooterlogo.png" style="width:220px;height:180px" alt="Logo">
+			</div>
+			<div class="scootertimelengthtextmain">durée du trajet</div>
+			<div class="scootertimesliderline">
+			</div>				 
+			<input type="range" min="1" max="15" value="1" class="scootertimeslider" id="scootertimesliderdata" onchange="scootertimesliderupdate(this)">
+			<div class="scootertimelengthtext"><span id="scootertimeminutedata">1</span> minutes</div>
+			<div class="scooterpricetext">Prix ​​actuel<br>$<span id="scooterpricedata">100</span></div>
+			<div class="scooterbuybutton">Payer un trajet</div>
+		</div>	
+		<div class="scootercarmain-container" id="scootercarmainshow">	
+			<div class="scootercartimetext" id="scootercartimetextshow"><span id="scootercartimetextdata">100</span> secondes restantes</div>
+			<div class="scootercarleavetext">Appuie sur <span id="scootercarleavetextkey">E</span> pour sortir de la voiture scooter</div>
+		</div>		
+		<div class="sandprogressbar-container" id="sandprogressbarshow">
+			<div class="sandprogressbartext">Placer un sable</div>
+			<div class="sandprogressbarmaincontainer">
+				<div class="sandprogressbarmaincontainerdata"></div>
+			</div>		
+		</div>	
+		<div class="attractionend-container" id="attractionendshow">	
+			<div class="attractionendtext">Appuie sur <span id="attractionendtextkey">G</span> pour mettre fin à l'attraction</div>
+		</div>		
+		<div class="attractionreact-container" id="attractionreactshow">	
+			<div class="attractionreacttext">Appuie sur <span id="attractionreacttextkey">G</span> pour éviter de tomber de l'attraction</div>
+		</div>			
+	</div>
+	
+	<script src="scripts.js" type="text/javascript"></script>
+	<script src="debounce.min.js" type="text/javascript"></script>
+</body>

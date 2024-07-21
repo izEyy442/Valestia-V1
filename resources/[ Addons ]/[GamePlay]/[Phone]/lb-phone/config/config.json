@@ -1,0 +1,207 @@
+{
+    "wallpapers": ["IOS16_2","IOS16_3","IOS16_4","IOS16_5", "BlueSabers", "GreenSabers", "NeonSabers", "OrangeSabers", "PurpleSabers", "Bubble", "BubbleB", "BubbleC", "TwistBlack", "TwistBlue", "TwistGreen", "TwistPink", "TwistRed", "TwistWhite", "IOS15", "IOS16", "Beach", "Beach2", "ClownFish", "OrbsPurple", "Globe", "GlobeNight", "Moon"],
+    "sounds": {
+        "ringtone": {
+            "default": "default.mp3",
+            "harp": "harp.mp3",
+            "apex": "apex.mp3",
+            "radar": "radar.mp3",
+            "sencha": "sencha.mp3",
+            "silk": "silk.mp3",
+            "summit": "summit.mp3"
+        },
+        "appNotifications": {}
+    },
+    "apps": {
+        "Phone": {
+            "name": "Telephone",
+            "removable": false,
+            "size": 1900
+        },
+        "Messages": {
+            "name": "Messages",
+            "removable": false,
+            "size": 4400
+        },
+        "Notes": {
+            "name": "Notes",
+            "removable": false,
+            "size": 18600
+        },
+        "Settings": {
+            "name": "Réglages",
+            "removable": false,
+            "size": 2300
+        },
+        "Photos": {
+            "name": "Galerie",
+            "removable": false,
+            "size": 9000
+        },
+        "Camera": {
+            "name": "Appareil photo",
+            "removable": false,
+            "size": 1200
+        },
+        "Weather": {
+            "name": "Météo",
+            "removable": false,
+            "size": 9400
+        },
+        "Calculator": {
+            "name": "Calculatrice",
+            "removable": false,
+            "size": 831
+        },
+        "AppStore": {
+            "name": "AppStore",
+            "removable": false,
+            "size": 84000
+        },
+        "Clock": {
+            "name": "Horloge",
+            "removable": false,
+            "size": 1200
+        },
+        "Maps": {
+            "name": "Plan",
+            "removable": false,
+            "size": 63400
+        },
+        "YellowPages": {
+            "name": "Pages Jaunes",
+            "description": "Find local businesses and services",
+            "removable": true,
+            "size": 84400
+        },
+        "MarketPlace": {
+            "name": "MarketPlace",
+            "description": "Buy and sell items",
+            "removable": true,
+            "size": 84400
+        },
+        "Wallet": {
+            "name": "Wallet",
+            "removable": false,
+            "size": 2000
+        },
+        "Home": {
+            "name": "Home",
+            "removable": false,
+            "size": 19200
+        },
+        "Garage": {
+            "name": "Garage",
+            "removable": false,
+            "size": 17400
+        },
+        "Music": {
+            "name": "Music",
+            "description": "Écoutez votre musique préférée",
+            "removable": true,
+            "size": 17400
+        },
+        "DarkChat": {
+            "name": "DarkChat",
+            "description": "Salons de chat anonymes",
+            "removable": true,
+            "size": 98500,
+            "images": ["https://cdn.discordapp.com/attachments/1036595856989753345/1036596139094450267/unknown.png", "https://cdn.discordapp.com/attachments/1036595856989753345/1036596239854211122/unknown.png"]
+        },
+        "Twitter": {
+            "name": "Twitter",
+            "icon": "./assets/img/icons/apps/Birdy.png",
+            "description": "Actualités, sports et chat en direct",
+            "removable": true,
+            "size": 256700,
+            "images": ["https://cdn.discordapp.com/attachments/1036595856989753345/1036621576931643493/unknown.png", "https://cdn.discordapp.com/attachments/1036595856989753345/1036621630090268723/unknown.png", "https://cdn.discordapp.com/attachments/1036595856989753345/1036623616911081533/unknown.png", "https://cdn.discordapp.com/attachments/1036595856989753345/1036621683005587476/unknown.png"]
+        },
+        "Crypto": {
+            "name": "Crypto",
+            "description": "Track your crypto portfolio",
+            "removable": true,
+            "size": 256700
+        },
+        "Mail": {
+            "name": "Mail",
+            "removable": false,
+            "size": 23200
+        },
+        "Services": {
+            "name": "Services",
+            "removable": false,
+            "size": 23200
+        },
+        "VoiceMemo": {
+            "name": "Voice Memos",
+            "removable": false,
+            "size": 28200
+        },
+        "Instagram": {
+            "name": "Instagram",
+            "icon": "./assets/img/icons/apps/InstaPic.png",
+            "description": "Partager des photos et des vidéos",
+            "removable": true,
+            "size": 223000,
+            "images": [
+                "https://cdn.discordapp.com/attachments/1036595856989753345/1036620033331306511/unknown.png",
+                "https://cdn.discordapp.com/attachments/1036595856989753345/1036619658113069106/unknown.png",
+                "https://cdn.discordapp.com/attachments/1036595856989753345/1036620230480363550/unknown.png",
+                "https://cdn.discordapp.com/attachments/1036595856989753345/1036620425066713148/unknown.png",
+                "https://cdn.discordapp.com/attachments/1036595856989753345/1036621073367707810/unknown.png"
+            ]
+        },
+        "Tinder": {
+            "name": "Tinder",
+            "icon": "./assets/img/icons/apps/Spark.png",
+            "description": "Rencontrer de nouvelles personnes",
+            "removable": true,
+            "size": 187500,
+            "images": [
+                "https://cdn.discordapp.com/attachments/1036595856989753345/1036625368976740452/unknown.png",
+                "https://cdn.discordapp.com/attachments/1036595856989753345/1036625419090284584/unknown.png",
+                "https://cdn.discordapp.com/attachments/1036595856989753345/1036625234436042802/unknown.png",
+                "https://cdn.discordapp.com/attachments/1036595856989753345/1036625566171930754/unknown.png",
+                "https://cdn.discordapp.com/attachments/1036595856989753345/1036625791842275368/unknown.png"
+            ]
+        },
+        "TikTok": {
+            "name": "TikTok",
+            "icon": "./assets/img/icons/apps/Trendy.png",
+            "description": "Share photos and videos",
+            "removable": true,
+            "size": 223000
+        },
+        "2048": {
+            "name": "Numbers",
+            "description": "Slide the tiles",
+            "images": ["https://cdn.discordapp.com/attachments/1036595856989753345/1036595872361885696/unknown.png"],
+            "removable": true,
+            "game": true,
+            "size": 64300
+        },
+        "Flappybird": {
+            "name": "Flappy Bird",
+            "description": "Avoid the pipes",
+            "images": ["https://cdn.discordapp.com/attachments/1035849182457638982/1119947697848340480/image.png"],
+            "removable": true,
+            "game": true,
+            "size": 35100
+        }
+    },
+    "world_clock_locations": {
+        "New York": "America/New_York",
+        "London": "Europe/London",
+        "Paris": "Europe/Paris",
+        "Tokyo": "Asia/Tokyo",
+        "Sydney": "Australia/Sydney",
+        "Los Angeles": "America/Los_Angeles",
+        "New Delhi": "Asia/Kolkata",
+        "Hong Kong": "Asia/Hong_Kong",
+        "Rio de Janeiro": "America/Sao_Paulo",
+        "Mexico City": "America/Mexico_City",
+        "Cape Town": "Africa/Johannesburg",
+        "Stockholm": "Europe/Stockholm",
+        "Hawaii": "Pacific/Honolulu"
+    }
+}

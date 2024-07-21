@@ -1,0 +1,333 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap');
+
+* {
+  user-select: none;
+}
+
+:root {
+  background-image: url(../img/background2.png); /* To see the video, remove the img background and increase the opacity on line 37 */
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  cursor: none;
+  margin: 0;
+  padding: 0;
+  background-color: #111111;
+}
+
+.sub-text {
+  font-family: "Roboto", sans-serif;
+}
+
+#video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#video-container iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 56.25vw; /* 100vw * 9 / 16 */
+  min-height: 100vh;
+  min-width: 177.78vh; /* 100vh * 16 / 9 */
+  border: 0;
+  opacity: 0; /*Change opacity to see a video*/
+  scale: 1.2;
+}
+
+.bg1 {
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: -15.2vw;
+  bottom: -20.3vw;
+}
+
+@media (min-width: 2560px) {
+  .bg1 {
+    position: absolute;
+    inset: 0;
+    width: auto;
+    height: 1650px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: -1vw;
+    left: 22vw;
+  }
+}
+
+@media (max-width: 1280px) {
+    .bg1 {
+display: none;
+    }
+  }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  /* Colors: */
+  --button-grey: rgba(0, 0, 0, 0.51);
+  --purple-main: #0073f3;
+  --purble-button-hover: #0073f3;
+  --purple-shadow: linear-gradient(
+    180.81deg,
+    rgba(101, 54, 234, 0) 45.42%,
+    #6536ea 95.78%
+  );
+  --white: #ffffff;
+  --text-white: #ffffff;
+  --text-grey: rgba(255, 255, 255, 0.57);
+  --text-black: #000000;
+  --text-black-second: rgba(0, 0, 0, 0.56);
+  --black: #111111;
+  --black-shadow: linear-gradient(
+    180.81deg,
+    rgba(0, 0, 0, 0) 45.42%,
+    #111111 95.78%
+  );
+  font-family: "Roboto", sans-serif;
+}
+
+.cursor-custom {
+  position: absolute;
+  width: 1.5vh;
+  height: 1.5vh;
+  border-radius: 100%;
+  background: var(--black);
+}
+
+.container {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  left: 7.552vw;
+  top: 6.042vw;
+  z-index: 100;
+}
+
+.button {
+  background: var(--button-grey);
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--white);
+  transition: 0.3s;
+}
+a {
+  text-decoration: none;
+}
+.dcdiv {
+  backdrop-filter: blur(10px) !important;
+  background-color: rgba(0, 0, 0, 0.21);
+  transition: 0.3s;
+}
+.button:hover {
+  background: var(--purble-button-hover);
+}
+.button.selected {
+  background: var(--purple-main);
+  box-shadow: 0px 0px 30px rgba(0, 115, 243, 0.6);
+}
+.button.selected:hover {
+  background: var(--purple-main);
+}
+
+.music-container {
+  position: absolute;
+  left: 50px;
+  bottom: 305px;
+  /* width: 220px; */
+  /* height: 03px; */
+  background-size: cover;
+  border-radius: 10px;
+  transition-duration: 0.3s !important;
+  transition-timing-function: linear;
+}
+
+.music-container .circle {
+  position: absolute;
+  top: -23px;
+  right: -23px;
+  width: 45px;
+  height: 45px;
+  background-color: var(--white);
+  border-radius: 100%;
+}
+
+.circle:hover {
+  filter: brightness(0.8);
+}
+
+.music-container .circle .bar1 {
+  position: absolute;
+  top: 21.715px;
+  left: 13.997px;
+  width: 18px;
+  height: 2.5px;
+  border-radius: 48px;
+  background-color: var(--text-black);
+}
+.music-container .circle .bar2 {
+  position: absolute;
+  top: 21.715px;
+  left: 13.997px;
+  width: 18px;
+  height: 2.5px;
+  border-radius: 2.5px;
+  background-color: var(--text-black);
+  transform: rotate(90deg);
+  transition-duration: 0.3s !important;
+  transition-timing-function: linear;
+}
+.music-container.active {
+  transition-duration: 0.3s !important;
+  transition-timing-function: linear;
+  width: 547px;
+}
+.bar2.active {
+  transform: rotate(180deg) !important;
+  transition-duration: 0.3s !important;
+  transition-timing-function: linear;
+}
+.music-container .label {
+  position: absolute;
+  inset: 0;
+  top: 26.992px;
+  left: 200.006px;
+  color: var(--white);
+  white-space: nowrap;
+  max-width: 180px;
+}
+.music-container .author {
+  position: absolute;
+  top: 52.008px;
+  left: 200.006px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.music-container img {
+  position: absolute;
+  inset: 0;
+  top: -62.4px;
+  left: -44.16px;
+  width: 204px;
+  height: 165px;
+}
+.music-container .visualizer {
+  position: absolute;
+  top: 40.006px;
+  left: 165.005px;
+  width: 35px;
+  height: 16px;
+}
+.visualizer .bar {
+  position: relative;
+  display: inline-flex;
+  height: 16px;
+  width: 4px;
+  border-radius: 4px;
+  background-color: var(--purple-main);
+}
+.music-container .back {
+  position: absolute;
+  top: 40.992px;
+  left: 405.005px;
+  width: 19px;
+  height: 19px;
+}
+
+.play:hover {
+  filter: brightness(0.8);
+}
+
+.back:hover {
+  filter: brightness(0.8);
+}
+
+.pause:hover {
+  filter: brightness(0.8);
+}
+
+.forward:hover {
+  filter: brightness(0.8);
+}
+
+.music-container .pause {
+  position: absolute;
+  top: 40.992px;
+  left: 452.006px;
+  width: 18px;
+  height: 22px;
+}
+.music-container .forward {
+  position: absolute;
+  top: 40.992px;
+  left: 498.01px;
+  width: 19px;
+  height: 19px;
+}
+.music-container .play {
+  position: absolute;
+  top: 40.992px;
+  left: 452.006px;
+  width: 18px;
+  height: 22px;
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  right: 50%;
+  white-space: nowrap;
+  width: fit-content;
+  text-align: center;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #0073f3;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-family: "Roboto", sans-serif;
+}
+
+.notification.show {
+  opacity: 1;
+}
+
+.bar.active {
+  animation: 1.2s music infinite linear;
+}
+.bar.active2 {
+  animation: 1s music infinite linear;
+}
+.bar.active3 {
+  animation: 1.1s music infinite linear;
+}
+@keyframes music {
+  0% {
+    height: 0.233vw;
+  }
+  50% {
+    height: 0.833vw;
+  }
+  100% {
+    height: 0.233vw;
+  }
+}
+

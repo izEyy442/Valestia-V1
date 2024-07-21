@@ -1,0 +1,1 @@
+.game-container{height:100%;background-color:#000;overflow:hidden}.game-container iframe{margin-top:10%;height:90%;width:100%;max-width:100%;border-radius:25px;overflow:hidden}.game-container iframe::-webkit-scrollbar{display:none}.game-container iframe.no-top{margin:0;height:100%;transform:scaleY(1.05)}

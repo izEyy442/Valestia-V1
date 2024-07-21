@@ -1,0 +1,46 @@
+{
+    "airplaneMode": false,
+    "streamerMode": false,
+    "doNotDisturb": false,
+    "name": "",
+    "display": {
+        "brightness": 1.0,
+        "size": 0.7,
+        "theme": "light",
+        "automatic": false
+    },
+    "security": {
+        "pinCode": false,
+        "faceId": false
+    },
+    "wallpaper": {
+        "background": "IOS16_2"
+    },
+    "time": {
+        "twelveHourClock": false
+    },
+    "sound": {
+        "volume": 0.5,
+        "ringtone": "default",
+        "silent": false
+    },
+    "weather": {
+        "celcius": false
+    },
+    "notifications": {},
+    "storage": {
+        "used": 8576331,
+        "total": 128000000
+    },
+    "phone": {
+        "showCallerId": true
+    },
+    "lockscreen": {
+        "color": "gradient",
+        "fontStyle": 1
+    },
+    "apps": [
+        ["Phone", "Messages", "Camera", "Photos"],
+        ["Settings", "AppStore", "Clock", "Garage", "Notes", "Calculator", "Weather", "Maps", "Wallet", "Home", "Music", "Mail", "VoiceMemo", "Services"]
+    ]
+}

@@ -1,0 +1,1 @@
+import{j as e}from"./jsx-runtime-f40812bf.js";function t(){return e("div",{className:"game-container",children:e("iframe",{src:"https://freehtml5games.org/games/fruit-ninja-hd/index.html",onLoad:r=>{}})})}export{t as default};

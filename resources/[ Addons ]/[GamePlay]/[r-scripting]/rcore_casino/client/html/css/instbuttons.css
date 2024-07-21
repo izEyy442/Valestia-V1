@@ -1,0 +1,65 @@
+ .key {
+        font-family: 'Segoe UI Light', sans-serif;
+        color: black;
+        background: white;
+        border-radius: 2px;
+        user-select: none;
+        height: 2.8vh;
+        line-height: 2.8vh;
+        margin-right: 0.7vh;
+        margin-left: 1.0vh;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .keySmall {
+        -webkit-text-stroke: 1.00px;
+        font-size: 1.70vh;
+        width: 2.8vh;
+        justify-content: center;
+    }
+
+    .keyBig {
+        -webkit-text-stroke: 0.50px;
+        font-size: 1.50vh;
+        width: 4.5vh;
+    }
+
+    .keyCustom {
+        height: 2.8vh;
+        width: 2.8vh;
+        margin-right: 1.0vh;
+        margin-left: 0.8vh;
+    }
+
+    #instbuttons {
+
+        background: #000000c6;
+        color: white;
+        width: fit-content;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        height: 3.5vh;
+        padding-left: 1.0vh;
+        position: absolute;
+        font-family: 'Segoe UI Light', sans-serif;
+        font-weight: 100;
+        font-size: 1.70vh;
+        line-height: 1.70vh;
+        -webkit-text-stroke: 0.10px;
+        border-radius: 3px;
+        position: absolute;
+        bottom: 1.70vh;
+        right: 1.35vw;
+    }
+
+    .justText {
+        user-select: none;
+        margin-top: 1.2vh;
+        margin-left: 1.2vh;
+    }
+
+    body {
+        background: url(./img/unknown.png);
+    }

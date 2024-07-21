@@ -1,0 +1,14 @@
+DrugsHandler = {}
+DrugsHandler.Utilities = {}
+DrugsHandler.Users = {}
+DrugsHandler.Infos = {}
+DrugsHandler.LaboData = {}
+DrugsHandler.ConfigBuilds = {}
+DrugsHandler.ConfigInteriors = {}
+DrugsHandler.ConfigSettings = {}
+DrugsHandler.ConfigItems = {}
+DrugsHandler.ConfigUpgrades = {}
+DrugsHandler.ConfigSupplies = {}
+DrugsHandler.MenuIsOpen = false 
+DrugsHandler.CurrentLabo = nil 
+DrugsHandler.WaitingFor = false

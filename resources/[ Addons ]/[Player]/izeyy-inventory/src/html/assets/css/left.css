@@ -1,0 +1,35 @@
+.loading-bar-kg-left-part {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 9.2vw;
+	height: 1.875vw;
+    margin: 0.15vw;
+}
+.text-loading-bar-left-part {
+    display: flex;
+	font-size: 0.833vw;
+	color: #ffff;
+	margin-top: 50px;
+	margin-left: 10px;
+}
+.text-loading-bar-left-part span:nth-child(2) {
+    margin-left: auto;
+}
+
+.novalue-left-part {
+	display: flex;
+	align-items: center;
+	width: 28.2vw;
+	height: 0.621vw;
+	background: var(--background-color);
+	margin-top: 0.313vw;
+	border-radius: 30px;
+}
+.value-left-part {
+	/* width: 27vw; */
+	height: 0.621vw;
+	background: var(--color-bar);
+	animation: width 3s ease;
+	border-radius: 30px;
+}

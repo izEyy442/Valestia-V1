@@ -1,0 +1,12 @@
+:root {
+    --border-color: rgba(53, 53, 53, 150);
+    --light-border-color: rgba(45, 45, 45, 150);
+    --color-bar: linear-gradient(#bebebe2a, #4f5992b4);
+    --active-color: linear-gradient(to left top, rgba(255, 255, 255, 0), rgba(124, 124, 124, 0.507));
+    --hover-color: linear-gradient(to left top, rgba(255, 255, 255, 0), rgba(124, 124, 124, 0.507)); 
+    --background-color:rgba(0, 0, 0, 0.26);
+    --font-family:'Roboto';
+    --inventory-color : radial-gradient(200% 140% at 50% 50%, rgba(0, 0, 0, 0.134) 10%, rgba(24, 63, 239, 0.534) 100%);
+    --background-notif:rgba(133, 133, 133, 0.300);
+    --color-notif:rgba(0, 115, 243, 255);
+}

@@ -1,0 +1,224 @@
+
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.idcard-form {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+	/* background-color: rgb(39, 2, 2); */
+}
+/* Animation Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.idcard-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 23vh; /* Increase the height */
+    justify-content: center;
+    flex-direction: column;
+    top: 18.063vw;
+    right: 6.958vw;
+    /* border-left: 0.104vw solid #FFF; */
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 2%;
+    /* Ajout de l'animation */
+    animation: fadeIn 1.5s ease-in;
+}
+
+.idcard-container:after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 0.104vw;
+    /* background-color: #ffffff; */
+    animation: progressBar 5s ease;
+}
+
+@keyframes progressBar {
+	0% { 
+		width: 0%;
+	 }
+	100% { 
+		width: 80%; 
+	}
+}
+
+
+.close-button {
+    position: absolute;
+    top: 17.663vw;
+    right: 6.458vw;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 50px;
+    color: #000;
+    background-color: #fff; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; 
+    animation: fadeIn 1.5s ease-in;
+
+}
+
+.icon-bg {
+	position: absolute;
+	width: 10.417vw;
+	height: 10.417vw;
+	margin-left: 6.083vw;
+	opacity: 0.2;
+}
+.idcard-header, .idcard-header span {
+	font-size: 0.925vw;
+	font-family: "Roboto";
+	color: #ffff;
+	margin-bottom: 0.81vw;
+    /* background: rgba(20, 20, 20, 0.801); */
+}
+
+
+.idcard-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    font-size: 0.925vw;
+	font-family: "Roboto";
+	margin-top: 0.521vw;
+}
+.idcard-left-part {
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: column;
+	width: 5.729vw;
+	padding-left: 0.925vw;
+}
+.idcard-left-part img:nth-child(2) {
+	width: 1.527vw;
+	height: 1.735vw;
+	margin-top: 0.625vw;
+}
+.idcard-left-part span:last-child {
+	margin-top: 1.8vw;
+	margin-bottom: 0.625vw;
+}
+.picture-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 5.729vw;
+	height: 5.677vw;
+	background-color: rgba(20, 20, 20, 0.65);
+}
+.picture-box img:nth-child(1) {
+	width: 5.573vw;
+	height: 5.521vw;
+}
+.idcard-info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: auto;
+	margin-left: 2.2vw;
+    font-family: 'Black';
+    font-size: 0.725vw;
+	padding-right: 0.625vw;
+}
+.idcard-info-left-part {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	
+}
+.signature {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 0.4vw;
+	font-family: justsignature;
+	margin-left: 1.6vw;
+	padding-right: 1.4vw;
+}
+.line {
+	background-color: #fff;
+}
+
+.name {
+	display: flex;
+	align-items: start;
+	flex-direction: column;
+	text-align: start;
+	width: 6vw;
+	height: 2.656vw;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.dob {
+	display: flex;
+	align-items: start;
+	flex-direction: column;
+	width: 6vw;
+	height: 2.656vw;
+	margin-top: 0.938vw;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.idcard-info-right-part {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: auto;
+	margin-left: 10%;
+	padding-right: 0.833vw;
+}
+.sex {
+	display: flex;
+	align-items: start;
+	flex-direction: column;
+	width: 6vw;
+	height: 2.656vw;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.nationality {
+	display: flex;
+	align-items: start;
+	flex-direction: column;
+	width: 6vw;
+	height: 2.656vw;
+	margin-top: 0.938vw;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.signature-box {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	margin-top: 0.938vw;
+	padding-bottom: 0.938vw;
+}

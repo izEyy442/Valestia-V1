@@ -1,0 +1,270 @@
+<head>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+</head>
+<body>
+<div class="outfit-bag draggable">
+    <span id="amount" class="amount noDrag"></span>
+    <div class="main-container">
+        <div id="outfits" class="bag-container">
+            <div class="outfit noDrag"></div>
+        </div>
+    </div>
+    <div class="bag-buttons noDrag">
+        <div id="save-outfit" class="btn">
+            <span>Sauvegarder votre Tenue</span>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        let amount = 0;
+        let maxAmount = 0;
+        let owned = false;
+
+        $('.draggable').draggable({
+            preventCollision: true,
+            containment: 'body',
+            cancel: '.noDrag'
+        });
+
+
+        window.addEventListener('message', (event) => {
+            if (event.data.event === 'show') {
+                owned = event.data.owned;
+                if (event.data.state) {
+                    $('body').fadeIn(300);
+                } else {
+                    $('body').fadeOut(300);
+
+                }
+            }
+            if (event.data.event === 'config') {
+                maxAmount = event.data.maxAmount;
+            }
+
+            if (event.data.event === 'clear') {
+                $('#outfits').html('');
+                amount = 0;
+
+                RefreshAmount();
+            }
+
+            if (event.data.event === 'add') {
+                amount++;
+
+                const html = '' +
+                    '<div class="outfit noDrag" outfitId="' + event.data.id + '" outfitIndex="' + event.data.index + '">' +
+                    '   <span class="model-span">'+event.data.model+'</span>' +
+                    '   <div class="btn select-outfit">' +
+                    '       <span>' + event.data.name + '</span>' +
+                    '   </div>' +
+                    '   <div class="delete-btn ' + (owned ? '' : 'hidden') + '"></div>' +
+                    '</div>';
+
+                $('#outfits').append(html);
+
+                RefreshAmount();
+            }
+        });
+
+        function RefreshAmount() {
+            $('#amount').html(amount + '/' + maxAmount);
+
+            if (amount < maxAmount && owned) {
+                $('#save-outfit').show();
+                $('.bag-container').css('height', '40vh');
+            } else {
+                $('#save-outfit').hide();
+                $('.bag-container').css('height', '45vh');
+            }
+        }
+
+        document.addEventListener('keyup', logKey);
+
+        function logKey(e) {
+            if (e.key === 'Escape' || e.key === 'Backspace' || e.key === 'e' || e.key === ' ') {
+                fetch(`https://${GetParentResourceName()}/CloseBag`, {
+                    method: 'POST',
+                })
+            }
+        }
+
+        $(document).on('click', '.select-outfit', function () {
+            const id = $(this).parent().attr('outfitId');
+            const index = $(this).parent().attr('outfitIndex');
+
+            fetch(`https://${GetParentResourceName()}/LoadOutfit`, {
+                method: 'POST',
+                body: JSON.stringify({
+                    id: id,
+                    index: index
+                })
+            })
+        });
+
+        $(document).on('click', '.delete-btn', function () {
+            const index = $(this).parent().attr('outfitIndex');
+
+            fetch(`https://${GetParentResourceName()}/DeleteOutfit`, {
+                method: 'POST',
+                body: JSON.stringify({
+                    index: index
+                })
+            })
+        })
+
+        $(document).on('click', '#save-outfit', function () {
+            fetch(`https://${GetParentResourceName()}/SaveOutfit`, {
+                method: 'POST',
+            });
+        });
+
+        fetch(`https://${GetParentResourceName()}/UILoaded`, {
+            method: 'POST',
+        });
+    });
+</script>
+
+<style>
+    @font-face {
+        font-family: Quicksand;
+        src: url('fonts/quicksand.ttf') format('truetype');
+    }
+
+    body {
+        font-family: Quicksand, sans-serif !important;
+        font-weight: bold;
+        user-select: none;
+        display: none;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .outfit-bag {
+        background-image: url('img/outfitbag.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 4vh;
+        width: 50vh;
+        height: 70vh;
+        left: calc(80% - (42vh / 2));
+        top: calc(25% - (22vh / 2));
+        position: relative;
+    }
+
+    .outfit {
+        display: flex;
+        position: relative;
+    }
+
+    .outfit .btn {
+        width: 87%;
+    }
+
+    .delete-btn {
+        float: right;
+        color: white;
+        width: 13%;
+
+        cursor: pointer;
+        background-image: url('img/trash.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 100%;
+        transition-duration: 0.2s;
+        opacity: 0.75;
+    }
+
+    .delete-btn:hover {
+        transform: scale(1.1);
+    }
+
+    .delete-btn:active {
+        transform: scale(0.8);
+    }
+
+    .main-container {
+        padding: 14vh 14vh 2vh;
+    }
+
+    .bag-container {
+
+        display: flex;
+        flex-direction: column;
+        height: 40vh;
+        color: white;
+        gap: 1vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .bag-buttons {
+        height: 10vh;
+        padding: 0 14vh;
+    }
+
+    .bag-buttons .btn {
+        border-bottom: solid 2px white;
+    }
+
+    .btn {
+        color: white;
+        height: 2.5vh;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 3vh;
+        padding: 1.5vh;
+        transition-duration: 0.2s;
+        cursor: pointer;
+        line-height: 2.5vh;
+        text-align: center;
+        font-size: 1.5vh;
+    }
+
+    .btn:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .btn:active {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .amount {
+        color: #606060;
+        position: absolute;
+        left: 34vh;
+        top: 9vh;
+        font-size: 1.5vh;
+    }
+
+    .model-span {
+        position: absolute;
+        left: 2vh;
+        top: 1.4vh;
+        color: #606060;
+        line-height: 2.5vh;
+        font-size: 1.25vh;
+        pointer-events: none;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        box-shadow: transparent;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 100%;
+    }
+</style>

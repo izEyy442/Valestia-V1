@@ -1,0 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,900&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 2900;
+    font-style: normal;
+}
+
+#connect-font {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background: radial-gradient(50.7% 160.25% at 50% 50%, rgba(0, 0, 0, 0.327) 0%, rgba(17, 130, 223, 0.568) 150%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#connect-font .logo {
+    position: absolute;
+    left: 41%;
+    top: 28%;
+    width: 300px;
+    height: 300px;
+    transition: 0.9s;
+    pointer-events: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#connect-font .logo:hover {
+    position: absolute;
+    left: 41%;
+    top: 21%;
+    width: 320px;
+    height: 320px;
+    box-shadow: #1182df9a;
+}
+
+#connect-font .connect-btn {
+    position: absolute;
+    left: 41.7%;
+    top: 60%;
+    width: 270px;
+    height: 50px;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    background-color: #1182dfa6; 
+    opacity: 0.8;
+    transition: 0.4s;
+}
+
+#connect-font .connect-btn:hover {
+    position: absolute;
+    left: 41.7%;
+    top: 60%;
+    width: 270px;
+    height: 50px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    background-color: #1182dfad;
+    opacity: 0.8;
+    transition: 0.4s;
+    box-shadow: 0 0 50px 0px #1182df;
+}
+
+h1 {
+    position: absolute;
+    left: 38%;
+    top: 50%;
+    font-size: 500px;
+    font-weight: 900%;
+    border: none;
+    color: #ffffff;
+    border-radius: 500px;
+    border: none;
+    pointer-events: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

@@ -1,0 +1,131 @@
+.categorys {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30px; /* Baisse les carré de l'inventaire */
+	width: 45.708vw;
+	height: 0.755vw;
+}
+.first-category-all {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.535vw;
+	height: 1.535vw;
+	border: 0.052vw solid var(--border-color);
+	border-radius: 20px;
+	background: var(--background-color);
+	margin-left: 1.417vw;
+	margin-top: 155px;
+	transition: all 0.1s ease;
+	cursor: pointer;
+}
+.first-category-all img:nth-child(1) {
+	width: 0.59vw;
+	height: 0.59vw;
+	opacity: 70%;
+}
+.first-category-all:hover {
+	border: 0.052vw solid var(--border-color);
+	border-radius: 20px;
+	background: var(--hover-color);
+}
+.first-category-all:active {
+	/* border: 0.052vw solid rgba(255, 0, 107, 0.2); */
+	border-radius: 20px;
+	background: var(--active-color);
+}
+.sec-category-food {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.535vw;
+	height: 1.535vw;
+	border: 0.052vw solid var(--border-color);
+	border-radius: 20px;
+	background: var(--background-color);
+	margin-left: 0.417vw;
+	margin-top: 155px;
+	transition: all 0.1s ease;
+	cursor: pointer;
+}
+.sec-category-food img:nth-child(1) {
+	width: 0.59vw;
+	height: 0.59vw;
+	opacity: 70%;
+}
+.sec-category-food:hover {
+	border: 0.052vw solid var(--border-color);
+	border-radius: 20px;
+	background: var(--hover-color);
+}
+.sec-category-food:active {
+	/* border: 0.052vw solid rgba(255, 0, 107, 0.2); */
+	border-radius: 20px;
+	background: var(--active-color);
+}
+
+.three-category-weapon {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.535vw;
+	height: 1.535vw;
+	border: 0.052vw solid var(--border-color);
+	border-radius: 20px;
+	background: var(--background-color);
+	margin-left: 0.417vw;
+	margin-top: 155px;
+	transition: all 0.1s ease;
+	cursor: pointer;
+}
+.three-category-weapon img:nth-child(1) {
+	width: 0.59vw;
+	height: 0.481vw;
+	opacity: 70%;
+}
+.three-category-weapon:hover {
+	border: 0.052vw solid var(--border-color);
+	border-radius: 20px;
+	background: var(--hover-color);
+}
+.three-category-weapon:active {
+	/* border: 0.052vw solid rgba(255, 0, 107, 0.2); */
+	border-radius: 20px;
+	background: var(--active-color);
+}
+
+.four-category-clothes {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.535vw;
+	height: 1.535vw;
+	border: 0.052vw solid var(--border-color);
+	border-radius: 20px;
+	background: var(--background-color);
+	margin-left: 0.417vw;
+	margin-top: 155px;
+	transition: all 0.1s ease;
+	cursor: pointer;
+}
+.four-category-clothes img:nth-child(1) {
+	width: 0.481vw;
+	height: 0.56vw;
+	opacity: 70%;
+	opacity: 70%;
+}
+.four-category-clothes:hover {
+	border: 0.052vw solid var(--border-color);
+	border-radius: 20px;
+	background: var(--hover-color);
+}
+.four-category-clothes:active {
+	/* border: 0.052vw solid rgba(255, 0, 107, 0.2); */
+	border-radius: 20px;
+	background: var(--active-color);
+}

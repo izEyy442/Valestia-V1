@@ -1,0 +1,93 @@
+.top-buttons-center-part {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.552vw;
+	height: 3.094vw;
+}
+
+.top-button-utilize {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 5vw;
+	height: 3.094vw;
+	margin-top: 1440px;
+}
+.top-button-utilize span:nth-child(1) {
+	font-size: 0.625vw;
+}
+
+.top-button-give {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 5vw;
+	height: 3.094vw;
+	margin-left: 0.573vw;
+	margin-top: 1440px;
+}
+.top-button-give span:nth-child(1) {
+	font-size: 0.625vw;
+}
+
+.top-button-rename {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 5vw;
+	height: 3.094vw;
+	margin-left: 0.573vw;
+	margin-top: 1440px;
+}
+
+.top-button-rename span:nth-child(1) {
+	font-size: 0.625vw;
+}
+
+.top-button-delete {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 5vw;
+	height: 3.094vw;
+	margin-left: 0.573vw;
+	margin-top: 1440px;
+}
+
+.top-button-delete span:nth-child(1) {
+	font-size: 0.625vw;
+}
+
+.raccours4, .raccours3, .raccours2, .raccours1 {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 5vw;
+	height: 2.8vw;
+	border: 0.052vw solid var(--border-color);
+	border-radius: 10px;
+	background-color: var(--background-color);
+	margin-left: 0px;
+	transition: all 0.1s ease;
+	cursor: pointer;
+}
+.raccours4:hover, .raccours3:hover, .raccours2:hover, .raccours1:hover{
+	/* border: 0.052vw solid var(--border-color);
+	border-radius: 10px; */
+	background: var(--active-color);
+	/* box-shadow: 0 0 50px 0px #296ae44f; */
+}
+.raccours4:active, .raccours3:active, .raccours2:active, .raccours1:active{
+	border: 0.052vw solid var(--border-color);
+	border-radius: 10px;
+	background: var(--active-color);
+}
+.raccours4 img:nth-child(1), .raccours3 img:nth-child(1), .raccours2 img:nth-child(1), .raccours1 img:nth-child(1) {
+	width: 3.604vw;
+	height: 3.604vw;
+}

@@ -1,0 +1,4848 @@
+@font-face {
+    font-family: "Acrom";
+    src: url("../font/Acrom-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "TT Norms";
+    src: url("../font/TTNorms-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../font/Rubik-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik Bold";
+    src: url("../font/Rubik-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik Light";
+    src: url("../font/Rubik-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../font/Inter-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "Inter Thin";
+    src: url("../font/Inter-Thin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Zabal";
+    src: url("../font/ZabalDEMO-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Zabal Bold";
+    src: url("../font/ZabalDEMO-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("../font/Poppins-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Oswald Light";
+    src: url("../font/Poppins-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Nature";
+    src: url("../font/Nature.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../font/Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Popins";
+    src: url("../font/Poppins-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "PopinsBold";
+    src: url("../font/Poppins-SemiBoldItalic.ttf") format("truetype");
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    /* overflow: auto; */
+    /* scroll-behavior: smooth; */
+}
+
+html,
+body {
+    font-size: 15px;
+    font-family: Oswald;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    /* background-repeat: no-repeat; */
+}
+
+.fullBackGround {
+    display: none;
+    position: absolute;
+    /* position: absolute; */
+    /* z-index: ; */
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background: url("/html/images/src/generalBG.png");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.generalSection {
+    display: none;
+    overflow: scroll;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.caseOpeningSection {
+    display: none;
+    height: 100%;
+    overflow: scroll;
+}
+
+.coinMarketSection {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    z-index: 9879999;
+}
+
+.topBar {
+    z-index: 987897987;
+    display: flex;
+    display: none;
+    /* margin: auto; */
+    /* position: relative; */
+    position: fixed;
+    background-image: url("/html/images/src/topArea.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: red; */
+    width: 80% !important;
+    left: 10.5%;
+    /* margin-left: -40%; */
+    height: 11rem !important;
+    margin: auto !important;
+}
+
+.profileImageArea {
+    overflow: hidden;
+    border: 2px solid #326ef06f;
+    /* background-color: red; */
+    height: 4rem;
+    width: 4rem;
+    margin-left: 7.5%;
+    margin-top: 1.3%;
+    border-radius: 50px;
+}
+
+.profileImageArea img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.profileInfoArea {
+    /* background-color: red; */
+    max-width: 14rem;
+    height: 4rem;
+    margin-top: 1.3%;
+    margin-left: 1%;
+}
+
+.charNameArea {
+    line-height: 35px;
+    display: flex;
+    width: 13rem;
+    height: 50%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-shadow: 0px 0px 50px rgba(255, 255, 255, 0.4);
+    /* background-color: blue; */
+}
+
+.lastName {
+    font-family: Popins;
+    margin-left: 1.7%;
+    color: rgba(255, 255, 255, 0.604);
+}
+
+.divCreditArea {
+    display: flex;
+    margin-top: 1.5%;
+    text-shadow: 0px 0px 50px rgba(255, 255, 255, 0.4);
+}
+
+.silverCoinImageArea {
+    /* background-color: red; */
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.silverCoinImageArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.silverCoinAmount {
+    color: #b5b5b5;
+    margin-left: 2%;
+    font-size: 15px;
+}
+
+.coinCSText {
+    margin-left: 1%;
+    font-family: Popins;
+    color: #b5b5b5;
+    font-size: 15px;
+}
+
+.goldCoinImageArea {
+    margin-left: 10%;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.goldCoinImageArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.goldCoinAmount {
+    margin-left: 2%;
+    color: #2d6eb9;
+    font-size: 15px;
+}
+
+.coinAddButton {
+    cursor: pointer;
+    margin-top: -0.3%;
+    margin-left: 5%;
+    width: 12%;
+    height: 1.6rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.49);
+    font-size: 24px;
+    line-height: 1.4rem;
+    background: linear-gradient(180deg, #2d6eb9 0%, #2d6eb9 167.5%);
+    border: 1.15px solid rgba(0, 0, 0, 0.26);
+    border-radius: 49.45px;
+}
+
+.premiumCasesButtonArea {
+    font-family: Popins;
+    cursor: pointer;
+    width: 8%;
+    margin-top: 1.7%;
+    margin-left: 2%;
+    height: 33%;
+    background: linear-gradient(180deg, rgba(31, 30, 39, 0) 15.83%, #363448 132.5%);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.45));
+    border-radius: 13px;
+}
+
+.premiumText {
+    margin-top: 0.8%;
+    letter-spacing: 0.01em;
+    font-family: Popins;
+    font-size: 23px;
+    text-align: center;
+    color: #2d6eb9;
+
+    text-shadow: 0px 0px 39px #2d6eb9;
+}
+
+.caseText {
+    text-align: center;
+    font-size: 15px;
+    margin-top: -0.4rem;
+    font-family: Popins;
+    color: #ffffff65;
+    text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.4);
+}
+
+.logoArea {
+    cursor: pointer;
+    margin-left: 15.5%;
+    /* background-color: red; */
+    width: 17%;
+    margin-top: -0.3%;
+    height: 103%;
+}
+
+.logoCaseText {
+    letter-spacing: -0.035em;
+    position: relative;
+    z-index: 123;
+    font-family: PopinsBold;
+    text-align: center;
+    font-size: 54px;
+    background: linear-gradient(180deg, #2d6eb9 0%, #2d6eb9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-shadow: 0px 0px 50px rgb(0, 0, 0);
+}
+
+/* .logoCaseShadow {
+    letter-spacing: -0.035em;
+    position: relative;
+    z-index: 122;
+    color: #100000;
+    font-family: Popins;
+    text-align: center;
+    font-size: 54px;
+    margin-top: -5rem;
+    /* background: linear-gradient(180deg, #e92222 0%, #ff8f8f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
+.silverCaseLogoImageArea {
+    z-index: 121;
+    /* background-color: red; */
+    margin-top: -3rem;
+    width: 100%;
+    height: 53%;
+}
+
+.silverCaseLogoImageArea img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.logoOpeningText {
+    margin-top: -1.9rem;
+    text-align: center;
+    font-size: 32px;
+    background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.39) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+
+.topRightButton {
+    cursor: pointer;
+    display: flex;
+    overflow: hidden;
+    width: 8rem;
+    height: 2.5rem;
+    margin-top: 2.1rem;
+
+    margin-left: 1rem;
+    background: #1e1d26;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 11px rgba(255, 255, 255, 0.03);
+    border-radius: 40px;
+}
+
+.topRightButton:nth-child(:last-child) {
+}
+
+/* .topRightButton:first-child {
+} */
+
+#earthButton {
+    color: #ffffff;
+    background: #201f27;
+    box-shadow: inset -5px 0px 4px rgba(255, 255, 255, 0.05);
+    border-radius: 40px;
+    width: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+.rightButtonText {
+    text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.3);
+    /* font-family: Popins; */
+    color: rgba(255, 255, 255, 0.43);
+    line-height: 2.5rem;
+    text-align: center;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    /* background-color: red; */
+    width: 5.5rem;
+}
+
+.serverLastItemsArea {
+    position: relative;
+    z-index: 9879987;
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+    /* padding-left: 1rem; */
+    /* padding-right: 10rem; */
+    /* background-color: blue; */
+    /* height: 80%; */
+    width: 72%;
+    margin-left: 14.3%;
+    margin-top: 8.7%;
+    margin-bottom: 0.2%;
+}
+
+*::-webkit-scrollbar {
+    width: 9px;
+    height: 0;
+}
+
+*::-webkit-scrollbar-track {
+    background: #19191f;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.lastItem {
+    z-index: 9998790003;
+    position: relative;
+    flex: 0 0 8.9%;
+    /* height: 100%; */
+    /* background-color: red; */
+    /* height: 10%; */
+    margin-right: 1.2%;
+}
+
+.lastItemBackgroundArea {
+    margin-top: -4%;
+    width: 100%;
+    height: 100%;
+}
+.lastItemBackgroundArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.lastItemImageArea {
+    position: absolute;
+    top: 0;
+    z-index: 321;
+    height: 55%;
+    width: 55%;
+    left: 22.5%;
+    top: 17.5%;
+    transform: rotate(17.96deg);
+}
+
+.lastItemImageArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.premiumCasesArea {
+    /* height: 150%; */
+    /* background-color: red; */
+}
+
+.caseRectangleArea {
+    display: flex;
+    height: 6%;
+    /* margin-bottom: 2%; */
+    /* margin-top: 2%; */
+}
+
+.caseContentRectangleArea {
+    margin-top: 11%;
+    display: flex;
+    justify-content: center;
+    height: 6%;
+    margin-bottom: 1%;
+    /* margin-top: 2%; */
+}
+
+.leftRectangleImageArea {
+    margin-top: 1.5%;
+    height: 25%;
+    width: 20%;
+    /* background-color: red; */
+}
+
+.leftRectangleImageArea img {
+    height: 100%;
+    width: 100%;
+}
+
+.caseNameBGArea {
+    position: relative;
+
+    z-index: 987;
+    /* background-color: blue; */
+    height: 100%;
+    width: 13%;
+}
+.caseNameBGArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.openingCaseNameBGArea {
+    position: relative;
+
+    z-index: 987;
+    /* background-color: blue; */
+    height: 100%;
+    width: 10%;
+    margin-right: -0.2%;
+}
+.openingCaseNameBGArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.caseNames {
+    text-transform: uppercase;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.03em;
+    font-size: 25px;
+    color: #ffffff;
+    position: absolute;
+    top: 35%;
+    font-family: PopinsBold;
+    /* background-color: red; */
+    width: 100%;
+    text-align: center;
+}
+
+.openingCaseNames {
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    color: #ffffff;
+    position: absolute;
+    top: 35.5%;
+    font-family: PopinsBold;
+    /* background-color: red; */
+    width: 100%;
+    text-align: center;
+}
+
+.middleRectangleImageArea {
+    margin-top: 1.5%;
+    height: 25%;
+    width: 60%;
+    /* background-color: red; */
+}
+
+.openingMiddleRectangleImageArea {
+    z-index: 9879;
+    margin-top: 1.5%;
+    height: 25%;
+    width: 45%;
+    /* background-color: red; */
+}
+
+.openingMiddleRectangleImageArea img {
+    height: 100%;
+    width: 100%;
+    /* object-fit: contain; */
+}
+
+.middleRectangleImageArea img {
+    height: 100%;
+    width: 100%;
+}
+
+.caseCountImgArea {
+    position: relative;
+    z-index: 987;
+    /* background-color: blue; */
+    height: 100%;
+    width: 7.5%;
+    margin-left: -1%;
+}
+
+.caseCountImgArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.openingCaseCountImgArea {
+    position: relative;
+    z-index: 99987;
+    /* background-color: blue; */
+    height: 100%;
+    width: 7.5%;
+    margin-left: -1%;
+}
+
+.openingCaseCountImgArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.rightRectangleImageArea {
+    margin-top: 1.5%;
+    height: 25%;
+    width: 25%;
+    margin-left: -1%;
+    /* background-color: red; */
+}
+
+.rightRectangleImageArea img {
+    height: 100%;
+    width: 100%;
+}
+
+.caseCountTextArea {
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    font-family: Popins;
+    top: 37.9%;
+    /* background-color: red; */
+    width: 100%;
+    font-size: 13px;
+    /* height: 100%; */
+}
+
+.openingCaseCountTextArea {
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    font-family: Popins;
+    top: 39.9%;
+    /* background-color: red; */
+    width: 100%;
+    font-size: 13px;
+    /* height: 100%; */
+}
+
+.inBoxCasesText {
+    /* font-family: Oswald; */
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.inBoxCasesCount {
+    margin-top: -1.3%;
+    font-size: 15px;
+    color: #70ff00;
+    margin-left: 5%;
+    text-shadow: 0px 0px 17px rgba(112, 255, 0, 0.64);
+}
+
+.casesArea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -1%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+
+.premiumCasesList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -1%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.caseItem {
+    position: relative;
+    /* background-color: blue; */
+    width: 21%;
+    height: 19rem;
+    margin-top: 2%;
+    transition-duration: 0.6s;
+    /* margin-right: 2%; */
+}
+
+.premiumCaseBackgroundArea {
+    position: relative;
+    /* background-color: red; */
+    height: 125%;
+    width: 125%;
+    left: -12%;
+    top: -10%;
+    transition-duration: 0.6s;
+    /* padding: 10%; */
+}
+
+.premiumCaseBackgroundArea img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.premiumCaseImgArea {
+    position: absolute;
+    /* top: 0; */
+    /* top: -20%; */
+    /* background-color: red; */
+    width: 95%;
+    left: 6.5%;
+    transition-duration: 0.6s;
+    top: 14%;
+    height: 73%;
+}
+
+.premiumCaseImgArea img {
+    height: 93%;
+    width: 92%;
+    object-fit: contain;
+}
+
+
+.caseInfoArea {
+    position: absolute;
+    /* background-color: red; */
+    height: 20%;
+    transition-duration: 0.6s;
+    width: 100%;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    top: 72%;
+}
+
+.caseName {
+    font-family: Popins;
+    color: White;
+    text-align: center;
+}
+
+.caseCreditArea {
+    justify-content: center;
+    display: flex;
+}
+
+.inCaseCreditAmount {
+    color: #2d6eb9;
+}
+
+.inCaseCreditType {
+    font-family: Popins;
+    margin-left: 1%;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.648);
+}
+
+.openCaseButton {
+    transition-duration: 0.6s;
+    font-family: PopinsBold;
+    position: absolute;
+    z-index: 98789;
+    top: 88%;
+    cursor: pointer;
+    border-radius: 7px;
+    width: fit-content;
+    left: 22%;
+    font-size: 16px;
+    padding: 2.5% 6% 2.5% 6%;
+    text-shadow: 0px 0px 10px rgba(5, 5, 5, 0.9);
+    color: rgba(255, 255, 255, 0.954);
+}
+
+/* .openCaseButton.yellow {
+    background: linear-gradient(178.01deg, #ffa800 1.68%, #ff7a00 98.33%);
+    box-shadow: inset 0px 0px 30px #000000;
+    border: 2px solid #af83137e;
+} */
+
+/* .openCaseButton.red {
+    background: linear-gradient(178.01deg, #ff9191 1.68%, #ff0000 98.33%);
+    box-shadow: inset 0px 0px 30px #000000;
+    border: 2px solid #ba4a4aa4;
+} */
+
+/* .openCaseButton.green {
+    background: linear-gradient(178.01deg, #a0ff91 1.68%, #00ff85 98.33%);
+    box-shadow: inset 0px 0px 30px #000000;
+    border: 2px solid #6dba615c;
+}
+
+.openCaseButton.blue {
+    background: linear-gradient(178.01deg, #00ffff 1.68%, #00a3ff 98.33%);
+    box-shadow: inset 0px 0px 30px #000000;
+    border: 2px solid #129b9b61;
+}
+
+.openCaseButton.purple {
+    background: linear-gradient(178.01deg, #8f00ff 1.68%, #eb00ff 98.33%);
+    box-shadow: inset 0px 0px 30px #000000;
+    border: 2px solid #7914c68b;
+}
+
+.openCaseButton.nude {
+    background: linear-gradient(178.01deg, #9c8d6f 1.68%, #d7a97e 98.33%);
+    box-shadow: inset 0px 0px 30px #000000;
+    border: 2px solid #9c8d6f83;
+} */
+
+.caseOpeningRectangle {
+    display: flex;
+    position: relative;
+    top: 16%;
+}
+
+.caseOpeningRectImageArea {
+    width: 50%;
+    margin-left: -0.4%;
+}
+
+.caseOpeningRectImageArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.openingBGArea {
+    position: relative;
+    width: 15%;
+    margin-left: -0.3%;
+}
+
+.openingBGArea img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.openingCaseArea {
+    position: relative;
+    /* background-color: red; */
+    height: 25%;
+    display: flex;
+    top: 15%;
+    width: 55%;
+    left: 22.5%;
+}
+
+.caseOpeningBefore {
+    display: flex;
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+}
+
+.caseOpeningDurationArea {
+    /* background-color: red; */
+    width: 100%;
+    overflow: hidden;
+    /* height: 15%; */
+    display: flex;
+    display: none;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.openingCaseImgArea {
+    /* background-color: blue; */
+    width: 55%;
+}
+
+.openingCaseImgArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.openingButtonArea {
+    /* background-color: green; */
+    width: 20%;
+    height: 100%;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+.openinOpenCaseButton {
+    cursor: pointer;
+    height: 20%;
+    /* background: linear-gradient(178.01deg, #ee8d8d 1.68%, #ff0000 98.33%);
+    box-shadow: inset 0px 0px 40px 5px #000000;
+    border-radius: 10px;
+    border: 2px solid #963d3da6; */
+    font-family: "PopinsBold";
+    text-align: center;
+    line-height: 52px;
+    font-size: 17px;
+    color: #ffffff;
+    margin-top: 10%;
+}
+
+.yourAccountUpgradedGeneral {
+    display: none;
+    position: absolute;
+    z-index: 987987988989889779;
+    height: 100%;
+    width: 100%;
+    /* z-index: 9878976; */
+}
+
+.upgradedNotifArea {
+    box-shadow: 0px 0px 35px rgba(255, 138, 138, 0.301);
+    position: absolute;
+    background: linear-gradient(0deg, rgba(220, 56, 56, 0.142) -11.39%, rgba(192, 76, 76, 0.193) 79.17%), rgba(177, 82, 82, 0.18);
+    backdrop-filter: blur(1px);
+    border: 1px solid RED;
+    border-radius: 15px;
+    min-height: 75px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -50px;
+}
+
+.upgradeTopArea {
+    /* background-color: red; */
+    height: 2rem;
+    margin-top: 0.5rem;
+    color: #2d6eb9;
+    text-shadow: 0px 0px 19px rgba(251, 255, 0, 0.34);
+    text-align: center;
+    text-shadow: 0px 0px 9px rgba(255, 255, 255, 0.5);
+    font-family: Popins;
+    font-size: 25px;
+}
+
+.upgradeNotifMiddle {
+    text-align: center;
+    line-height: 1.5rem;
+    /* color: #ff8a8a; */
+    color: white;
+    font-family: Popins;
+    /* background-color: red; */
+    min-height: 2rem;
+}
+
+/* sasasa */
+
+/* .openinOpenCaseButton.orange {
+    background: linear-gradient(178.01deg, #ffa800 1.68%, #ff7a00 98.33%);
+    box-shadow: inset 0px 0px 30px #000000;
+    border: 2px solid #af83137e;
+}
+
+.openinOpenCaseButton.red {
+    background: linear-gradient(178.01deg, #ee8d8d 1.68%, #ff0000 98.33%);
+    box-shadow: inset 0px 0px 40px 5px #000000;
+    border: 2px solid #963d3da6;
+}
+
+.openinOpenCaseButton.green {
+    background: linear-gradient(178.01deg, #a0ff91 1.68%, #00ff85 98.33%);
+    box-shadow: inset 0px 0px 30px #000000;
+    border: 2px solid #6dba615c;
+}
+
+.openinOpenCaseButton.blue {
+    background: linear-gradient(178.01deg, #00ffff 1.68%, #00a3ff 98.33%);
+    box-shadow: inset 0px 0px 30px #000000;
+    border: 2px solid #129b9b61;
+}
+
+.openinOpenCaseButton.purple {
+    background: linear-gradient(178.01deg, #8f00ff 1.68%, #eb00ff 98.33%);
+    box-shadow: inset 0px 0px 30px #000000;
+    border: 2px solid #7914c68b;
+}
+
+.openinOpenCaseButton.nude {
+    background: linear-gradient(178.01deg, #9c8d6f 1.68%, #d7a97e 98.33%);
+    box-shadow: inset 0px 0px 30px #000000;
+    border: 2px solid #9c8d6f83;
+} */
+
+/* asdasdsa */
+
+.openinOpenFastButton {
+    cursor: pointer;
+    height: 20%;
+    margin-top: 8%;
+    /* background: rgba(36, 34, 45, 0.72);
+    box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.05), inset 0px 0px 15px rgba(255, 255, 255, 0.15); */
+    /* border-radius: 10px; */
+    /* border: 2px solid #963d3da6; */
+    font-family: "PopinsBold";
+    text-align: center;
+    line-height: 55px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.openingCreditArea {
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+}
+
+.openingRectImageArea {
+    width: 35%;
+    height: 1%;
+}
+
+.openingRectImageArea img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.openingCreditButton {
+    height: -7%;
+    justify-content: center;
+    margin-top: -7%;
+    padding: 2.4% 2% 3.1% 2%;
+    display: flex;
+    font-size: 15px;
+    /* background: linear-gradient(178.01deg, #2d2d2d 1.68%, #050505 98.33%);
+    border-radius: 8px;
+    border: 3px solid #353535cb; */
+}
+
+.openingCreditCountText {
+    line-height: 18px;
+    font-family: Popins;
+    color: #2d6eb9;
+}
+
+.openingCreditText {
+    text-transform: uppercase;
+    line-height: 18px;
+    font-family: Popins;
+    margin-left: 5%;
+    color: #ffffff;
+}
+
+.openingCreditIconArea {
+    width: 20%;
+    margin-right: 7%;
+}
+
+.openingCreditIconArea img {
+    /* height: 100%; */
+    width: 100%;
+    object-fit: contain;
+}
+
+.caseOpeningGoBackButton {
+    cursor: pointer;
+    display: flex;
+    width: fit-content;
+    position: relative;
+    top: 16%;
+    left: 3%;
+    /* line-height: 40px; */
+    border-radius: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.7% 1.2% 0.4% 1.2%;
+    color: rgba(255, 255, 255, 0.795);
+    /* background: linear-gradient(180deg, rgba(31, 30, 39, 0) 15.83%, #385dff 132.5%);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+}
+
+.goBackText {
+    width: fit-content;
+    position: relative;
+    top: 0.2rem;
+}
+
+.goBackIconArea {
+    width: 25%;
+    margin-top: 0%;
+    margin-right: 12%;
+}
+.goBackIconArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.caseOpeningInCaseItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1% 5% 0% 5%;
+    gap: 2px;
+    width: 70%;
+    height: 10%;
+    margin-left: 15%;
+    /* margin-bottom: 1rem; */
+    /* background-color: red; */
+}
+
+.inCaseItem {
+    margin-bottom: 2%;
+    position: relative;
+    width: 10rem;
+}
+
+.inCaseItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.incaseItemImageArea {
+    /* background-color: red; */
+    width: 60%;
+    left: 20%;
+    height: 60%;
+    position: absolute;
+    top: -5%;
+}
+
+.incaseItemImageArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.rollItemImageArea {
+    /* background-color: red; */
+    width: 60%;
+    left: 20%;
+    height: 60%;
+    position: absolute;
+    top: 10%;
+}
+
+.rollItemImageArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.incaseItemItemName {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #ffffffdb;
+}
+
+.rollItemItemName {
+    position: absolute;
+    top: 73%;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: #ffffffdb;
+}
+
+.incaseCurrentCase {
+    font-family: Popins;
+    position: absolute;
+    font-size: 7px;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    top: 80%;
+    color: rgba(255, 255, 255, 0.56);
+}
+
+.caseSelectArrowImageArea {
+    /* background-color: blue; */
+    /* width: 10%; */
+    height: 15%;
+}
+
+.caseSelectArrowImageArea img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.caseItemRollArea {
+    /* background-color: red; */
+    width: 10000000000000000000px;
+    max-width: 1000000000000000000px;
+    height: 55%;
+    margin-top: 2%;
+    display: flex;
+    gap: 1px;
+    margin-left: 0;
+    transition: all 8s cubic-bezier(0.08, 0.6, 0, 1);
+    overflow-y: hidden;
+}
+
+.caseRollItem {
+    position: relative;
+    flex: 0 0 9.95rem;
+}
+
+.caseRollItem img {
+    width: 100%;
+    height: 100%;
+}
+
+.congratulationsSection {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(25, 25, 31, 0.65), rgba(25, 25, 31, 0.65)), rgba(0, 0, 0, 0.73);
+    z-index: 98789789789;
+}
+
+.congMain {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* background-color: red; */
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.congratText {
+    z-index: 897987989;
+    color: #00ff47;
+    font-size: 45px;
+    margin-top: 13%;
+    text-shadow: 0px 0px 100px rgba(0, 255, 71, 0.2);
+}
+
+.congratDesc {
+    color: rgba(255, 255, 255, 0.37);
+}
+
+.congratItemBGArea {
+    /* margin-top: 1%; */
+    width: 20%;
+    height: 35%;
+    /* background-color: red; */
+}
+
+.congratItemBGArea img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.congratItemArea {
+    /* background-color: red; */
+    width: 13%;
+    height: 15%;
+    margin-top: -16%;
+}
+
+.congratItemArea img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.congratItemName {
+    font-family: "Popins";
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    font-size: 21px;
+    margin-top: 1.3%;
+}
+
+.congButtonArea {
+    display: flex;
+    /* background-color: red; */
+    height: 6%;
+    width: 30%;
+    margin-top: 2.5%;
+    gap: 13px;
+}
+
+.congButton {
+    cursor: pointer;
+    padding-top: 1.5%;
+    font-size: 30px;
+    font-family: "PopinsBold";
+    color: rgb(255, 255, 255);
+    align-items: center;
+    vertical-align: center;
+    width: 50%;
+    /* background: linear-gradient(180deg, #00ff57 -48.03%, rgba(0, 255, 87, 0) 147.37%);
+    filter: drop-shadow(0px 0px 59px rgba(10, 186, 68, 0.32)); */
+    /* border-radius: 8px; */
+}
+
+#collectButton {
+    line-height: 50px;
+}
+
+/* #sellButton { */
+    /* line-height: 430px; */
+    /* margin-top: 1%; */
+    /* line-height: 40px; */
+    /* background: linear-gradient(180deg, #09ff00 -48.03%, rgba(255, 245, 0, 0) 147.37%); */
+/* } */
+
+.congSellCredit {
+    /* position: relative; */
+    /* margin-top: 12rem; */
+    /* margin-top: 100%; */
+    color: white;
+}
+
+.csText {
+    /* font-family: Popins; */
+    /* font-weight: 500; */
+    margin-left: 2%;
+    color: rgb(255, 255, 255);
+}
+
+.sellText {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.coinMarketSection {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    z-index: 9879999;
+}
+
+.marketCoinListArea {
+    /* background-color: red; */
+    width: 70%;
+    margin-left: 15%;
+    /* max-height: 67%; */
+    overflow: auto;
+    justify-content: center;
+    display: flex;
+    /* padding-bottom: 1rem; */
+    flex-wrap: wrap;
+    padding-right: 2rem;
+    margin-top: 2%;
+    /* gap: 50px; */
+}
+
+.coinItem {
+    /* margin-left: -5%; */
+    position: relative;
+    /* background-color: red; */
+    height: 24rem;
+    width: 25%;
+    /* padding */
+}
+
+.coinItem img {
+    height: 100%;
+    width: 100%;
+    /* margin-left: -1%; */
+    /* margin-left: -13%;Popins;
+    margin-top: -6%; */
+    object-fit: cover;
+}
+
+.coinBuyCoinImage {
+    position: absolute;
+    top: 13%;
+    left: 5.5%;
+    /* background-color: red; */
+    height: 65%;
+    width: 90%;
+}
+
+.coinBuyCoinImage img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.coinTextArea {
+    position: relative;
+    z-index: 89789789897;
+    /* z-index: 98889999; */
+    margin-top: -35.5%;
+    /* background-color: red; */
+    width: 100%;
+    /* height: 10%; */
+    display: flex;
+    font-family: "Oswald";
+    justify-content: center;
+    font-size: 22px;
+    color: #2d6eb9;
+
+    text-shadow: 0px 0px 12.4553px rgba(0, 0, 0, 0.41);
+}
+
+.buyCoinText {
+    font-family: "Oswald Light";
+    margin-left: 0.5%;
+    color: #ffffff;
+}
+
+.coinBuyButton {
+    cursor: pointer;
+    text-align: center;
+    background: rgba(255, 199, 0, 0.54);
+    box-shadow: 0px 0px 32.2927px rgba(0, 0, 0, 0.68), inset 0px 0px 28.7046px rgba(0, 0, 0, 0.49);
+    backdrop-filter: blur(8.52167px);
+    border: 3px solid rgba(255, 199, 0, 0.34);
+    width: fit-content;
+    min-height: fit-content;
+    color: white;
+    /* margin-top: 1%; */
+    margin-left: 35%;
+    padding: 1.3% 11% 1.7% 11%;
+    border-radius: 8.97018px;
+}
+
+.coinBuyButton:hover {
+    background: rgba(255, 199, 0, 0.34);
+}
+
+.coinRedeemSection {
+    height: 10%;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+}
+
+.redeemInputBG {
+    height: 70%;
+    width: 50%;
+    /* background-color: orange; */
+}
+
+.redeemInputBG img {
+    width: 100%;
+    height: 100%;
+}
+
+.customInput {
+    margin-top: -5.15%;
+    margin-left: 25.7%;
+    height: 5%;
+    font-size: 18px;
+    width: 40%;
+    z-index: 999;
+    color: rgba(0, 0, 0, 0.35);
+    padding-left: 1.2rem;
+    padding-right: 3.2rem;
+    font-family: "Popins";
+    /* line-height: 100px; */
+    outline: none;
+    background: rgba(7, 7, 7, 0);
+    border: none;
+    border-radius: 5px;
+    transition: border 0.4s;
+}
+
+.redeemAcceptButton {
+    height: 67%;
+    cursor: pointer;
+    margin-top: 0.1%;
+    width: 11%;
+    text-align: center;
+    font-size: 22px;
+    line-height: 65px;
+    font-family: "Popins";
+    color: rgba(0, 0, 0, 0.48);
+    margin-left: -10%;
+    background: linear-gradient(0deg, rgba(255, 199, 0, 0.54), rgba(255, 199, 0, 0.54)), #d9d9d9;
+    box-shadow: 0px 0px 32.2927px rgba(0, 0, 0, 0.68), inset 0px 0px 28.7046px rgba(0, 0, 0, 0.49);
+    border-radius: 14px;
+    border: 3px solid rgba(255, 199, 0, 0.54);
+}
+
+.redeemAcceptButton:hover {
+    color: rgba(0, 0, 0, 0.78);
+    background: linear-gradient(0deg, rgba(255, 199, 0, 0.64), rgba(255, 199, 0, 0.64)), #d9d9d9;
+}
+
+.lastItemInfoArea {
+    display: none;
+    top: 0;
+    position: absolute;
+    box-shadow: (0px 10px 5px rgba(0, 0, 0, 0.95));
+    border-radius: 13px;
+    height: 95%;
+    margin-left: 20%;
+    width: 60%;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    /* transform-origin: display; */
+    /* transition-duration: 1s; */
+}
+
+.lastItemInfoArea.red {
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0) 15.83%, rgba(255, 0, 0, 0.15) 132.5%);
+}
+
+.lastItemInfoArea.green {
+    background: linear-gradient(180deg, rgba(0, 255, 110, 0) 15.83%, rgba(0, 255, 60, 0.15) 132.5%);
+}
+
+.lastItemInfoArea.yellow {
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0) 15.83%, rgba(242, 255, 0, 0.15) 132.5%);
+}
+
+.lastItemInfoArea.blue {
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0) 15.83%, rgba(0, 149, 255, 0.15) 132.5%);
+}
+
+.lastItemInfoArea.purple {
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0) 15.83%, rgba(191, 0, 255, 0.15) 132.5%);
+}
+
+.lastItemInfoArea.nude {
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0) 15.83%, rgba(156, 140, 109, 0.514)32.5%);
+}
+
+.lastItemCaseName {
+    margin-top: 28%;
+    font-family: "Oswald Light";
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.lastItemFirstName {
+    margin-top: 110%;
+    font-family: "Oswald";
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.lastItemLastName {
+    margin-top: -6%;
+    font-family: "Oswald Light";
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#gcCoinShopText {
+    margin-top: 4%;
+}
+
+#currentCaseName {
+    margin-top: 1.2%;
+}
+
+.wonServerNotif {
+    position: absolute;
+    z-index: -1;
+    /* background-color: red; */
+    height: 25%;
+    width: 100%;
+    display: flex;
+    display: none;
+    justify-content: center;
+    transition-duration: 0.4s;
+}
+
+.wonLeftImageArea {
+    width: 15%;
+    height: 100%;
+    /* background-color: blue; */
+    margin-right: -6.5%;
+}
+
+.wonLeftImageArea img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.wonRightImageArea {
+    /* background-color: green; */
+    width: 30%;
+}
+
+.wonRightImageArea img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.wonNotifyItemImgArea {
+    transform: rotate(7.36deg);
+    position: absolute;
+    height: 50%;
+    left: 34.7%;
+    top: 24.9%;
+    width: 7%;
+    /* background-color: red; */
+}
+
+.wonNotifyItemImgArea img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.wonNotifyTextArea {
+    /* background-color: red; */
+    position: absolute;
+    height: 40%;
+    left: 43.7%;
+    top: 29.9%;
+    width: 22%;
+}
+
+.wonNotifyCharName {
+    text-transform: uppercase;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    margin-top: 4%;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.98);
+}
+
+.WonItemName {
+    font-size: 27px;
+    color: #ffee01;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+}
+
+.wonNotifyBottom {
+    font-size: 25px;
+    text-align: center;
+}
+.wonFromText {
+    text-align: center;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.98);
+}
+
+/*  RESPONSIVE  */
+
+@media screen and (max-width: 1680px) and (max-height: 1050px) {
+    .lastItemFirstName {
+        margin-top: 125%;
+        font-family: "Oswald";
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    .lastItemLastName {
+        margin-top: -6%;
+        font-family: "Oswald Light";
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    html,
+    body {
+        font-size: 15px;
+        font-family: Oswald;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        /* background-repeat: no-repeat; */
+    }
+    .logoArea {
+        margin-left: 5.5%;
+        width: 12%;
+        margin-top: -0.7%;
+        height: 90%;
+    }
+    .logoCaseText {
+        font-size: 48px;
+    }
+    .logoCaseShadow {
+        font-size: 48px;
+        margin-top: -4.4rem;
+    }
+    .logoOpeningText {
+        margin-top: -1.7rem;
+
+        font-size: 30px;
+    }
+    .caseNames {
+        font-size: 15px;
+        top: 35%;
+        width: 100%;
+    }
+    .rightButtonText {
+        line-height: 2.5rem;
+
+        font-size: 14px;
+
+        width: 5.5rem;
+    }
+    .topRightButton {
+        width: 8rem;
+        height: 2.5rem;
+        margin-top: 2.1rem;
+        margin-left: 1rem;
+
+        border-radius: 40px;
+    }
+
+    .caseText {
+        font-size: 15px;
+        margin-top: -0.4rem;
+    }
+
+    .premiumText {
+        margin-top: 0.8%;
+
+        font-size: 23px;
+
+        text-shadow: 0px 0px 39px rgb(255, 230, 0);
+    }
+    .charNameArea {
+        line-height: 35px;
+
+        width: 13rem;
+        height: 50%;
+
+        font-size: 20px;
+        text-shadow: 0px 0px 50px rgb(255 255 255 / 40%);
+    }
+    .profileImageArea {
+        border: 2px solid #4178ef6f;
+
+        height: 4rem;
+        width: 4rem;
+        margin-left: 7.5%;
+        margin-top: 1.3%;
+        border-radius: 50px;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .caseCountTextArea {
+        top: 37.9%;
+
+        width: 100%;
+        font-size: 13px;
+        /* height: 100%; */
+    }
+
+    .caseOpeningGoBackButton {
+        top: 16%;
+        left: 3%;
+
+        border-radius: 20px;
+
+        padding: 0.7% 1.2% 0.4% 1.2%;
+    }
+    .coinBuyCoinImage {
+        top: 12%;
+        left: 0.5%;
+        height: 65%;
+        width: 99%;
+    }
+    .coinTextArea {
+        margin-top: -41.5%;
+        width: 100%;
+        font-size: 22px;
+    }
+    .coinBuyButton {
+        margin-left: 35%;
+        padding: 1.3% 11% 1.7% 11%;
+        border-radius: 8.97018px;
+    }
+    .coinRedeemSection {
+        height: 10%;
+        width: 100%;
+    }
+    .customInput {
+        margin-top: -5.65%;
+        margin-left: 25.7%;
+        height: 5%;
+        font-size: 18px;
+        width: 40%;
+        padding-left: 1.2rem;
+        padding-right: 3.2rem;
+        border-radius: 5px;
+    }
+    .redeemAcceptButton {
+        height: 67%;
+
+        margin-top: 0.1%;
+        width: 11%;
+
+        font-size: 22px;
+        line-height: 65px;
+
+        margin-left: -10%;
+
+        border-radius: 14px;
+    }
+    .openCaseButton {
+        top: 88%;
+        border-radius: 7px;
+        left: 28.8%;
+        font-size: 14px;
+        padding: 2.5% 6% 2.5% 6%;
+    }
+    .caseOpeningBefore {
+        width: 100%;
+        height: 100%;
+    }
+    .openingCaseImgArea {
+        width: 55%;
+    }
+    .openingButtonArea {
+        width: 20%;
+        height: 100%;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+    .openinOpenCaseButton {
+        height: 20%;
+        border-radius: 10px;
+        font-size: 17px;
+        margin-top: 10%;
+        line-height: 51px;
+    }
+    .openingCreditButton {
+        height: -7%;
+
+        margin-top: -7%;
+        padding: 2.4% 2% 3.1% 2%;
+
+        font-size: 15px;
+
+        border-radius: 8px;
+    }
+    .openingCreditIconArea {
+        width: 20%;
+        margin-right: 7%;
+    }
+    .openingCreditText {
+        line-height: 18px;
+
+        margin-left: 5%;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .inCaseItem {
+        margin-bottom: 2%;
+
+        width: 10rem;
+    }
+    .incaseItemImageArea {
+        width: 60%;
+        left: 20%;
+        height: 60%;
+
+        top: -5%;
+    }
+    .incaseItemItemName {
+        top: 60%;
+        width: 100%;
+
+        font-size: 13px;
+    }
+    .incaseCurrentCase {
+        font-size: 7px;
+        width: 100%;
+
+        top: 80%;
+    }
+    .openinOpenFastButton {
+        height: 20%;
+        margin-top: 8%;
+
+        border-radius: 10px;
+
+        line-height: 55px;
+        font-size: 17px;
+    }
+    .caseRollItem {
+        flex: 0 0 9.917rem;
+    }
+    .congratText {
+        font-size: 45px;
+        margin-top: 13%;
+    }
+    .congratItemBGArea {
+        width: 19%;
+        height: 34%;
+    }
+
+    .congratItemArea {
+        width: 13%;
+        height: 15%;
+        margin-top: -18%;
+    }
+
+    .congratItemName {
+        font-size: 21px;
+        margin-top: 1.3%;
+    }
+
+    .congButtonArea {
+        height: 6%;
+        width: 30%;
+        margin-top: 3.5%;
+        gap: 13px;
+    }
+
+    .congButton {
+        padding-top: 1.5%;
+        font-size: 25px;
+
+        width: 50%;
+
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 1600px) and (max-height: 1200px) {
+    .lastItemFirstName {
+        margin-top: 138%;
+        font-family: "Oswald";
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    .lastItemLastName {
+        margin-top: -6%;
+        font-family: "Oswald Light";
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    html,
+    body {
+        font-size: 15px;
+        font-family: Oswald;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        /* background-repeat: no-repeat; */
+    }
+    .logoArea {
+        margin-left: 4.7%;
+        width: 12%;
+        margin-top: -0.7%;
+        height: 90%;
+    }
+    .logoCaseText {
+        font-size: 47px;
+    }
+    .logoCaseShadow {
+        font-size: 47px;
+        margin-top: -4.4rem;
+    }
+    .logoOpeningText {
+        margin-top: -1.7rem;
+
+        font-size: 30px;
+    }
+    .caseNames {
+        font-size: 15px;
+        top: 35%;
+        width: 100%;
+    }
+    .rightButtonText {
+        line-height: 2.5rem;
+
+        font-size: 14px;
+
+        width: 5.5rem;
+    }
+    .topRightButton {
+        width: 8rem;
+        height: 2.5rem;
+        margin-top: 2.1rem;
+        margin-left: 1rem;
+
+        border-radius: 40px;
+    }
+
+    .caseText {
+        font-size: 15px;
+        margin-top: -0.4rem;
+    }
+
+    .premiumText {
+        margin-top: 0.8%;
+        font-size: 20px;
+        text-shadow: 0px 0px 39px rgb(255, 230, 0);
+    }
+    .charNameArea {
+        line-height: 35px;
+
+        width: 13rem;
+        height: 50%;
+
+        font-size: 20px;
+        text-shadow: 0px 0px 50px rgb(255 255 255 / 40%);
+    }
+    .profileImageArea {
+        border: 2px solid #415bef6f;
+
+        height: 4rem;
+        width: 4rem;
+        margin-left: 7.5%;
+        margin-top: 1.3%;
+        border-radius: 50px;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .caseCountTextArea {
+        top: 37.9%;
+
+        width: 100%;
+        font-size: 13px;
+        /* height: 100%; */
+    }
+
+    .caseOpeningGoBackButton {
+        top: 16%;
+        left: 3%;
+
+        border-radius: 20px;
+
+        padding: 0.7% 1.2% 0.4% 1.2%;
+    }
+    .coinBuyCoinImage {
+        top: 12%;
+        left: 0.5%;
+        height: 65%;
+        width: 99%;
+    }
+    .coinTextArea {
+        margin-top: -41.5%;
+        width: 100%;
+        font-size: 22px;
+    }
+    .coinBuyButton {
+        margin-left: 35%;
+        padding: 1.3% 11% 1.7% 11%;
+        border-radius: 8.97018px;
+    }
+    .coinRedeemSection {
+        height: 10%;
+        width: 100%;
+    }
+    .customInput {
+        margin-top: -5.65%;
+        margin-left: 25.7%;
+        height: 5%;
+        font-size: 18px;
+        width: 40%;
+        padding-left: 1.2rem;
+        padding-right: 3.2rem;
+        border-radius: 5px;
+    }
+    .redeemAcceptButton {
+        height: 67%;
+
+        margin-top: 0.1%;
+        width: 11%;
+
+        font-size: 22px;
+        line-height: 65px;
+
+        margin-left: -10%;
+
+        border-radius: 14px;
+    }
+    .openCaseButton {
+        top: 88%;
+        border-radius: 7px;
+        left: 27.8%;
+        font-size: 14px;
+        padding: 2.5% 6% 2.5% 6%;
+    }
+    .caseOpeningBefore {
+        width: 100%;
+        height: 100%;
+    }
+    .openingCaseImgArea {
+        width: 55%;
+    }
+    .openingButtonArea {
+        width: 20%;
+        height: 100%;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+    .openinOpenCaseButton {
+        height: 20%;
+        border-radius: 10px;
+        font-size: 17px;
+        margin-top: 10%;
+        line-height: 51px;
+    }
+    .openingCreditButton {
+        height: -7%;
+
+        margin-top: -7%;
+        padding: 2.4% 2% 3.1% 2%;
+
+        font-size: 15px;
+
+        border-radius: 8px;
+    }
+    .openingCreditIconArea {
+        width: 20%;
+        margin-right: 7%;
+    }
+    .openingCreditText {
+        line-height: 18px;
+
+        margin-left: 5%;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .inCaseItem {
+        margin-bottom: 2%;
+
+        width: 10rem;
+    }
+    .incaseItemImageArea {
+        width: 60%;
+        left: 20%;
+        height: 60%;
+
+        top: -5%;
+    }
+    .incaseItemItemName {
+        top: 60%;
+        width: 100%;
+
+        font-size: 13px;
+    }
+    .incaseCurrentCase {
+        font-size: 7px;
+        width: 100%;
+
+        top: 80%;
+    }
+    .openinOpenFastButton {
+        height: 20%;
+        margin-top: 8%;
+
+        border-radius: 10px;
+
+        line-height: 55px;
+        font-size: 17px;
+    }
+    .caseRollItem {
+        flex: 0 0 9.905rem;
+    }
+    .congratText {
+        font-size: 45px;
+        margin-top: 13%;
+    }
+    .congratItemBGArea {
+        width: 19%;
+        height: 34%;
+    }
+
+    .congratItemArea {
+        width: 13%;
+        height: 15%;
+        margin-top: -19%;
+    }
+
+    .congratItemName {
+        font-size: 21px;
+        margin-top: 1.3%;
+    }
+
+    .congButtonArea {
+        height: 6%;
+        width: 30%;
+        margin-top: 3.5%;
+        gap: 13px;
+    }
+
+    .congButton {
+        padding-top: 1.5%;
+        font-size: 25px;
+
+        width: 50%;
+
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 1600px) and (max-height: 900px) {
+    html,
+    body {
+        font-size: 15px;
+        font-family: Oswald;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        /* background-repeat: no-repeat; */
+    }
+    .logoArea {
+        margin-left: 5.5%;
+        width: 11%;
+        margin-top: -0.3%;
+        height: 92%;
+    }
+    .logoCaseText {
+        font-size: 48px;
+    }
+    .logoCaseShadow {
+        font-size: 48px;
+        margin-top: -4.4rem;
+    }
+    .logoOpeningText {
+        margin-top: -1.7rem;
+        font-size: 29px;
+    }
+    .caseNames {
+        font-size: 14px;
+        top: 35%;
+        width: 100%;
+    }
+    .rightButtonText {
+        line-height: 2.5rem;
+
+        font-size: 14px;
+
+        width: 5.5rem;
+    }
+    .topRightButton {
+        width: 8rem;
+        height: 2.5rem;
+        margin-top: 2.1rem;
+        margin-left: 1rem;
+
+        border-radius: 40px;
+    }
+
+    .caseText {
+        font-size: 15px;
+        margin-top: -0.4rem;
+    }
+    .premiumText {
+        margin-top: 0.8%;
+        font-size: 19px;
+        text-shadow: 0px 0px 39px rgb(255 230 0 / 76%);
+    }
+    .charNameArea {
+        line-height: 35px;
+
+        width: 13rem;
+        height: 50%;
+
+        font-size: 20px;
+        text-shadow: 0px 0px 50px rgb(255 255 255 / 40%);
+    }
+    .profileImageArea {
+        border: 2px solid #416fef6f;
+
+        height: 4rem;
+        width: 4rem;
+        margin-left: 7.5%;
+        margin-top: 1.3%;
+        border-radius: 50px;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .caseCountTextArea {
+        top: 37.9%;
+
+        width: 100%;
+        font-size: 13px;
+        /* height: 100%; */
+    }
+
+    .caseOpeningGoBackButton {
+        top: 16%;
+        left: 3%;
+
+        border-radius: 20px;
+
+        padding: 0.7% 1.2% 0.4% 1.2%;
+    }
+    .coinBuyCoinImage {
+        top: 13%;
+        left: 5.5%;
+
+        height: 65%;
+        width: 90%;
+    }
+    .coinTextArea {
+        margin-top: -45.5%;
+        width: 100%;
+        font-size: 22px;
+    }
+    .coinBuyButton {
+        margin-left: 35%;
+        padding: 1.3% 11% 1.7% 11%;
+        border-radius: 8.97018px;
+    }
+    .coinRedeemSection {
+        height: 10%;
+        width: 100%;
+    }
+    .customInput {
+        margin-top: -5.15%;
+        margin-left: 25.7%;
+        height: 5%;
+        font-size: 18px;
+        width: 40%;
+
+        padding-left: 1.2rem;
+        padding-right: 3.2rem;
+
+        border-radius: 5px;
+    }
+    .redeemAcceptButton {
+        height: 67%;
+        margin-top: 0.1%;
+        width: 11%;
+        font-size: 22px;
+        line-height: 61px;
+        margin-left: -10%;
+        line-height: 59px;
+    }
+    .openCaseButton {
+        top: 88%;
+        border-radius: 7px;
+        left: 27.8%;
+        font-size: 14px;
+        padding: 2.5% 6% 2.5% 6%;
+    }
+    .caseOpeningBefore {
+        width: 100%;
+        height: 100%;
+    }
+    .openingCaseImgArea {
+        width: 55%;
+    }
+    .openingButtonArea {
+        width: 20%;
+        height: 100%;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+    .openinOpenCaseButton {
+        height: 20%;
+        border-radius: 10px;
+        font-size: 17px;
+        margin-top: 10%;
+        line-height: 44px;
+    }
+    .openingCreditButton {
+        height: -7%;
+
+        margin-top: -7%;
+        padding: 2.4% 2% 3.1% 2%;
+
+        font-size: 15px;
+
+        border-radius: 8px;
+    }
+    .openingCreditIconArea {
+        width: 20%;
+        margin-right: 7%;
+    }
+    .openingCreditText {
+        line-height: 18px;
+
+        margin-left: 5%;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+        margin-left: 5%;
+    }
+    .inCaseItem {
+        margin-bottom: 2%;
+
+        width: 10rem;
+    }
+    .incaseItemImageArea {
+        width: 60%;
+        left: 20%;
+        height: 60%;
+
+        top: -5%;
+    }
+    .incaseItemItemName {
+        top: 60%;
+        width: 100%;
+
+        font-size: 13px;
+    }
+    .incaseCurrentCase {
+        font-size: 7px;
+        width: 100%;
+
+        top: 80%;
+    }
+    .openinOpenFastButton {
+        height: 20%;
+        margin-top: 8%;
+        border-radius: 10px;
+        line-height: 48px;
+        font-size: 17px;
+    }
+    .caseRollItem {
+        flex: 0 0 9.905rem;
+    }
+    .congratText {
+        font-size: 45px;
+        margin-top: 13%;
+    }
+    .congratItemBGArea {
+        width: 20%;
+        height: 35%;
+    }
+
+    .congratItemArea {
+        width: 13%;
+        height: 15%;
+        margin-top: -16%;
+    }
+
+    .congratItemName {
+        font-size: 21px;
+        margin-top: 1.3%;
+    }
+
+    .congButtonArea {
+        height: 6%;
+        width: 30%;
+        margin-top: 2.5%;
+        gap: 13px;
+    }
+
+    .congButton {
+        padding-top: 0.5%;
+        font-size: 25px;
+        width: 50%;
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+    html,
+    body {
+        font-size: 15px;
+        font-family: Oswald;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        /* background-repeat: no-repeat; */
+    }
+    .logoArea {
+        margin-left: 5.5%;
+
+        width: 17%;
+        margin-top: -0.3%;
+        height: 92%;
+    }
+    .logoCaseText {
+        font-size: 52px;
+    }
+    .logoCaseShadow {
+        font-size: 52px;
+        margin-top: -4.8rem;
+    }
+    .logoOpeningText {
+        margin-top: -1.7rem;
+
+        font-size: 30px;
+    }
+    .caseNames {
+        font-size: 17px;
+
+        top: 35%;
+
+        width: 100%;
+    }
+    .rightButtonText {
+        line-height: 2.5rem;
+
+        font-size: 14px;
+
+        width: 5.5rem;
+    }
+    .topRightButton {
+        width: 8rem;
+        height: 2.5rem;
+        margin-top: 2.1rem;
+        margin-left: 1rem;
+
+        border-radius: 40px;
+    }
+    .caseText {
+        font-size: 15px;
+        margin-top: -0.4rem;
+    }
+    .premiumText {
+        margin-top: 0.8%;
+
+        font-size: 23px;
+
+        text-shadow: 0px 0px 39px rgb(255 230 0 / 76%);
+    }
+    .charNameArea {
+        line-height: 35px;
+
+        width: 13rem;
+        height: 50%;
+
+        font-size: 20px;
+        text-shadow: 0px 0px 50px rgb(255 255 255 / 40%);
+    }
+    .profileImageArea {
+        border: 2px solid #416fef6f;
+
+        height: 4rem;
+        width: 4rem;
+        margin-left: 7.5%;
+        margin-top: 1.3%;
+        border-radius: 50px;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .caseCountTextArea {
+        top: 37.9%;
+
+        width: 100%;
+        font-size: 13px;
+        /* height: 100%; */
+    }
+
+    .caseOpeningGoBackButton {
+        top: 16%;
+        left: 3%;
+
+        border-radius: 20px;
+
+        padding: 0.7% 1.2% 0.4% 1.2%;
+    }
+    .coinBuyCoinImage {
+        top: 13%;
+        left: 5.5%;
+
+        height: 65%;
+        width: 90%;
+    }
+    .coinTextArea {
+        margin-top: -35.5%;
+
+        width: 100%;
+
+        font-size: 22px;
+    }
+    .coinBuyButton {
+        margin-left: 35%;
+        padding: 1.3% 11% 1.7% 11%;
+        border-radius: 8.97018px;
+    }
+    .coinRedeemSection {
+        height: 10%;
+        width: 100%;
+    }
+    .customInput {
+        margin-top: -5.15%;
+        margin-left: 25.7%;
+        height: 5%;
+        font-size: 18px;
+        width: 40%;
+
+        padding-left: 1.2rem;
+        padding-right: 3.2rem;
+
+        border-radius: 5px;
+    }
+    .redeemAcceptButton {
+        height: 67%;
+
+        margin-top: 0.1%;
+        width: 11%;
+
+        font-size: 22px;
+        line-height: 65px;
+
+        margin-left: -10%;
+
+        border-radius: 14px;
+    }
+    .openCaseButton {
+        top: 88%;
+
+        border-radius: 7px;
+
+        left: 29.8%;
+        font-size: 14px;
+        padding: 2.5% 6% 2.5% 6%;
+    }
+    .caseOpeningBefore {
+        width: 100%;
+        height: 100%;
+    }
+    .openingCaseImgArea {
+        width: 55%;
+    }
+    .openingButtonArea {
+        width: 20%;
+        height: 100%;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+    .openinOpenCaseButton {
+        height: 20%;
+
+        border-radius: 10px;
+
+        font-size: 17px;
+
+        margin-top: 10%;
+    }
+    .openingCreditButton {
+        height: -7%;
+
+        margin-top: -7%;
+        padding: 2.4% 2% 3.1% 2%;
+
+        font-size: 15px;
+
+        border-radius: 8px;
+    }
+    .openingCreditIconArea {
+        width: 20%;
+        margin-right: 7%;
+    }
+    .openingCreditText {
+        line-height: 18px;
+
+        margin-left: 5%;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .inCaseItem {
+        margin-bottom: 2%;
+
+        width: 10rem;
+    }
+    .incaseItemImageArea {
+        width: 60%;
+        left: 20%;
+        height: 60%;
+
+        top: -5%;
+    }
+    .incaseItemItemName {
+        top: 60%;
+        width: 100%;
+
+        font-size: 13px;
+    }
+    .incaseCurrentCase {
+        font-size: 7px;
+        width: 100%;
+
+        top: 80%;
+    }
+    .openinOpenFastButton {
+        height: 20%;
+        margin-top: 8%;
+
+        border-radius: 10px;
+
+        line-height: 55px;
+        font-size: 17px;
+    }
+    .caseRollItem {
+        flex: 0 0 9.905rem;
+    }
+    .congratText {
+        font-size: 45px;
+        margin-top: 13%;
+    }
+    .congratItemBGArea {
+        width: 20%;
+        height: 35%;
+    }
+
+    .congratItemArea {
+        width: 13%;
+        height: 15%;
+        margin-top: -16%;
+    }
+
+    .congratItemName {
+        font-size: 21px;
+        margin-top: 1.3%;
+    }
+
+    .congButtonArea {
+        height: 6%;
+        width: 30%;
+        margin-top: 2.5%;
+        gap: 13px;
+    }
+
+    .congButton {
+        padding-top: 1.5%;
+        font-size: 25px;
+
+        width: 50%;
+
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 1440px) and (max-height: 1050px) {
+    html,
+    body {
+        font-size: 15px;
+        font-family: Oswald;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        /* background-repeat: no-repeat; */
+    }
+    .logoArea {
+        margin-left: 5.5%;
+        width: 7%;
+        margin-top: 0%;
+        height: 77%;
+    }
+    .logoCaseText {
+        font-size: 38px;
+    }
+    .logoCaseShadow {
+        font-size: 38px;
+        margin-top: -3.4rem;
+    }
+    .logoOpeningText {
+        margin-top: -1.7rem;
+        font-size: 25px;
+    }
+    .caseNames {
+        font-size: 13px;
+        top: 35%;
+        width: 100%;
+    }
+    .rightButtonText {
+        line-height: 2.5rem;
+
+        font-size: 14px;
+
+        width: 5.5rem;
+    }
+    .topRightButton {
+        width: 7rem;
+        height: 2.5rem;
+        margin-top: 2.1rem;
+        margin-left: 1rem;
+        border-radius: 40px;
+    }
+    .caseText {
+        font-size: 15px;
+        margin-top: -0.4rem;
+    }
+    .premiumText {
+        margin-top: 6.8%;
+        font-size: 19px;
+        text-shadow: 0px 0px 39px rgb(255 230 0 / 76%);
+    }
+    .charNameArea {
+        line-height: 35px;
+
+        width: 13rem;
+        height: 50%;
+
+        font-size: 20px;
+        text-shadow: 0px 0px 50px rgb(255 255 255 / 40%);
+    }
+    .profileImageArea {
+        border: 2px solid #416fef6f;
+
+        height: 4rem;
+        width: 4rem;
+        margin-left: 7.5%;
+        margin-top: 1.3%;
+        border-radius: 50px;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .caseCountTextArea {
+        top: 37.9%;
+
+        width: 100%;
+        font-size: 13px;
+        /* height: 100%; */
+    }
+
+    .caseOpeningGoBackButton {
+        top: 16%;
+        left: 3%;
+
+        border-radius: 20px;
+
+        padding: 0.7% 1.2% 0.4% 1.2%;
+    }
+    .coinItem {
+        /* margin-left: -5%; */
+        position: relative;
+        /* background-color: red; */
+        height: 19rem;
+        width: 25%;
+    }
+    .coinBuyCoinImage {
+        top: 13%;
+        left: 5.5%;
+
+        height: 65%;
+        width: 90%;
+    }
+    .coinTextArea {
+        margin-top: -39.5%;
+        width: 100%;
+        font-size: 22px;
+    }
+    .coinBuyButton {
+        margin-left: 35%;
+        padding: 1.3% 11% 1.7% 11%;
+        border-radius: 8.97018px;
+    }
+    .coinRedeemSection {
+        height: 10%;
+        width: 100%;
+    }
+    .customInput {
+        margin-top: -6.65%;
+        margin-left: 25.7%;
+        height: 5%;
+        font-size: 18px;
+        width: 40%;
+        padding-left: 1.2rem;
+        padding-right: 3.2rem;
+        border-radius: 5px;
+    }
+    .redeemAcceptButton {
+        height: 67%;
+        margin-top: 0.1%;
+        width: 11%;
+        font-size: 22px;
+        line-height: 59px;
+        margin-left: -10%;
+        border-radius: 14px;
+    }
+    .openCaseButton {
+        top: 88%;
+        border-radius: 7px;
+        left: 24.8%;
+        font-size: 14px;
+        padding: 2.5% 6% 2.5% 6%;
+    }
+    .caseOpeningBefore {
+        width: 100%;
+        height: 100%;
+    }
+    .openingCaseImgArea {
+        width: 55%;
+    }
+    .openingButtonArea {
+        width: 20%;
+        height: 100%;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+    .openinOpenCaseButton {
+        height: 20%;
+
+        border-radius: 10px;
+
+        font-size: 17px;
+
+        margin-top: 10%;
+    }
+    .openingCreditButton {
+        height: -7%;
+
+        margin-top: -7%;
+        padding: 2.4% 2% 3.1% 2%;
+
+        font-size: 15px;
+
+        border-radius: 8px;
+    }
+    .openingCreditIconArea {
+        width: 20%;
+        margin-right: 7%;
+    }
+    .openingCreditText {
+        line-height: 18px;
+
+        margin-left: 5%;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .inCaseItem {
+        margin-bottom: 2%;
+
+        width: 10rem;
+    }
+    .incaseItemImageArea {
+        width: 60%;
+        left: 20%;
+        height: 60%;
+
+        top: -5%;
+    }
+    .incaseItemItemName {
+        top: 60%;
+        width: 100%;
+
+        font-size: 13px;
+    }
+    .incaseCurrentCase {
+        font-size: 7px;
+        width: 100%;
+
+        top: 80%;
+    }
+    .openinOpenFastButton {
+        height: 20%;
+        margin-top: 8%;
+
+        border-radius: 10px;
+
+        line-height: 55px;
+        font-size: 17px;
+    }
+    .caseRollItem {
+        flex: 0 0 9.876em;
+    }
+    .congratText {
+        font-size: 45px;
+        margin-top: 13%;
+    }
+    .congratItemBGArea {
+        width: 20%;
+        height: 35%;
+    }
+
+    .congratItemArea {
+        width: 13%;
+        height: 15%;
+        margin-top: -18%;
+    }
+
+    .congratItemName {
+        font-size: 21px;
+        margin-top: 1.3%;
+    }
+
+    .congButtonArea {
+        height: 6%;
+        width: 30%;
+        margin-top: 2.5%;
+        gap: 13px;
+    }
+
+    .congButton {
+        padding-top: 0.8%;
+        font-size: 23px;
+        width: 50%;
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+    html,
+    body {
+        font-size: 15px;
+        font-family: Oswald;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        /* background-repeat: no-repeat; */
+    }
+    .logoArea {
+        margin-left: 5.5%;
+        width: 8%;
+        margin-top: -0.3%;
+        height: 92%;
+    }
+    .logoCaseText {
+        font-size: 43px;
+    }
+    .logoCaseShadow {
+        font-size: 43px;
+        margin-top: -3.9rem;
+    }
+    .logoOpeningText {
+        margin-top: -1.7rem;
+        font-size: 25px;
+    }
+    .caseNames {
+        font-size: 12px;
+        top: 35%;
+        width: 100%;
+    }
+    .rightButtonText {
+        line-height: 2.5rem;
+
+        font-size: 14px;
+
+        width: 5.5rem;
+    }
+    .topRightButton {
+        width: 8rem;
+        height: 2.5rem;
+        margin-top: 2.1rem;
+        margin-left: 1rem;
+
+        border-radius: 40px;
+    }
+    .caseText {
+        font-size: 15px;
+        margin-top: -0.4rem;
+    }
+    .premiumText {
+        margin-top: 8.8%;
+        font-size: 18px;
+        text-shadow: 0px 0px 39px rgb(255 230 0 / 76%);
+    }
+    .charNameArea {
+        line-height: 35px;
+
+        width: 13rem;
+        height: 50%;
+
+        font-size: 20px;
+        text-shadow: 0px 0px 50px rgb(255 255 255 / 40%);
+    }
+    .profileImageArea {
+        border: 2px solid #416fef6f;
+
+        height: 4rem;
+        width: 4rem;
+        margin-left: 7.5%;
+        margin-top: 1.3%;
+        border-radius: 50px;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .caseCountTextArea {
+        top: 37.9%;
+
+        width: 100%;
+        font-size: 13px;
+        /* height: 100%; */
+    }
+
+    .caseOpeningGoBackButton {
+        top: 16%;
+        left: 3%;
+
+        border-radius: 20px;
+
+        padding: 0.7% 1.2% 0.4% 1.2%;
+    }
+    .coinBuyCoinImage {
+        top: 13%;
+        left: 5.5%;
+
+        height: 65%;
+        width: 90%;
+    }
+    .coinTextArea {
+        margin-top: -43.5%;
+        width: 100%;
+        font-size: 22px;
+    }
+    .coinBuyButton {
+        margin-left: 35%;
+        padding: 1.3% 11% 1.7% 11%;
+        border-radius: 8.97018px;
+    }
+    .coinRedeemSection {
+        height: 10%;
+        width: 100%;
+    }
+    .customInput {
+        margin-top: -5.15%;
+        margin-left: 25.7%;
+        height: 5%;
+        font-size: 18px;
+        width: 40%;
+
+        padding-left: 1.2rem;
+        padding-right: 3.2rem;
+
+        border-radius: 5px;
+    }
+    .redeemAcceptButton {
+        height: 67%;
+
+        margin-top: 0.1%;
+        width: 11%;
+
+        font-size: 22px;
+        line-height: 65px;
+
+        margin-left: -10%;
+
+        border-radius: 14px;
+    }
+    .openCaseButton {
+        top: 88%;
+        border-radius: 7px;
+        left: 24.8%;
+        font-size: 14px;
+        padding: 2.5% 6% 2.5% 6%;
+    }
+    .caseOpeningBefore {
+        width: 100%;
+        height: 100%;
+    }
+    .openingCaseImgArea {
+        width: 55%;
+    }
+    .openingButtonArea {
+        width: 20%;
+        height: 100%;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+
+    .openinOpenCaseButton {
+        line-height: 37px;
+        height: 20%;
+        border-radius: 10px;
+        font-size: 15px;
+        margin-top: 10%;
+    }
+    .openingCreditButton {
+        height: -7%;
+
+        margin-top: -7%;
+        padding: 2.4% 2% 3.1% 2%;
+
+        font-size: 15px;
+
+        border-radius: 8px;
+    }
+    .openingCreditIconArea {
+        width: 20%;
+        margin-right: 7%;
+    }
+    .openingCreditText {
+        line-height: 18px;
+
+        margin-left: 5%;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .inCaseItem {
+        margin-bottom: 2%;
+
+        width: 10rem;
+    }
+    .incaseItemImageArea {
+        width: 60%;
+        left: 20%;
+        height: 60%;
+
+        top: -5%;
+    }
+    .incaseItemItemName {
+        top: 56%;
+        width: 100%;
+        font-size: 13px;
+    }
+    .incaseCurrentCase {
+        font-size: 7px;
+        width: 100%;
+        top: 81%;
+    }
+    .openinOpenFastButton {
+        height: 20%;
+        margin-top: 8%;
+        border-radius: 10px;
+        line-height: 41px;
+        font-size: 15px;
+    }
+    .caseRollItem {
+        flex: 0 0 9.87rem;
+    }
+    .congratText {
+        font-size: 45px;
+        margin-top: 13%;
+    }
+    .congratItemBGArea {
+        width: 20%;
+        height: 35%;
+    }
+
+    .congratItemArea {
+        width: 13%;
+        height: 15%;
+        margin-top: -16%;
+    }
+
+    .congratItemName {
+        font-size: 21px;
+        margin-top: 1.3%;
+    }
+
+    .congButtonArea {
+        height: 6%;
+        width: 30%;
+        margin-top: 2.5%;
+        gap: 13px;
+    }
+
+    .congButton {
+        padding-top: -0.5%;
+        font-size: 21px;
+        width: 50%;
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 1360px) and (max-height: 768px) {
+    html,
+    body {
+        font-size: 15px;
+        font-family: Oswald;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        /* background-repeat: no-repeat; */
+    }
+    .logoArea {
+        margin-left: 5.5%;
+        width: 9%;
+        margin-top: -0.3%;
+        height: 92%;
+    }
+    .logoCaseText {
+        font-size: 45px;
+    }
+    .logoCaseShadow {
+        font-size: 45px;
+        margin-top: -4.2rem;
+    }
+    .logoOpeningText {
+        margin-top: -1.7rem;
+        font-size: 27px;
+    }
+    .caseNames {
+        font-size: 12px;
+        top: 35%;
+        width: 100%;
+    }
+    .rightButtonText {
+        line-height: 2.5rem;
+
+        font-size: 14px;
+
+        width: 5.5rem;
+    }
+    .topRightButton {
+        width: 8rem;
+        height: 2.5rem;
+        margin-top: 2.1rem;
+        margin-left: 1rem;
+
+        border-radius: 40px;
+    }
+    .caseText {
+        font-size: 15px;
+        margin-top: -0.4rem;
+    }
+    .premiumText {
+        margin-top: 10.8%;
+        font-size: 18px;
+        text-shadow: 0px 0px 39px rgb(255 230 0 / 76%);
+    }
+    .charNameArea {
+        line-height: 35px;
+
+        width: 13rem;
+        height: 50%;
+
+        font-size: 20px;
+        text-shadow: 0px 0px 50px rgb(255 255 255 / 40%);
+    }
+    .profileImageArea {
+        border: 2px solid #416fef6f;
+
+        height: 4rem;
+        width: 4rem;
+        margin-left: 7.5%;
+        margin-top: 1.3%;
+        border-radius: 50px;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .caseCountTextArea {
+        top: 37.9%;
+
+        width: 100%;
+        font-size: 13px;
+        /* height: 100%; */
+    }
+
+    .caseOpeningGoBackButton {
+        top: 16%;
+        left: 3%;
+
+        border-radius: 20px;
+
+        padding: 0.7% 1.2% 0.4% 1.2%;
+    }
+    .coinBuyCoinImage {
+        top: 13%;
+        left: 5.5%;
+
+        height: 65%;
+        width: 90%;
+    }
+    .coinTextArea {
+        margin-top: -44.5%;
+        width: 100%;
+        font-size: 22px;
+    }
+    .coinBuyButton {
+        margin-left: 35%;
+        padding: 1.3% 11% 1.7% 11%;
+        border-radius: 8.97018px;
+    }
+    .coinRedeemSection {
+        height: 10%;
+        width: 100%;
+    }
+    .customInput {
+        margin-top: -5.15%;
+        margin-left: 25.7%;
+        height: 5%;
+        font-size: 18px;
+        width: 40%;
+
+        padding-left: 1.2rem;
+        padding-right: 3.2rem;
+
+        border-radius: 5px;
+    }
+    .redeemAcceptButton {
+        height: 67%;
+        margin-top: 0.1%;
+        width: 11%;
+        font-size: 22px;
+        line-height: 49px;
+        margin-left: -10%;
+        border-radius: 14px;
+    }
+    .openCaseButton {
+        top: 88%;
+        border-radius: 7px;
+        left: 23.8%;
+        font-size: 14px;
+        padding: 2.5% 6% 2.5% 6%;
+    }
+    .caseOpeningBefore {
+        width: 100%;
+        height: 100%;
+    }
+    .openingCaseImgArea {
+        width: 55%;
+    }
+    .openingButtonArea {
+        width: 20%;
+        height: 100%;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+    .openinOpenCaseButton {
+        height: 20%;
+        border-radius: 10px;
+        font-size: 14px;
+        margin-top: 10%;
+    }
+    .openingCreditButton {
+        height: -7%;
+
+        margin-top: -7%;
+        padding: 2.4% 2% 3.1% 2%;
+
+        font-size: 15px;
+
+        border-radius: 8px;
+    }
+    .openingCreditIconArea {
+        width: 20%;
+        margin-right: 7%;
+    }
+    .openingCreditText {
+        line-height: 18px;
+
+        margin-left: 5%;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .inCaseItem {
+        margin-bottom: 2%;
+
+        width: 10rem;
+    }
+    .incaseItemImageArea {
+        width: 60%;
+        left: 20%;
+        height: 60%;
+
+        top: -5%;
+    }
+    .incaseItemItemName {
+        top: 60%;
+        width: 100%;
+        font-size: 12px;
+    }
+    .incaseCurrentCase {
+        font-size: 7px;
+        width: 100%;
+        top: 82%;
+    }
+    .openinOpenFastButton {
+        height: 20%;
+        margin-top: 8%;
+        border-radius: 10px;
+        line-height: 41px;
+        font-size: 14px;
+    }
+    .caseRollItem {
+        flex: 0 0 9.87rem;
+    }
+    .congratText {
+        font-size: 45px;
+        margin-top: 13%;
+    }
+    .congratItemBGArea {
+        width: 20%;
+        height: 35%;
+    }
+
+    .congratItemArea {
+        width: 13%;
+        height: 15%;
+        margin-top: -16%;
+    }
+
+    .congratItemName {
+        font-size: 21px;
+        margin-top: 1.3%;
+    }
+
+    .congButtonArea {
+        height: 6%;
+        width: 30%;
+        margin-top: 2.5%;
+        gap: 13px;
+    }
+
+    .congButton {
+        padding-top: 1.5%;
+        font-size: 25px;
+
+        width: 50%;
+
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 1024px) {
+    html,
+    body {
+        font-size: 15px;
+        font-family: Oswald;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        /* background-repeat: no-repeat; */
+    }
+    .logoArea {
+        margin-left: 5.5%;
+        width: 14%;
+        margin-top: -0.3%;
+        height: 92%;
+    }
+    .logoCaseText {
+        font-size: 45px;
+    }
+    .logoCaseShadow {
+        font-size: 45px;
+        margin-top: -4.2rem;
+    }
+    .logoOpeningText {
+        margin-top: -1.7rem;
+        font-size: 26px;
+    }
+    .caseNames {
+        font-size: 11px;
+        top: 35%;
+        width: 100%;
+    }
+    .rightButtonText {
+        line-height: 2.5rem;
+
+        font-size: 14px;
+
+        width: 5.5rem;
+    }
+    .topRightButton {
+        width: 8rem;
+        height: 2.5rem;
+        margin-top: 2.1rem;
+        margin-left: 1rem;
+
+        border-radius: 40px;
+    }
+    .caseText {
+        font-size: 15px;
+        margin-top: -0.4rem;
+    }
+    .premiumText {
+        margin-top: 17.8%;
+        font-size: 14px;
+        text-shadow: 0px 0px 39px rgb(255 230 0 / 76%);
+    }
+    .charNameArea {
+        line-height: 35px;
+
+        width: 13rem;
+        height: 50%;
+
+        font-size: 20px;
+        text-shadow: 0px 0px 50px rgb(255 255 255 / 40%);
+    }
+    .profileImageArea {
+        border: 2px solid #416fef6f;
+
+        height: 4rem;
+        width: 4rem;
+        margin-left: 7.5%;
+        margin-top: 1.3%;
+        border-radius: 50px;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .caseCountTextArea {
+        top: 37.9%;
+
+        width: 100%;
+        font-size: 13px;
+        /* height: 100%; */
+    }
+
+    .caseOpeningGoBackButton {
+        top: 16%;
+        left: 3%;
+
+        border-radius: 20px;
+
+        padding: 0.7% 1.2% 0.4% 1.2%;
+    }
+    .coinBuyCoinImage {
+        top: 13%;
+        left: 5.5%;
+
+        height: 65%;
+        width: 90%;
+    }
+    .coinTextArea {
+        margin-top: -48.5%;
+        width: 100%;
+        font-size: 22px;
+    }
+    .coinBuyButton {
+        margin-left: 35%;
+        padding: 1.3% 11% 1.7% 11%;
+        border-radius: 8.97018px;
+    }
+    .coinRedeemSection {
+        height: 10%;
+        width: 100%;
+    }
+    .customInput {
+        margin-top: -7.15%;
+        margin-left: 25.7%;
+        height: 5%;
+        font-size: 18px;
+        width: 40%;
+        padding-left: 1.2rem;
+        padding-right: 3.2rem;
+        border-radius: 5px;
+    }
+    .redeemAcceptButton {
+        height: 67%;
+
+        margin-top: 0.1%;
+        width: 11%;
+
+        font-size: 22px;
+        line-height: 65px;
+
+        margin-left: -10%;
+
+        border-radius: 14px;
+    }
+    .openCaseButton {
+        top: 88%;
+        border-radius: 7px;
+        left: 23.8%;
+        font-size: 14px;
+        padding: 2.5% 6% 2.5% 6%;
+    }
+    .caseOpeningBefore {
+        width: 100%;
+        height: 100%;
+    }
+    .openingCaseImgArea {
+        width: 55%;
+    }
+    .openingButtonArea {
+        width: 20%;
+        height: 100%;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+    .openinOpenCaseButton {
+        height: 20%;
+
+        border-radius: 10px;
+
+        font-size: 17px;
+
+        margin-top: 10%;
+    }
+    .openingCreditButton {
+        height: -7%;
+
+        margin-top: -7%;
+        padding: 2.4% 2% 3.1% 2%;
+
+        font-size: 15px;
+
+        border-radius: 8px;
+    }
+    .openingCreditIconArea {
+        width: 20%;
+        margin-right: 7%;
+    }
+    .openingCreditText {
+        line-height: 18px;
+
+        margin-left: 5%;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .inCaseItem {
+        margin-bottom: 2%;
+
+        width: 10rem;
+    }
+    .incaseItemImageArea {
+        width: 60%;
+        left: 20%;
+        height: 60%;
+
+        top: -5%;
+    }
+    .incaseItemItemName {
+        top: 60%;
+        width: 100%;
+
+        font-size: 13px;
+    }
+    .incaseCurrentCase {
+        font-size: 7px;
+        width: 100%;
+
+        top: 80%;
+    }
+    .openinOpenFastButton {
+        height: 20%;
+        margin-top: 8%;
+
+        border-radius: 10px;
+
+        line-height: 55px;
+        font-size: 17px;
+    }
+    .caseRollItem {
+        flex: 0 0 9.859rem;
+    }
+    .congratText {
+        font-size: 45px;
+        margin-top: 13%;
+    }
+    .congratItemBGArea {
+        width: 20%;
+        height: 35%;
+    }
+
+    .congratItemArea {
+        width: 13%;
+        height: 15%;
+        margin-top: -24%;
+    }
+
+    .congratItemName {
+        font-size: 21px;
+        margin-top: 1.3%;
+    }
+
+    .congButtonArea {
+        height: 6%;
+        width: 30%;
+        margin-top: 2.5%;
+        gap: 13px;
+    }
+
+    .congButton {
+        padding-top: 1.5%;
+        font-size: 25px;
+
+        width: 50%;
+
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 960px) {
+    html,
+    body {
+        font-size: 15px;
+        font-family: Oswald;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        /* background-repeat: no-repeat; */
+    }
+    .logoArea {
+        margin-left: 5.5%;
+        width: 18%;
+        margin-top: -0.3%;
+        height: 85%;
+    }
+    .logoCaseText {
+        font-size: 45px;
+    }
+    .logoCaseShadow {
+        font-size: 45px;
+        margin-top: -4.2rem;
+    }
+    .logoOpeningText {
+        margin-top: -1.7rem;
+        font-size: 28px;
+    }
+    .caseNames {
+        font-size: 12px;
+        top: 35%;
+        width: 100%;
+    }
+    .rightButtonText {
+        line-height: 2.5rem;
+
+        font-size: 14px;
+
+        width: 5.5rem;
+    }
+    .topRightButton {
+        width: 8rem;
+        height: 2.5rem;
+        margin-top: 2.1rem;
+        margin-left: 1rem;
+
+        border-radius: 40px;
+    }
+    .caseText {
+        font-size: 15px;
+        margin-top: -0.4rem;
+    }
+    .premiumText {
+        margin-top: 23.8%;
+        font-size: 13px;
+        text-shadow: 0px 0px 39px rgb(255 230 0 / 76%);
+    }
+    .charNameArea {
+        line-height: 35px;
+
+        width: 13rem;
+        height: 50%;
+
+        font-size: 20px;
+        text-shadow: 0px 0px 50px rgb(255 255 255 / 40%);
+    }
+    .profileImageArea {
+        border: 2px solid #416fef6f;
+
+        height: 4rem;
+        width: 4rem;
+        margin-left: 7.5%;
+        margin-top: 1.3%;
+        border-radius: 50px;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .caseCountTextArea {
+        top: 37.9%;
+
+        width: 100%;
+        font-size: 13px;
+        /* height: 100%; */
+    }
+
+    .caseOpeningGoBackButton {
+        top: 16%;
+        left: 3%;
+
+        border-radius: 20px;
+
+        padding: 0.7% 1.2% 0.4% 1.2%;
+    }
+    .coinBuyCoinImage {
+        top: 13%;
+        left: 5.5%;
+
+        height: 65%;
+        width: 90%;
+    }
+    .coinTextArea {
+        margin-top: -46.5%;
+        width: 100%;
+        font-size: 22px;
+    }
+    .coinBuyButton {
+        margin-left: 33%;
+        padding: 1.3% 11% 1.7% 11%;
+        border-radius: 8.97018px;
+    }
+    .coinRedeemSection {
+        height: 10%;
+        width: 100%;
+    }
+    .customInput {
+        margin-top: -6.65%;
+        margin-left: 25.7%;
+        height: 5%;
+        font-size: 18px;
+        width: 40%;
+        padding-left: 1.2rem;
+        padding-right: 3.2rem;
+        border-radius: 5px;
+    }
+    .redeemAcceptButton {
+        height: 67%;
+
+        margin-top: 0.1%;
+        width: 11%;
+
+        font-size: 22px;
+        line-height: 65px;
+
+        margin-left: -10%;
+
+        border-radius: 14px;
+    }
+    .openCaseButton {
+        top: 88%;
+        border-radius: 7px;
+        left: 22.8%;
+        font-size: 14px;
+        padding: 2.5% 6% 2.5% 6%;
+    }
+    .caseOpeningBefore {
+        width: 100%;
+        height: 100%;
+    }
+    .openingCaseImgArea {
+        width: 55%;
+    }
+    .openingButtonArea {
+        width: 20%;
+        height: 100%;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+    .openinOpenCaseButton {
+        height: 20%;
+
+        border-radius: 10px;
+
+        font-size: 17px;
+
+        margin-top: 10%;
+    }
+    .openingCreditButton {
+        height: -7%;
+
+        margin-top: -7%;
+        padding: 2.4% 2% 3.1% 2%;
+
+        font-size: 15px;
+
+        border-radius: 8px;
+    }
+    .openingCreditIconArea {
+        width: 20%;
+        margin-right: 7%;
+    }
+    .openingCreditText {
+        line-height: 18px;
+
+        margin-left: 5%;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .inCaseItem {
+        margin-bottom: 2%;
+
+        width: 10rem;
+    }
+    .incaseItemImageArea {
+        width: 60%;
+        left: 20%;
+        height: 60%;
+
+        top: -5%;
+    }
+    .incaseItemItemName {
+        top: 60%;
+        width: 100%;
+
+        font-size: 13px;
+    }
+    .incaseCurrentCase {
+        font-size: 7px;
+        width: 100%;
+
+        top: 80%;
+    }
+    .openinOpenFastButton {
+        height: 20%;
+        margin-top: 8%;
+
+        border-radius: 10px;
+
+        line-height: 55px;
+        font-size: 17px;
+    }
+    .caseRollItem {
+        flex: 0 0 9.86rem;
+    }
+    .congratText {
+        font-size: 45px;
+        margin-top: 13%;
+    }
+    .congratItemBGArea {
+        width: 20%;
+        height: 35%;
+    }
+
+    .congratItemArea {
+        width: 13%;
+        height: 15%;
+        margin-top: -23%;
+    }
+
+    .congratItemName {
+        font-size: 21px;
+        margin-top: 1.3%;
+    }
+
+    .congButtonArea {
+        height: 6%;
+        width: 30%;
+        margin-top: 2.5%;
+        gap: 13px;
+    }
+
+    .congButton {
+        padding-top: 1.5%;
+        font-size: 25px;
+
+        width: 50%;
+
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 800px) {
+    html,
+    body {
+        font-size: 15px;
+        font-family: Oswald;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        /* background-repeat: no-repeat; */
+    }
+    .logoArea {
+        margin-left: 5.5%;
+        width: 17%;
+        margin-top: -0.3%;
+        height: 85%;
+    }
+    .logoCaseText {
+        font-size: 45px;
+    }
+    .logoCaseShadow {
+        font-size: 45px;
+        margin-top: -4.2rem;
+    }
+    .logoOpeningText {
+        margin-top: -1.7rem;
+        font-size: 25px;
+    }
+    .caseNames {
+        font-size: 11px;
+        top: 35%;
+        width: 100%;
+    }
+    .rightButtonText {
+        line-height: 2.5rem;
+
+        font-size: 14px;
+
+        width: 5.5rem;
+    }
+    .topRightButton {
+        width: 8rem;
+        height: 2.5rem;
+        margin-top: 2.1rem;
+        margin-left: 1rem;
+
+        border-radius: 40px;
+    }
+    .caseText {
+        font-size: 15px;
+        margin-top: -0.4rem;
+    }
+    .premiumText {
+        margin-top: 27.8%;
+        font-size: 13px;
+        text-shadow: 0px 0px 39px rgb(255 230 0 / 76%);
+    }
+    .charNameArea {
+        line-height: 35px;
+
+        width: 13rem;
+        height: 50%;
+
+        font-size: 20px;
+        text-shadow: 0px 0px 50px rgb(255 255 255 / 40%);
+    }
+    .profileImageArea {
+        border: 2px solid #416fef6f;
+
+        height: 4rem;
+        width: 4rem;
+        margin-left: 7.5%;
+        margin-top: 1.3%;
+        border-radius: 50px;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .caseCountTextArea {
+        top: 37.9%;
+
+        width: 100%;
+        font-size: 13px;
+        /* height: 100%; */
+    }
+
+    .caseOpeningGoBackButton {
+        top: 16%;
+        left: 3%;
+
+        border-radius: 20px;
+
+        padding: 0.7% 1.2% 0.4% 1.2%;
+    }
+    .coinBuyCoinImage {
+        top: 13%;
+        left: 5.5%;
+
+        height: 65%;
+        width: 90%;
+    }
+    .coinTextArea {
+        margin-top: -46.5%;
+        width: 100%;
+        font-size: 22px;
+    }
+    .coinBuyButton {
+        margin-left: 32%;
+        padding: 1.3% 11% 1.7% 11%;
+        border-radius: 8.97018px;
+    }
+    .coinRedeemSection {
+        height: 10%;
+        width: 100%;
+    }
+    .customInput {
+        margin-top: -5.75%;
+        margin-left: 25.7%;
+        height: 5%;
+        font-size: 18px;
+        width: 40%;
+        padding-left: 1.2rem;
+        padding-right: 3.2rem;
+        border-radius: 5px;
+    }
+    .redeemAcceptButton {
+        height: 67%;
+        margin-top: 0.1%;
+        width: 11%;
+        font-size: 22px;
+        line-height: 51px;
+        margin-left: -10%;
+        border-radius: 14px;
+    }
+    .openCaseButton {
+        top: 88%;
+        border-radius: 7px;
+        left: 22.8%;
+        font-size: 14px;
+        padding: 2.5% 6% 2.5% 6%;
+    }
+    .caseOpeningBefore {
+        width: 100%;
+        height: 100%;
+    }
+    .openingCaseImgArea {
+        width: 55%;
+    }
+    .openingButtonArea {
+        width: 20%;
+        height: 100%;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+    .openinOpenCaseButton {
+        line-height: 38px;
+        height: 20%;
+        border-radius: 10px;
+        font-size: 13px;
+        margin-top: 10%;
+    }
+    .openingCreditButton {
+        height: -7%;
+
+        margin-top: -7%;
+        padding: 2.4% 2% 3.1% 2%;
+
+        font-size: 15px;
+
+        border-radius: 8px;
+    }
+    .openingCreditIconArea {
+        width: 20%;
+        margin-right: 7%;
+    }
+    .openingCreditText {
+        line-height: 18px;
+
+        margin-left: 5%;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .inCaseItem {
+        margin-bottom: 2%;
+
+        width: 10rem;
+    }
+    .incaseItemImageArea {
+        width: 60%;
+        left: 20%;
+        height: 60%;
+
+        top: -5%;
+    }
+    .incaseItemItemName {
+        top: 60%;
+        width: 100%;
+        font-size: 12px;
+    }
+    .incaseCurrentCase {
+        font-size: 7px;
+        width: 100%;
+
+        top: 80%;
+    }
+    .openinOpenFastButton {
+        height: 20%;
+        margin-top: 8%;
+        border-radius: 10px;
+        line-height: 44px;
+        font-size: 13px;
+    }
+    .caseRollItem {
+        flex: 0 0 9.86rem;
+    }
+    .congratText {
+        font-size: 45px;
+        margin-top: 13%;
+    }
+    .congratItemBGArea {
+        width: 20%;
+        height: 35%;
+    }
+
+    .congratItemArea {
+        width: 13%;
+        height: 15%;
+        margin-top: -19%;
+    }
+
+    .congratItemName {
+        font-size: 21px;
+        margin-top: 1.3%;
+    }
+
+    .congButtonArea {
+        height: 6%;
+        width: 30%;
+        margin-top: 2.5%;
+        gap: 13px;
+    }
+
+    .congButton {
+        padding-top: 0.5%;
+        font-size: 20px;
+        width: 50%;
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 768px) {
+    html,
+    body {
+        font-size: 15px;
+        font-family: Oswald;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        /* background-repeat: no-repeat; */
+    }
+    .logoArea {
+        margin-left: 5.5%;
+        width: 17%;
+        margin-top: -0.3%;
+        height: 90%;
+    }
+    .logoCaseText {
+        font-size: 43px;
+    }
+    .logoCaseShadow {
+        font-size: 43px;
+        margin-top: -3.9rem;
+    }
+    .logoOpeningText {
+        margin-top: -1.7rem;
+        font-size: 27px;
+    }
+    .caseNames {
+        font-size: 11px;
+        top: 35%;
+        width: 100%;
+    }
+    .rightButtonText {
+        line-height: 2.5rem;
+
+        font-size: 14px;
+
+        width: 5.5rem;
+    }
+    .topRightButton {
+        width: 8rem;
+        height: 2.5rem;
+        margin-top: 2.1rem;
+        margin-left: 1rem;
+
+        border-radius: 40px;
+    }
+    .caseText {
+        font-size: 15px;
+        margin-top: -0.4rem;
+    }
+    .premiumText {
+        margin-top: 17.8%;
+        font-size: 15px;
+        text-shadow: 0px 0px 39px rgb(255 230 0 / 76%);
+    }
+    .charNameArea {
+        line-height: 35px;
+
+        width: 13rem;
+        height: 50%;
+
+        font-size: 20px;
+        text-shadow: 0px 0px 50px rgb(255 255 255 / 40%);
+    }
+    .profileImageArea {
+        border: 2px solid #416fef6f;
+
+        height: 4rem;
+        width: 4rem;
+        margin-left: 7.5%;
+        margin-top: 1.3%;
+        border-radius: 50px;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .caseCountTextArea {
+        top: 37.9%;
+
+        width: 100%;
+        font-size: 13px;
+        /* height: 100%; */
+    }
+
+    .caseOpeningGoBackButton {
+        top: 16%;
+        left: 3%;
+
+        border-radius: 20px;
+
+        padding: 0.7% 1.2% 0.4% 1.2%;
+    }
+    .coinBuyCoinImage {
+        top: 13%;
+        left: 5.5%;
+
+        height: 65%;
+        width: 90%;
+    }
+    .coinTextArea {
+        margin-top: -47.5%;
+        width: 100%;
+        font-size: 22px;
+    }
+    .coinBuyButton {
+        margin-left: 32%;
+        padding: 1.3% 11% 1.7% 11%;
+        border-radius: 8.97018px;
+    }
+    .coinRedeemSection {
+        height: 10%;
+        width: 100%;
+    }
+    .customInput {
+        margin-top: -5.45%;
+        margin-left: 25.7%;
+        height: 5%;
+        font-size: 18px;
+        width: 40%;
+        padding-left: 1.2rem;
+        padding-right: 3.2rem;
+        border-radius: 5px;
+    }
+    .redeemAcceptButton {
+        height: 67%;
+        margin-top: 0.1%;
+        width: 11%;
+        font-size: 22px;
+        line-height: 50px;
+        margin-left: -10%;
+        border-radius: 14px;
+    }
+    .openCaseButton {
+        top: 88%;
+        border-radius: 7px;
+        left: 22.8%;
+        font-size: 14px;
+        padding: 2.5% 6% 2.5% 6%;
+    }
+    .caseOpeningBefore {
+        width: 100%;
+        height: 100%;
+    }
+    .openingCaseImgArea {
+        width: 55%;
+    }
+    .openingButtonArea {
+        width: 20%;
+        height: 100%;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+    .openinOpenCaseButton {
+        height: 20%;
+
+        border-radius: 10px;
+
+        font-size: 17px;
+
+        margin-top: 10%;
+    }
+    .openingCreditButton {
+        height: -7%;
+
+        margin-top: -7%;
+        padding: 2.4% 2% 3.1% 2%;
+
+        font-size: 15px;
+
+        border-radius: 8px;
+    }
+    .openingCreditIconArea {
+        width: 20%;
+        margin-right: 7%;
+    }
+    .openingCreditText {
+        line-height: 18px;
+
+        margin-left: 5%;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .inCaseItem {
+        margin-bottom: 2%;
+
+        width: 10rem;
+    }
+    .incaseItemImageArea {
+        width: 60%;
+        left: 20%;
+        height: 60%;
+
+        top: -5%;
+    }
+    .incaseItemItemName {
+        top: 60%;
+        width: 100%;
+
+        font-size: 13px;
+    }
+    .incaseCurrentCase {
+        font-size: 7px;
+        width: 100%;
+
+        top: 80%;
+    }
+    .openinOpenFastButton {
+        height: 20%;
+        margin-top: 8%;
+
+        border-radius: 10px;
+
+        line-height: 55px;
+        font-size: 17px;
+    }
+    .caseRollItem {
+        flex: 0 0 9.85.5rem;
+    }
+    .congratText {
+        font-size: 45px;
+        margin-top: 13%;
+    }
+    .congratItemBGArea {
+        width: 20%;
+        height: 35%;
+    }
+
+    .congratItemArea {
+        width: 13%;
+        height: 15%;
+        margin-top: -16%;
+    }
+
+    .congratItemName {
+        font-size: 21px;
+        margin-top: 1.3%;
+    }
+
+    .congButtonArea {
+        height: 6%;
+        width: 30%;
+        margin-top: 2.5%;
+        gap: 13px;
+    }
+
+    .congButton {
+        padding-top: 1.5%;
+        font-size: 25px;
+
+        width: 50%;
+
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 720px) {
+    html,
+    body {
+        font-size: 15px;
+        font-family: Oswald;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        /* background-repeat: no-repeat; */
+    }
+    .logoArea {
+        margin-left: 5.5%;
+        width: 17%;
+        margin-top: -0.3%;
+        height: 83%;
+    }
+    .logoCaseText {
+        font-size: 43px;
+    }
+    .logoCaseShadow {
+        font-size: 43px;
+        margin-top: -3.9rem;
+    }
+    .logoOpeningText {
+        margin-top: -1.7rem;
+        font-size: 27px;
+    }
+    .caseNames {
+        font-size: 12px;
+        top: 35%;
+        width: 100%;
+    }
+    .rightButtonText {
+        line-height: 2.5rem;
+
+        font-size: 14px;
+
+        width: 5.5rem;
+    }
+    .topRightButton {
+        width: 8rem;
+        height: 2.5rem;
+        margin-top: 2.1rem;
+        margin-left: 1rem;
+
+        border-radius: 40px;
+    }
+    .caseText {
+        font-size: 15px;
+        margin-top: -0.4rem;
+    }
+    .premiumText {
+        margin-top: 21.8%;
+        font-size: 13px;
+        text-shadow: 0px 0px 39px rgb(255, 230, 0);
+    }
+    .charNameArea {
+        line-height: 35px;
+
+        width: 13rem;
+        height: 50%;
+
+        font-size: 20px;
+        text-shadow: 0px 0px 50px rgb(255 255 255 / 40%);
+    }
+    .profileImageArea {
+        border: 2px solid #416fef6f;
+
+        height: 4rem;
+        width: 4rem;
+        margin-left: 7.5%;
+        margin-top: 1.3%;
+        border-radius: 50px;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .caseCountTextArea {
+        top: 37.9%;
+
+        width: 100%;
+        font-size: 13px;
+        /* height: 100%; */
+    }
+
+    .caseOpeningGoBackButton {
+        top: 16%;
+        left: 3%;
+
+        border-radius: 20px;
+
+        padding: 0.7% 1.2% 0.4% 1.2%;
+    }
+    .coinBuyCoinImage {
+        top: 13%;
+        left: 5.5%;
+
+        height: 65%;
+        width: 90%;
+    }
+    .coinTextArea {
+        margin-top: -46.5%;
+        width: 100%;
+        font-size: 22px;
+    }
+    .coinBuyButton {
+        margin-left: 34%;
+        padding: 1.3% 11% 1.7% 11%;
+        border-radius: 8.97018px;
+    }
+    .coinRedeemSection {
+        height: 10%;
+        width: 100%;
+    }
+    .customInput {
+        margin-top: -5.15%;
+        margin-left: 25.7%;
+        height: 5%;
+        font-size: 18px;
+        width: 40%;
+
+        padding-left: 1.2rem;
+        padding-right: 3.2rem;
+
+        border-radius: 5px;
+    }
+    .redeemAcceptButton {
+        height: 67%;
+        margin-top: 0.1%;
+        width: 11%;
+        font-size: 22px;
+        line-height: 47px;
+        margin-left: -10%;
+        border-radius: 14px;
+    }
+    .openCaseButton {
+        top: 88%;
+        border-radius: 7px;
+        left: 23.8%;
+        font-size: 14px;
+        padding: 2.5% 6% 2.5% 6%;
+    }
+    .caseOpeningBefore {
+        width: 100%;
+        height: 100%;
+    }
+    .openingCaseImgArea {
+        width: 55%;
+    }
+    .openingButtonArea {
+        width: 20%;
+        height: 100%;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+    .openinOpenCaseButton {
+        line-height: 34px;
+        height: 20%;
+        border-radius: 10px;
+        font-size: 13px;
+        margin-top: 10%;
+    }
+    .openingCreditButton {
+        height: -7%;
+
+        margin-top: -7%;
+        padding: 2.4% 2% 3.1% 2%;
+
+        font-size: 15px;
+
+        border-radius: 8px;
+    }
+    .openingCreditIconArea {
+        width: 20%;
+        margin-right: 7%;
+    }
+    .openingCreditText {
+        line-height: 18px;
+
+        margin-left: 5%;
+    }
+    .inBoxCasesCount {
+        margin-top: -1.3%;
+        font-size: 15px;
+
+        margin-left: 5%;
+    }
+    .inCaseItem {
+        margin-bottom: 2%;
+
+        width: 10rem;
+    }
+    .incaseItemImageArea {
+        width: 60%;
+        left: 20%;
+        height: 60%;
+
+        top: -5%;
+    }
+    .incaseItemItemName {
+        top: 60%;
+        width: 100%;
+        font-size: 11px;
+    }
+    .incaseCurrentCase {
+        font-size: 7px;
+        width: 100%;
+
+        top: 80%;
+    }
+    .openinOpenFastButton {
+        height: 20%;
+        margin-top: 8%;
+        border-radius: 10px;
+        line-height: 38px;
+        font-size: 13px;
+    }
+    .caseRollItem {
+        flex: 0 0 9.86rem;
+    }
+    .congratText {
+        font-size: 45px;
+        margin-top: 13%;
+    }
+    .congratItemBGArea {
+        width: 20%;
+        height: 35%;
+    }
+
+    .congratItemArea {
+        width: 13%;
+        height: 15%;
+        margin-top: -16%;
+    }
+
+    .congratItemName {
+        font-size: 21px;
+        margin-top: 1.3%;
+    }
+
+    .congButtonArea {
+        height: 6%;
+        width: 30%;
+        margin-top: 2.5%;
+        gap: 13px;
+    }
+
+    .congButton {
+        padding-top: 0.5%;
+        font-size: 18px;
+        width: 50%;
+        border-radius: 8px;
+    }
+}

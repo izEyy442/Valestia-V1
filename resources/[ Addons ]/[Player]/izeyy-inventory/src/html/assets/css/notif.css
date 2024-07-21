@@ -1,0 +1,172 @@
+
+.notification {
+    position: fixed;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    height: 5.0vw;
+	width: 15vw;
+    left: 50%; 
+    transform: translateX(-50%); 
+    bottom: 15px; 
+    font-family:var(--font-family);                               
+
+}
+
+.notify-without-icon {
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: column;
+	width: 28vw;
+	/* border-left: 0.156vw solid #0000C8; */
+	background: var(--background-notif);
+	margin-bottom: 0.417vw;
+	animation: ani 0.8s forwards;
+}
+.content-notify-without-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.progress-bar-notifi-without-icon {
+	width: 100%;
+	height: 0.106vw;
+	margin-top: auto;
+	margin-left: -1.042vw;
+	background-color: var(--color-notif);
+	animation: progressBar 5s ease;
+}
+@keyframes progressBar {
+	0% { 
+		width: 100%;
+	 }
+	100% { 
+		width: 0%; 
+	}
+}
+
+.notify-without-icon-text {
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: column;
+	text-transform: none;
+	padding-top: 0.621vw;
+	padding-bottom: 0.621vw;
+	margin-left: 0.913vw;
+	font-size: 0.730vw;
+}
+.notify-without-icon-text span:nth-child(1) {
+    font-family:var(--font-family);                               
+	max-width: 13vw;
+}
+.notify-without-icon-text span:nth-child(2) {
+    font-family:var(--font-family);                               
+	max-width: 13vw;
+}
+
+@keyframes ani {
+    0% {
+        transform: translateY(150%); /* Fait disparaître la notification en dessous de l'écran */
+        opacity: 0; /* L'élément est invisible */
+    }
+    100% {
+        transform: translateY(0); /* Fait apparaître la notification en bas de l'écran */
+        opacity: 1; /* L'élément est visible */
+    }
+}
+
+@keyframes hideNotification {
+    from {
+        opacity: 1;
+        transform: translateX(0vw)
+    }
+    to {
+        opacity: 0;
+        transform: translateX(0.2083333333vw)
+    }
+}
+
+.hidden {
+	transform: translateX(0.2083333333vw);
+	transition: all 0.45s ease;
+	animation: hideNotification 0.45s ease forwards;
+}
+
+@keyframes hide {
+	0% {transform: translateX(0%);}
+	100% {transform: translateY(+150%);}
+}
+
+/* with icon */
+
+
+.iconNotif {
+    position: fixed;
+    display: flex;
+    /* flex-direction: column-reverse; */
+    flex-wrap: nowrap;
+    overflow: hidden;
+    width: 500; 
+    height: 500; 
+    right: 0.625vw;
+    bottom: 0.625vw;
+    font-family:var(--font-family);                               
+}
+
+.notify-with-icon {
+    display: flex;
+    float: left;
+    width: 5.5vw;
+    height: 5.5vw;
+    bottom: -5%;
+    color: var(--color-notif); 
+    /* border: 0.078vw solid rgba(255, 0, 107, 0.35); */
+    background-color: var(--background-color);
+    border-top-left-radius: 0.50vh;
+    border-top-right-radius: 0.50vh;
+    margin: 0.15vw;
+    /* border-radius: 3%; */
+    position: relative;
+}
+.content-notify-with-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.content-notify-with-icon img:nth-child(1) {
+	width: 3.354vw;
+	height: 3.354vw;
+	margin-left: 1vw;
+    margin-top: -1vw;
+}
+
+
+.notify-with-icon-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family:var(--font-family);                               
+    color: var(--color-notif); /* Couleur du texte du "+1" */
+    padding: 1px;
+}
+
+.notify-with-icon-text {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(17, 19, 18, 0.515);
+    border-top-left-radius: 0.50vh;
+    border-top-right-radius: 0.50vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.55vw;
+    /* font-weight: bold; */
+    text-align: center;
+    padding-top: 0.286vw;
+    padding-bottom: 0.417vw;
+    margin-left: 0vw;
+    width: 5.5vw;
+    min-height: 0.15vw;
+    z-index: 500
+}
